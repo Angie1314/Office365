@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
+
+$office-logo: "ZCOOL XiaoWei", serif;
+$card-width: 100%;
+$card-height: auto;
+$parent-overflow: hidden;
+$img-postition: relative;
+$img-width: 100%;
+$h2-postition-on-img: absolute;
+$h2-top-position-on-img:200px;
+$h2-left-position-on-img:0;
+$h2-width-on-img:100%;
+
+.logo {
+  font-family: $office-logo;
+}
+
+.parent {
+  overflow: $parent-overflow;
+}
+
+.card img {
+  width: $card-width;
+  height: $card-height;
+}
+
+.image {
+  position: $img-postition;
+  width: $img-width;
+}
+
+h2 {
+  position: $h2-postition-on-img;
+  top: $h2-top-position-on-img;
+  left: $h2-left-position-on-img;
+  width: $h2-width-on-img;
+  font-family: $office-logo;
+  margin: 12px;
+
+.btn{
+    position: $h2-postition-on-img;
+    top: 50%;
+    left: $h2-left-position-on-img;
+    width: $h2-width-on-img;
+    font-family: $office-logo;
+}
+}
+
+#my_centered_button { display: flex; justify-content: center; }

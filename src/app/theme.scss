@@ -1,0 +1,68 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-blue);
+$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-blue);
+  $alternate-accent: mat-palette($mat-pink, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
+.vertical-divider {
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  height: 100%;
+}
+.parallax {
+  background-image: url("src/assets/images/pplWork.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.button-login-feature button,
+.button-login-feature a {
+  margin-right: 8px;
+  position: relative;
+}
+
+.centerize { 
+  text-align: center;
+  margin-right: 8px;
+}
+
+.ripple {
+  margin: 6px 12px 6px 0;
+}
+
+.mat-display-3{
+  color:whitesmoke;
+}
+
+a{
+  color:white;
+  text-decoration:none;
+}
+
+
+
+#my_centered_button { display: flex; justify-content: center; opacity: 1; }
+
