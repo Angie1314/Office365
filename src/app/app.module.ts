@@ -28,10 +28,9 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { MailBoxComponent } from './mail-box/mail-box.component';
 import { HelpComponent } from './help/help.component';
 import { SettingComponent } from './setting/setting.component';
-import { OAuthModule } from 'angular-oauth2-oidc';
+import { OAuthModule, OAuthService, JwksValidationHandler } from 'angular-oauth2-oidc';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutOfficeComponent } from './about-office/about-office.component';
-
 
 @NgModule({
   declarations: [
@@ -41,7 +40,7 @@ import { AboutOfficeComponent } from './about-office/about-office.component';
     MailBoxComponent,
     HelpComponent,
     SettingComponent,
-    AboutOfficeComponent,
+    AboutOfficeComponent
   ],
   imports: [
     BrowserModule,
@@ -70,12 +69,4 @@ import { AboutOfficeComponent } from './about-office/about-office.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  centered = false;
-  disabled = false;
-  unbounded = false;
-
-  radius: number;
-  color: string;
-
-}
+export class AppModule { }
