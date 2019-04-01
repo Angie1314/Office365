@@ -21,6 +21,7 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
   border-right-style: solid;
   height: 100%;
 }
+
 .parallax {
   background-image: url("src/assets/images/pplWork.jpg");
   min-height: 500px;
@@ -44,7 +45,7 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
   position: relative;
 }
 
-.centerize { 
+.centerize {
   text-align: center;
   margin-right: 8px;
 }
@@ -53,16 +54,17 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
   margin: 6px 12px 6px 0;
 }
 
-.mat-display-3{
-  color:whitesmoke;
+.mat-display-3 {
+  color: whitesmoke;
 }
 
-a{
-  color:white;
-  text-decoration:none;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-
-
-#my_centered_button { display: flex; justify-content: center; opacity: 1; }
-
+#my_centered_button {
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+}

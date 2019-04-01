@@ -18,7 +18,7 @@ export class SettingComponent implements OnInit {
   mailboxText = 'Mail Box';
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
-  
+
   ngOnInit() {
   }
 
