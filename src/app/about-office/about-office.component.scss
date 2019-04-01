@@ -1,21 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
-@import url('https://fonts.googleapis.com/css?family=Cinzel');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+$about-office-font: "Cinzel", serif;
+$text-body-text: "Source Sans Pro", sans-serif;
 
-$about-office-font:'Cinzel', serif;
-$text-body-text:'Source Sans Pro', sans-serif;
-
-.about-office{
-    font-family: $about-office-font;
-    text-align: center;
-  }
-.features{
-    font-family: $about-office-font;
-    color: blue;
+.about-office {
+  font-family: $about-office-font;
+  text-align: center;
 }
-.text-body{
-    font-family: $text-body-text;
-    size: 14px;
-    color:rgb(104, 98, 98);
 
+.features {
+  font-family: $about-office-font;
+  color: blue;
+}
+
+.text-body {
+  font-family: $text-body-text;
+  size: 14px;
+  color: rgb(104, 98, 98);
 }

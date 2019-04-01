@@ -1,35 +1,39 @@
-
-
 <header>
   <nav>
     <div class="alternate-theme parallax image button-login-feature centerize">
       <h2 class="mat-display-3">{{ officeLogo }}</h2>
-      <button routerLink ="/login" [(ngModel)] = "unbounded" class="ripple" mat-flat-button
-        color="primary">{{ loginButton }}</button>
-      <button  routerLink ="/about-office" [(ngModel)] = "unbounded" class="ripple" mat-flat-button
+      <button *ngIf="!name;else content" class="btn btn-default"
+        (click)="login()" class="ripple" mat-flat-button
+        color="primary" routerLink="/calendar">{{ loginButton }}</button>
+      <ng-template #content>
+        <h1>Hallo {{ name }}.</h1>
+        <button class="alternate-theme parallax image button-login-feature
+          centerize" (click)="logOut()">Logout </button>
+      </ng-template>
+      <button routerLink="/about-office" [(ngModel)]="unbounded" class="ripple"
+        mat-flat-button
         color="primary">{{ seeFeautesText }}
       </button>
-        
     </div>
-  <mat-card id="my_centered_button" class="fade x-hidden-focus"> 
-      <a mat-fab routerLink="/about-office" aria-label="Down keyboard_arrow_down">{{clickMessage}}<mat-icon>{{ arrowDown }}</mat-icon></a>
-  </mat-card>
-  <button *ngIf="!name;else content" class="btn btn-default" (click)="login()">Login</button>
-
-<ng-template #content>
-  <h1>Hallo {{ name }}.</h1>
-
-  <button class="btn btn-default" (click)="logOut()">Logout</button>
-</ng-template>
-  
-    <!-- <mat-card>
+    <mat-card id="my_centered_button" class="fade x-hidden-focus">
+      <a mat-fab routerLink="/about-office" aria-label="Down
+        keyboard_arrow_down">
+        {{ clickMessage }}
+        <mat-icon>{{ arrowDown }}</mat-icon>
+      </a>
+    </mat-card>
+    <ng-template #content>
+      <h1>Hallo {{ name }}.</h1>
+      <a routerLink="/calendar"></a>
+      <button class="btn btn-default alternate-themeß" (click)="logOut()">Logout</button>
+    </ng-template>
+    <mat-card>
       <mat-toolbar class="alternate-theme fixed-img">
-        <span class="alternate-theme" >
+        <span class="alternate-theme">
           <button mat-button>
             <img src="../../../../assets/images/icon.png">
           </button>
         </span>
-
         <mat-menu #appMenu="matMenu" class="accent">
           <button mat-menu-item><img class="jpg-icon"
               src="../../../../assets/images/settings.png"><a
@@ -38,36 +42,29 @@
               src="../../../../assets/images/help.png">
             <a routerLink="/help">Help</a></button>
         </mat-menu>
-
         <mat-toolbar color="accent">
-
           <a routerLink="/login">Sign up</a>
-
         </mat-toolbar>
-
         <mat-toolbar color="accent">
           <p>
             <a routerLink="/mail-box">Mailbox</a>
           </p>
         </mat-toolbar>
-
         <mat-toolbar color="accent">
           <p>
             <a routerLink="/calendar">Calendar</a>
           </p>
         </mat-toolbar>
-
         <button mat-icon-button [matMenuTriggerFor]="appMenu">
           <mat-icon>more_vert</mat-icon>
         </button>
       </mat-toolbar>
-
-    </mat-card> 
+    </mat-card>
     <div layout="row" layout-margin layout-wrap layout-align="center center"></div>
     <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
       fxLayoutGap="0.5%" fxLayoutAlign="center">
       <div fxFlex="20%"></div>
-    </div> -->
+    </div>
   </nav>
 </header>
 <main>

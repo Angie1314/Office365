@@ -16,7 +16,7 @@ export class HelpComponent implements OnInit {
   mailboxText = 'Mail Box';
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
-  
+
   constructor() { }
 
   ngOnInit() {

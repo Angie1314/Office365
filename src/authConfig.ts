@@ -9,7 +9,7 @@ export const authConfig: AuthConfig = {
   redirectUri: window.location.origin + '/index.html',
 
   // The SPA's id. The SPA is registerd with this id at the auth-server
-  clientId: 'spa-demo',
+  clientId: '8faad26f-980e-441d-9f63-f3b50b071d20',
 
   // set the scope for the permissions the client should request
   // The first three are defined by OIDC. The 4th is a usecase-specific one

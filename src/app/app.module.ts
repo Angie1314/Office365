@@ -40,7 +40,7 @@ import { AboutOfficeComponent } from './about-office/about-office.component';
     MailBoxComponent,
     HelpComponent,
     SettingComponent,
-    AboutOfficeComponent
+    AboutOfficeComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,22 +13,27 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
+
   {
     path: 'mail-box',
     component: MailBoxComponent
   },
+
   {
     path: 'calendar',
     component: CalendarComponent
   },
+
   {
     path: 'help',
     component: HelpComponent
   },
+
   {
     path: 'setting',
     component: SettingComponent
   },
+  
   {
     path: 'about-office',
     component: AboutOfficeComponent

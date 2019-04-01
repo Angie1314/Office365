@@ -11,6 +11,12 @@ export class CalendarComponent implements OnInit {
   help = '../../../../assets/images/help.png';
 
   settingsText = 'Settings';
+  helpText = 'Help';
+  signupText = 'Sign up';
+  mailboxText = 'Mail Box';
+  calendarText = 'Calendar';
+  officeLogo = 'Office 365';
+
   constructor() { }
 
   ngOnInit() {
