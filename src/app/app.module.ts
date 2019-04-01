@@ -31,7 +31,6 @@ import { SettingComponent } from './setting/setting.component';
 import { OAuthModule, OAuthService, JwksValidationHandler } from 'angular-oauth2-oidc';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutOfficeComponent } from './about-office/about-office.component';
-import { CustomValidateDirective } from './custom-validate.directive';
 
 @NgModule({
   declarations: [
@@ -42,7 +41,6 @@ import { CustomValidateDirective } from './custom-validate.directive';
     HelpComponent,
     SettingComponent,
     AboutOfficeComponent,
-    CustomValidateDirective
   ],
   imports: [
     BrowserModule,
