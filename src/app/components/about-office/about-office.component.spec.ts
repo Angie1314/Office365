@@ -8,9 +8,9 @@ describe('AboutOfficeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutOfficeComponent ]
+      declarations: [AboutOfficeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

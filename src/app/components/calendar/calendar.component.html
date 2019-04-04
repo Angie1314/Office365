@@ -17,10 +17,15 @@
   <div class="parallax"></div>
 </nav> -->
 <mat-list>
-    <mat-list-item> Event 1</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item> Event 2</mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>  <p *ngIf="Calendar"> Event:{{ (Calendar)}}</p> </mat-list-item>
-    <mat-divider></mat-divider>
+  <mat-list-item> Event 1</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item> Event 2
+      <p *ngIf="calendar"> {{ (calendar| async).value[0].start.dateTime| date}}</p>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+    Event 3
+    <!-- <p *ngIf="calendar"> Event:{{ (calendar| async).vaule[0].subject}}</p> -->
+  </mat-list-item>
+  <mat-divider></mat-divider>
 </mat-list>

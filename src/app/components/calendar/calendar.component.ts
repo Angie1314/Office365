@@ -21,10 +21,10 @@ export class CalendarComponent implements OnInit {
   officeLogo = 'Office 365';
 
   calendar: Observable<Calendar>;
-  constructor(private Calendar:CalendarService) { }
+  constructor(private calendarService: CalendarService) { }
 
   ngOnInit() {
-    this.calendar = this.Calendar.getCalendar();
+    this.calendar = this.calendarService.getCalendar();
   }
   // profile: Observable<Profile>;
   // constructor(private graphApi: GraphApiService) { }
