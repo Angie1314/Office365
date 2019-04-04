@@ -1,4 +1,4 @@
 
 export interface Calendar {
-    subject: string;
+    event: string;
 }

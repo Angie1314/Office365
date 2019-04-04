@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mail-box.component.scss']
 })
 export class MailBoxComponent implements OnInit {
+  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
   icon = '../../../../assets/images/icon.png';
   settings = '../../../../assets/images/settings.png';
   help = '../../../../assets/images/help.png';
@@ -21,5 +22,4 @@ export class MailBoxComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

@@ -15,6 +15,6 @@ export class CalendarService {
   }
 
   getCalendar(): Observable<Calendar> {
-    return this.http.get<Calendar>(`${baseUrl}/me/calendar`);
+    return this.http.get<Calendar>(`${baseUrl}/me/events?$select=subject,body,bodyPreview,organizer,attendees,start,end,location`);
   }
 }

@@ -11,8 +11,11 @@ import { MatButtonModule,
          MatInputModule,
          MatProgressBarModule,
          MatRippleModule,
-         MatProgressSpinnerModule     
+         MatProgressSpinnerModule,
+         MatListModule    
  } 
+ 
+
  from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -32,7 +35,9 @@ import { FormsModule } from '@angular/forms';
               MatInputModule,
               FormsModule, 
               MatProgressBarModule, 
-              MatRippleModule],
+              MatRippleModule,
+              MatListModule
+            ],
     exports: [MatButtonModule, 
               MatProgressSpinnerModule,
               MatCheckboxModule, 
@@ -47,7 +52,9 @@ import { FormsModule } from '@angular/forms';
               MatInputModule,
               FormsModule, 
               MatProgressBarModule, 
-              MatRippleModule],
+              MatRippleModule,
+              MatListModule
+            ],
 
 
 })

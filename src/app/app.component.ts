@@ -17,6 +17,7 @@ export class AppComponent {
     arrowDown = 'keyboard_arrow_down';
     seeFeautesText = 'See Features';
     loginButton = 'Login';
+    logoutButton = 'Logout';
 
     constructor(private oauthService: OAuthService) {
         const config = openIdConfig as any;

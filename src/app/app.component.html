@@ -2,13 +2,12 @@
   <nav>
     <div class="alternate-theme parallax image button-login-feature centerize">
       <h2 class="mat-display-3">{{ officeLogo }}</h2>
-      <button *ngIf="!name;else content" class="btn btn-default" (click)="login()" class="ripple" mat-flat-button
+      <button *ngIf="!name;else content" (click)="login()" class="ripple" mat-flat-button
         color="primary" routerLink="/calendar">{{ loginButton }}</button>
       <ng-template #content>
         <h1>Hallo {{ name }}</h1>
-        
-        <button class="alternate-theme parallax image button-login-feature
-          centerize" (click)="logOut()">Logout </button>
+        <button (click)="logOut()">{{ Logout }}
+        </button>
       </ng-template>
       <button routerLink="/profile" [(ngModel)]="unbounded" class="ripple" mat-flat-button
         color="primary">{{ seeFeautesText }}
@@ -21,11 +20,13 @@
         <mat-icon>{{ arrowDown }}</mat-icon>
       </a>
     </mat-card>
+    <div class="alternate-theme button-login-feature centerize">
     <ng-template #content>
       <h1>Hallo {{ name }}.</h1>
       <a routerLink="/calendar"></a>
-      <button class="btn btn-default alternate-theme" (click)="logOut()">Logout</button>
+      <button (click)="logOut()">Logout</button>
     </ng-template>
+  </div>
     <mat-card>
       <mat-toolbar class="alternate-theme fixed-img">
         <span class="alternate-theme">
@@ -40,7 +41,7 @@
             <a routerLink="/help">Help</a></button>
         </mat-menu>
         <mat-toolbar color="accent">
-          <a routerLink="/login">Sign up</a>
+          <a routerLink="/login">Contacts</a>
         </mat-toolbar>
         <mat-toolbar color="accent">
           <p>

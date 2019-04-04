@@ -1,46 +1,26 @@
-<nav>
-  <div class="parallax"></div>
-  <mat-card>
-     
-    <mat-toolbar class="alternate-theme fixed-img">
-      <span class="alternate-theme">
-        <button mat-button>
-          <img src="{{ icon }}">
-        </button>
-      </span>
-      <mat-menu #appMenu="matMenu" class="accent">
-        <button mat-menu-item>
-          <img class="jpg-icon" src="{{ settings }}">
-          <a routerLink="/setting"> {{ settingsText }}</a></button>
-        <button mat-menu-item>
-          <img class="jpg-icon" src="{{ help }}">
-          <a routerLink="/help">{{ helpText }}</a></button>
-      </mat-menu>
-      <mat-toolbar color="accent">
-        <p class="logo">{{ officeLogo }}
-          <a routerLink="/login">{{ signupText }}</a>
-        </p>
-      </mat-toolbar>
-      <mat-toolbar color="accent">
-        <p>
-          <a routerLink="/mail-box"> {{ mailboxText }}</a>
-        </p>
-      </mat-toolbar>
-      <mat-toolbar color="accent">
-        <p>
-          <a routerLink="/calendar">{{ calendarText }}</a>
-        </p>
-      </mat-toolbar>
-      <button mat-icon-button [matMenuTriggerFor]="appMenu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-    </mat-toolbar>
+<!-- <nav>
+
+  <mat-card class="center-text">
+    <mat-card-title>Calendar Event Title</mat-card-title>
+    <mat-card-subtitle>Date/Time</mat-card-subtitle>
+    <mat-card-content>Info</mat-card-content>
+
+    <mat-card-title>Calendar Event Title</mat-card-title>
+    <mat-card-subtitle>Date/Time</mat-card-subtitle>
+    <mat-card-content>Info</mat-card-content>
+
+    <mat-card-title>Calendar Event Title</mat-card-title>
+    <mat-card-subtitle>Date/Time</mat-card-subtitle>
+    <mat-card-content>Info</mat-card-content>
+    <mat-divider></mat-divider>
   </mat-card>
-  <p *ngIf="calendar | async"> Photo:{{ (calendar | async)?.calendar }}</p>
-  <div layout="row" layout-margin layout-wrap layout-align="center center"></div>
-  <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
-    fxLayoutGap="0.5%" fxLayoutAlign="center">
-    <div fxFlex="20%">
-    </div>
-  </div>
-</nav>
+  <div class="parallax"></div>
+</nav> -->
+<mat-list>
+    <mat-list-item> Event 1</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item> Event 2</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>  <p *ngIf="Calendar"> Event:{{ (Calendar)}}</p> </mat-list-item>
+    <mat-divider></mat-divider>
+</mat-list>

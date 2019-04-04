@@ -17,8 +17,8 @@ import { MailBoxComponent } from './components/mail-box/mail-box.component';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
 import { MaterialModule } from './material';
+
 import { MatToolbarModule,
          MatIconModule,
          MatMenuModule,
@@ -31,6 +31,7 @@ import { MatToolbarModule,
          MatProgressBarModule,
          MatButtonModule,
          MatRippleModule,
+         MatListModule,
          
          } from '@angular/material';
 
@@ -52,7 +53,6 @@ import { TokenInterceptor } from 'src/interceptors/token-interceptor';
     AboutOfficeComponent,
     CustomValidateDirective,
     ProfileComponent,
-    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +77,7 @@ import { TokenInterceptor } from 'src/interceptors/token-interceptor';
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
+    MatListModule,
     OAuthModule.forRoot()
   ],
   providers: [{

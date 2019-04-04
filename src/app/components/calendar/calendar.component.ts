@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { Calendar }
 import { Calendar } from 'src/ models/calendar';
 import { Observable } from 'rxjs';
 import { CalendarService } from 'src/services/calendar.service';
@@ -25,7 +24,7 @@ export class CalendarComponent implements OnInit {
   constructor(private Calendar:CalendarService) { }
 
   ngOnInit() {
-    this.calendar = this.calendar.getCalendar();
+    this.calendar = this.Calendar.getCalendar();
   }
   // profile: Observable<Profile>;
   // constructor(private graphApi: GraphApiService) { }

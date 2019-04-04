@@ -17,7 +17,7 @@ export class GraphApiService {
   getProfile(): Observable<Profile> {
     return this.http.get<Profile>(`${baseUrl}/me/`);
   }
-  
+
   getPhoto(): Observable<Photo> {
     return this.http.get<Photo>(`${baseUrl}/me/photo/$value`);
   }
