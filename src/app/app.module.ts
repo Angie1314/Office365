@@ -1,37 +1,45 @@
 
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
 import { Routes, RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import simpleParallax from 'simple-parallax-js';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatStepperModule } from '@angular/material/stepper';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatCardModule } from '@angular/material/card';
-import { LoginComponent } from './login/login.component';
-import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatRippleModule } from '@angular/material/core';
-import { CalendarComponent } from './calendar/calendar.component';
-import { MailBoxComponent } from './mail-box/mail-box.component';
-import { HelpComponent } from './help/help.component';
-import { SettingComponent } from './setting/setting.component';
-import { OAuthModule, OAuthService, JwksValidationHandler } from 'angular-oauth2-oidc';
-import { HttpClientModule } from '@angular/common/http';
-import { AboutOfficeComponent } from './about-office/about-office.component';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
+
+import { LoginComponent } from './components/login/login.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { HelpComponent } from './components/help/help.component';
+import { SettingComponent } from './components/setting/setting.component';
+import { AboutOfficeComponent } from './components/about-office/about-office.component';
+import { MailBoxComponent } from './components/mail-box/mail-box.component';
+import { AppComponent } from './app.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+import { MaterialModule } from './material';
+import { MatToolbarModule,
+         MatIconModule,
+         MatMenuModule,
+         MatSidenavModule,
+         MatStepperModule,
+         MatFormFieldModule,
+         MatDividerModule,
+         MatCardModule,
+         MatInputModule,
+         MatProgressBarModule,
+         MatButtonModule,
+         MatRippleModule,
+         
+         } from '@angular/material';
+
 import { CustomValidateDirective } from '../directive/custom-validate.directive';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
+import { AppRoutingModule } from './app-routing.module';
+import { TokenInterceptor } from 'src/interceptors/token-interceptor';
 
 @NgModule({
   declarations: [
@@ -43,6 +51,8 @@ import { CustomValidateDirective } from '../directive/custom-validate.directive'
     SettingComponent,
     AboutOfficeComponent,
     CustomValidateDirective,
+    ProfileComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +60,7 @@ import { CustomValidateDirective } from '../directive/custom-validate.directive'
     MaterialModule,
     MatToolbarModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     MatMenuModule,
     MatSidenavModule,
     MatStepperModule,
@@ -68,7 +79,13 @@ import { CustomValidateDirective } from '../directive/custom-validate.directive'
     HttpClientModule,
     OAuthModule.forRoot()
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }
+  ],
   bootstrap: [AppComponent]
+   
 })
 export class AppModule { }

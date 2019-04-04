@@ -1,6 +1,7 @@
 <nav>
   <div class="parallax"></div>
   <mat-card>
+     
     <mat-toolbar class="alternate-theme fixed-img">
       <span class="alternate-theme">
         <button mat-button>
@@ -22,7 +23,7 @@
       </mat-toolbar>
       <mat-toolbar color="accent">
         <p>
-          <a routerLink="/mail-box"> {{ mailboxText }}}</a>
+          <a routerLink="/mail-box"> {{ mailboxText }}</a>
         </p>
       </mat-toolbar>
       <mat-toolbar color="accent">
@@ -35,6 +36,7 @@
       </button>
     </mat-toolbar>
   </mat-card>
+  <p *ngIf="calendar | async"> Photo:{{ (calendar | async)?.calendar }}</p>
   <div layout="row" layout-margin layout-wrap layout-align="center center"></div>
   <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
     fxLayoutGap="0.5%" fxLayoutAlign="center">

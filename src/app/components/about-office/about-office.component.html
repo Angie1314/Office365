@@ -34,5 +34,6 @@
      <mat-card-title>{{ matCardTitleCloud }}</mat-card-title>
      <p class="text-body">{{ matCardContentCloud }}</p>
      <img src="{{ imgComputer }}">
+     <p *ngIf="profile | async">{{ (profile | async)?.mail }}</p>
   </mat-card>
 </div>

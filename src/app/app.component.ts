@@ -55,6 +55,19 @@ export class AppComponent {
 
         return (claims as any).name;
     }
+
+    // public get photo(){
+    //     return =this.
+    // }
+    public get calendar(){
+        const claims = this.oauthService.getIdentityClaims();
+
+        if (!claims) {
+            return null;
+        }
+
+        return (claims as any).calendar;
+    }
 }
 
 

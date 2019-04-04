@@ -2,16 +2,15 @@
   <nav>
     <div class="alternate-theme parallax image button-login-feature centerize">
       <h2 class="mat-display-3">{{ officeLogo }}</h2>
-      <button *ngIf="!name;else content" class="btn btn-default"
-        (click)="login()" class="ripple" mat-flat-button
+      <button *ngIf="!name;else content" class="btn btn-default" (click)="login()" class="ripple" mat-flat-button
         color="primary" routerLink="/calendar">{{ loginButton }}</button>
       <ng-template #content>
-        <h1>Hallo {{ name }}.</h1>
+        <h1>Hallo {{ name }}</h1>
+        
         <button class="alternate-theme parallax image button-login-feature
           centerize" (click)="logOut()">Logout </button>
       </ng-template>
-      <button routerLink="/about-office" [(ngModel)]="unbounded" class="ripple"
-        mat-flat-button
+      <button routerLink="/profile" [(ngModel)]="unbounded" class="ripple" mat-flat-button
         color="primary">{{ seeFeautesText }}
       </button>
     </div>
@@ -25,7 +24,7 @@
     <ng-template #content>
       <h1>Hallo {{ name }}.</h1>
       <a routerLink="/calendar"></a>
-      <button class="btn btn-default alternate-themeß" (click)="logOut()">Logout</button>
+      <button class="btn btn-default alternate-theme" (click)="logOut()">Logout</button>
     </ng-template>
     <mat-card>
       <mat-toolbar class="alternate-theme fixed-img">
@@ -35,11 +34,9 @@
           </button>
         </span>
         <mat-menu #appMenu="matMenu" class="accent">
-          <button mat-menu-item><img class="jpg-icon"
-              src="../../../../assets/images/settings.png"><a
+          <button mat-menu-item><img class="jpg-icon" src="../../../../assets/images/settings.png"><a
               routerLink="/setting">Settings</a></button>
-          <button mat-menu-item><img class="jpg-icon"
-              src="../../../../assets/images/help.png">
+          <button mat-menu-item><img class="jpg-icon" src="../../../../assets/images/help.png">
             <a routerLink="/help">Help</a></button>
         </mat-menu>
         <mat-toolbar color="accent">
@@ -61,8 +58,7 @@
       </mat-toolbar>
     </mat-card>
     <div layout="row" layout-margin layout-wrap layout-align="center center"></div>
-    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
-      fxLayoutGap="0.5%" fxLayoutAlign="center">
+    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
       <div fxFlex="20%"></div>
     </div>
   </nav>

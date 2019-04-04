@@ -1,6 +1,6 @@
-import { Component} from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -15,7 +15,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent  {
+export class LoginComponent {
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
