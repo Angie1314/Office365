@@ -68,13 +68,6 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
   @include angular-material-theme($alternate-theme);
 }
 
-.vertical-divider {
-  border-top-width: 0;
-  border-right-width: 1px;
-  border-right-style: solid;
-  height: 100%;
-}
-
 .parallax {
   background-image: url("src/assets/images/pplWork.jpg");
   min-height: 500px;
