@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingComponent implements OnInit {
 
-  constructor() { }
-  icon = '../../../../assets/images/icon.png';
-  settings = '../../../../assets/images/settings.png';
-  help = '../../../../assets/images/help.png';
+  icon: string;
+  settings: string;
+  help: string;
+
+  constructor() {
+    this.icon = "../../../../assets/images/icon.png";
+    this.settings = "../../../../assets/images/settings.png";
+    this.help = "../../../../assets/images/help.png";
+  }
+
 
   settingsText = 'Settings';
   helpText = 'Help';

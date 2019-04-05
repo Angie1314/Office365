@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./help.component.scss']
 })
 export class HelpComponent implements OnInit {
-  icon = '../../../../assets/images/icon.png';
-  settings = '../../../../assets/images/settings.png';
-  help = '../../../../assets/images/help.png';
+  icon: string;
+  settings: string;
+  help: string;
 
   settingsText = 'Settings';
   helpText = 'Help';
@@ -17,8 +17,12 @@ export class HelpComponent implements OnInit {
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
 
-  constructor() { }
-
+  constructor() { 
+    this.icon = "../../../../assets/images/icon.png";
+    this.settings = "../../../../assets/images/settings.png";
+    this.help = "../../../../assets/images/help.png";
+  }
+ 
   ngOnInit() {
   }
 

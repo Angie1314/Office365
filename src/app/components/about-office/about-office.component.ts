@@ -6,15 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-office.component.scss']
 })
 export class AboutOfficeComponent implements OnInit {
-  imgEmail = '../../../../assets/images/email.png';
-  imgOneNote = '../../../../assets/images/oneNote.png';
-  imgWord = '../../../../assets/images/word.png';
-  imgExcel = '../../../../assets/images/excel.png';
-  imgPowerpoint = '../../../../assets/images/powerpoint.png';
-  imgAccess = '../../../../assets/images/access.png';
-  imgMonitor = '../../../../assets/images/monitor.png';
-  imgDevices = '../../../../assets/images/smartphones.png';
-  imgComputer = '../../../../assets/images/computer.png';
+
+  imgOneNote: string;
+  imgWord: string;
+  imgExcel: string;
+  imgPowerpoint: string;
+  imgAccess: string;
+  imgMonitor: string;
+  imgDevices: string;
+  imgComputer: string;
+
+  imgEmail: string;
+
+
+
 
   textForFeatures = 'It’s the tools you need Be more creative and achieve what matter';
   matCardTitleUpToDate = 'Up to date';
@@ -25,7 +30,17 @@ export class AboutOfficeComponent implements OnInit {
   matCardTitleCloud = 'Its is your great work, in the cloud';
   matCardContentCloud = 'OneDrive makes the work you do available to you from anywhere – and to others when you collaborate or share.';
 
-  constructor() { }
+  constructor() {
+    this.imgEmail = "../../../../assets/images/email.png";
+    this.imgOneNote = '../../../../assets/images/oneNote.png';
+    this.imgWord = '../../../../assets/images/word.png';
+    this.imgExcel = '../../../../assets/images/excel.png';
+    this.imgPowerpoint = '../../../../assets/images/powerpoint.png';
+    this.imgAccess = '../../../../assets/images/access.png';
+    this.imgMonitor = '../../../../assets/images/monitor.png';
+    this.imgDevices = '../../../../assets/images/smartphones.png';
+    this.imgComputer = '../../../../assets/images/computer.png';
+  }
 
   ngOnInit() {
   }

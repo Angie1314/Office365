@@ -59,3 +59,13 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 .panel-calendar {
   margin: 10px;
 }
+
+.ripple {
+  margin: 6px 12px 6px 0;
+}
+
+.button-login-feature button,
+.button-login-feature a {
+  margin-right: 8px;
+  position: relative;
+}

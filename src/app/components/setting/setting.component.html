@@ -4,15 +4,15 @@
         <mat-toolbar class="alternate-theme fixed-img">
             <span class="alternate-theme">
                 <button mat-button>
-                    <img src="{{ icon }}">
+                    <img [src]="icon">
                 </button>
             </span>
             <mat-menu #appMenu="matMenu" class="accent">
                 <button mat-menu-item>
-                    <img class="jpg-icon" src="{{ settings }}">
+                    <img [src]="settings">
                     <a routerLink="/setting"> {{ settingsText }}</a></button>
                 <button mat-menu-item>
-                    <img class="jpg-icon" src="{{ help }}">
+                    <img [src]="help">
                     <a routerLink="/help">{{ helpText }}</a></button>
             </mat-menu>
             <mat-toolbar color="accent">
@@ -36,8 +36,7 @@
         </mat-toolbar>
     </mat-card>
     <div layout="row" layout-margin layout-wrap layout-align="center center"></div>
-    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
-        fxLayoutGap="0.5%" fxLayoutAlign="center">
+    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
         <div fxFlex="20%">
         </div>
     </div>

@@ -4,6 +4,7 @@ import { JwksValidationHandler } from 'angular-oauth2-oidc';
 import { authConfig } from '../auth-config';
 import openIdConfig from '../openid-config.json';
 import openIdConfigKeys from '../openid-config.keys.json';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -19,7 +20,22 @@ export class AppComponent {
     loginButton = 'Login';
     logoutButton = 'Logout';
 
+    srcUrlFB: string;
+    srcUrlInstagram: string;
+    srcUrlTwitter: string;
+    icon: string;
+    settings: string;
+    help: string;
+
+
     constructor(private oauthService: OAuthService) {
+        this.srcUrlFB = "../../../../assets/images/fb.png";
+        this.srcUrlInstagram = "../../../../assets/images/instagram.png";
+        this.srcUrlTwitter = "../../../../assets/images/twitter.png";
+        this.icon = "../../../../assets/images/icon.png";
+        this.settings = "../../../../assets/images/settings.png";
+        this.help = "../../../../assets/images/help.png";
+
         const config = openIdConfig as any;
 
         Object.assign(authConfig, {
@@ -41,6 +57,7 @@ export class AppComponent {
 
     public login(): void {
         this.oauthService.initImplicitFlow();
+        
     }
 
     public logOut() {
@@ -60,7 +77,7 @@ export class AppComponent {
     // public get photo(){
     //     return =this.
     // }
-    public get calendar(){
+    public get calendar() {
         const claims = this.oauthService.getIdentityClaims();
 
         if (!claims) {

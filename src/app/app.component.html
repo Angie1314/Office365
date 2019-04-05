@@ -2,11 +2,11 @@
   <nav>
     <div class="alternate-theme parallax image button-login-feature centerize">
       <h2 class="mat-display-3">{{ officeLogo }}</h2>
-      <button *ngIf="!name;else content" (click)="login()" class="ripple" mat-flat-button
-        color="primary" routerLink="/calendar">{{ loginButton }}</button>
+      <button *ngIf="!name;else content" (click)="login()" class="ripple" mat-flat-button color="primary"
+        routerLink="/profile">{{ loginButton }}</button>
       <ng-template #content>
         <h1>Hallo {{ name }}</h1>
-        <button (click)="logOut()">{{ Logout }}
+        <button (click)="logOut()" mat-flat-button color="primary">{{ Logout }}
         </button>
       </ng-template>
       <button routerLink="/profile" [(ngModel)]="unbounded" class="ripple" mat-flat-button
@@ -21,23 +21,26 @@
       </a>
     </mat-card>
     <div class="alternate-theme button-login-feature centerize">
-    <ng-template #content>
-      <h1>Hallo {{ name }}.</h1>
-      <a routerLink="/calendar"></a>
-      <button (click)="logOut()">Logout</button>
-    </ng-template>
-  </div>
-    <mat-card>
+      <ng-template #content>
+        <h1>Hallo {{ name }}.</h1>
+        <a routerLink="/calendar"></a>
+        <button (click)="logOut()" mat-flat-button color="primary">Logout</button>
+      </ng-template>
+    </div>
+    <!-- <mat-card>
       <mat-toolbar class="alternate-theme fixed-img">
         <span class="alternate-theme">
           <button mat-button>
-            <img src="../../../../assets/images/icon.png">
+            <img [src]="icon">
           </button>
         </span>
         <mat-menu #appMenu="matMenu" class="accent">
-          <button mat-menu-item><img class="jpg-icon" src="../../../../assets/images/settings.png"><a
-              routerLink="/setting">Settings</a></button>
-          <button mat-menu-item><img class="jpg-icon" src="../../../../assets/images/help.png">
+          <button mat-menu-item>
+            <img class="jpg-icon" [src]="settings">
+            <a routerLink="/setting">Settings</a>
+          </button>
+          <button mat-menu-item>
+            <img class="jpg-icon" [src]="help">
             <a routerLink="/help">Help</a></button>
         </mat-menu>
         <mat-toolbar color="accent">
@@ -57,14 +60,31 @@
           <mat-icon>more_vert</mat-icon>
         </button>
       </mat-toolbar>
-    </mat-card>
-    <div layout="row" layout-margin layout-wrap layout-align="center center"></div>
-    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
-      <div fxFlex="20%"></div>
-    </div>
+    </mat-card> -->
   </nav>
 </header>
 <main>
   <router-outlet></router-outlet>
 </main>
-<footer></footer>
+<br />
+<br />
+<br />
+<br />
+<mat-divider></mat-divider>
+<footer>
+<br />
+<br />
+
+  <button>
+    <img class="jpg-icon" [src]="srcUrlFB">
+    <a href="https://www.linkedin.com/company/3509299"></a>
+  </button>
+  <button>
+    <img class="jpg-icon" [src]="srcUrlInstagram">
+    <a routerLink="/setting"></a>
+  </button>
+  <button>
+    <img class="jpg-icon" [src]="srcUrlTwitter">
+    <a routerLink="/setting"></a>
+  </button>
+</footer>

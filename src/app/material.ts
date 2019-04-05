@@ -12,9 +12,9 @@ import { MatButtonModule,
          MatProgressBarModule,
          MatRippleModule,
          MatProgressSpinnerModule,
-         MatListModule    
+         MatListModule,
+         MatGridListModule,  
  } 
- 
 
  from '@angular/material';
 
@@ -36,7 +36,8 @@ import { FormsModule } from '@angular/forms';
               FormsModule, 
               MatProgressBarModule, 
               MatRippleModule,
-              MatListModule
+              MatListModule,
+              MatGridListModule
             ],
     exports: [MatButtonModule, 
               MatProgressSpinnerModule,
@@ -53,7 +54,8 @@ import { FormsModule } from '@angular/forms';
               FormsModule, 
               MatProgressBarModule, 
               MatRippleModule,
-              MatListModule
+              MatListModule,
+              MatGridListModule
             ],
 
 

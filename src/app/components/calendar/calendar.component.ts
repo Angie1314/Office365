@@ -9,9 +9,9 @@ import { CalendarService } from 'src/services/calendar.service';
   styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent implements OnInit {
-  icon = '../../../../assets/images/icon.png';
-  settings = '../../../../assets/images/settings.png';
-  help = '../../../../assets/images/help.png';
+  icon: string;
+  settings: string;
+  help: string;
 
   settingsText = 'Settings';
   helpText = 'Help';
@@ -25,6 +25,10 @@ export class CalendarComponent implements OnInit {
 
   ngOnInit() {
     this.calendar = this.calendarService.getCalendar();
+
+    this.icon = "../../../../assets/images/icon.png";
+    this.settings = "../../../../assets/images/settings.png";
+    this.help = "../../../../assets/images/help.png";
   }
   // profile: Observable<Profile>;
   // constructor(private graphApi: GraphApiService) { }

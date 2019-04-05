@@ -4,15 +4,15 @@
     <mat-toolbar class="alternate-theme fixed-img">
       <span class="alternate-theme">
         <button mat-button>
-          <img src="{{ icon }}">
+          <img [src]="icon">
         </button>
       </span>
       <mat-menu #appMenu="matMenu" class="accent">
         <button mat-menu-item>
-          <img class="jpg-icon" src="{{ settings }}">
+            <img [src]="settings">
           <a routerLink="/setting"> {{ settingsText }}</a></button>
         <button mat-menu-item>
-          <img class="jpg-icon" src="{{ help }}">
+          <img [src]="help">
           <a routerLink="/help">{{ helpText }}</a></button>
       </mat-menu>
       <mat-toolbar color="accent">

@@ -1,4 +1,4 @@
-<p class="about-office mat-display-3">
+<p class="text-heading">
    About Office 365
 </p>
 
@@ -7,28 +7,28 @@
       <mat-card-title>{{ matCardTitleFeatures }}</mat-card-title>
       <p class="text-body">{{ textForFeatures }}</p>
       <button mat-button>
-         <img src="{{ imgEmail }}">
-         <img src="{{ imgOneNote }}">
-         <img src="{{ imgWord }}">
-         <img src="{{ imgExcel }}">
-         <img src="{{ imgPowerpoint }}">
-         <img src="{{ imgAccess }}">
+         <img [src]="imgEmail">
+         <img [src]="imgOneNote">
+         <img [src]="imgWord">
+         <img [src]="imgExcel">
+         <img [src]="imgPowerpoint">
+         <img [src]="imgAccess">
       </button>
    </mat-card>
    <mat-card class="item item-5 features" fxFlex="300px">
       <mat-card-title>{{ matCardTitleUpToDate }}</mat-card-title>
       <p class="text-body">{{ upToDateText }}</p>
-      <img src="{{ imgMonitor }}">
+      <img [src]="imgMonitor">
    </mat-card>
    <mat-card class="item item-5 features" fxFlex="300px">
       <mat-card-title>{{ devicesMatCardTitle }}</mat-card-title>
       <p class="text-body">{{ devicesMatCardContent }}</p>
-      <img src="{{ imgDevices }}">
+      <img [src]="imgDevices">
    </mat-card>
    <mat-card class="item item-5 features" fxFlex="300px">
       <mat-card-title>{{ matCardTitleCloud }}</mat-card-title>
       <p class="text-body">{{ matCardContentCloud }}</p>
-      <img src="{{ imgComputer }}">
+      <img [src]="imgComputer">
       <p *ngIf="profile | async">{{ (profile | async)?.mail }}</p>
    </mat-card>
 </div>

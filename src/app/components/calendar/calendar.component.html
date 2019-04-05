@@ -1,30 +1,35 @@
 <nav>
 
-  <mat-card class="center-text">
-    <mat-card-title>
+  <mat-card>
+    <mat-divider></mat-divider>
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="calendar">Date: {{ (calendar| async).value[0].start.dateTime| date  }}</p>
+      </mat-card-subtitle>
       <p *ngIf="calendar"> {{ (calendar| async).value[0].subject }}</p>
     </mat-card-title>
-    <mat-card-subtitle>
-       <p *ngIf="calendar">Date: {{ (calendar| async).value[0].start.dateTime| date  }}</p>
-    </mat-card-subtitle>
+
     <p *ngIf="calendar"> {{ (calendar| async).value[0].bodyPreview }}</p>
+    <br />
     <mat-divider></mat-divider>
 
-    <mat-card-title>
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="calendar">Date: {{ (calendar| async).value[1].start.dateTime| date }}</p>
+      </mat-card-subtitle>
       <p *ngIf="calendar"> {{ (calendar| async).value[1].subject }}</p>
     </mat-card-title>
-    <mat-card-subtitle>
-      <p *ngIf="calendar">Date: {{ (calendar| async).value[1].start.dateTime| date }}</p>
-    </mat-card-subtitle>
+
     <p *ngIf="calendar"> {{ (calendar| async).value[1].bodyPreview }}</p>
+    <br />
     <mat-divider></mat-divider>
 
-    <mat-card-title>
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="calendar">Date: {{ (calendar| async).value[2].start.dateTime| date }}</p>
+      </mat-card-subtitle>
       <p *ngIf="calendar"> {{ (calendar| async).value[2].subject }}</p>
     </mat-card-title>
-    <mat-card-subtitle>
-      <p *ngIf="calendar">Date: {{ (calendar| async).value[2].start.dateTime| date }}</p>
-    </mat-card-subtitle>
     <p *ngIf="calendar"> {{ (calendar| async).value[2].bodyPreview }}</p>
   </mat-card>
 </nav>

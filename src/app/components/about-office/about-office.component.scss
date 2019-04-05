@@ -1,21 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
 
-$about-office-font: "Cinzel", serif;
+$about-office-font: 'Righteous', cursive;
+$text-body-size:2em;
 $text-body-text: "Source Sans Pro", sans-serif;
+$color-for-feature-text:#2196F3;
+$button-font:'Righteous', cursive;
+$button-font-size:2em;
+$alignment-of-text:center;
 
-.about-office {
-  font-family: $about-office-font;
-  text-align: center;
+.text-heading {
+  font-size: $button-font-size;
+  font-family: $button-font;
+  color: $color-for-feature-text;
+  text-align: $alignment-of-text;
 }
 
 .features {
   font-family: $about-office-font;
-  color: blue;
+  color:$color-for-feature-text;
 }
 
 .text-body {
   font-family: $text-body-text;
-  size: 14px;
+  size: $text-body-size;
   color: rgb(104, 98, 98);
 }

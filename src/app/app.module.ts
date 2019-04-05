@@ -32,9 +32,10 @@ import { MatToolbarModule,
          MatButtonModule,
          MatRippleModule,
          MatListModule,
+         MatGridListModule,
          
          } from '@angular/material';
-
+         
 import { CustomValidateDirective } from '../directive/custom-validate.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -78,6 +79,7 @@ import { TokenInterceptor } from 'src/interceptors/token-interceptor';
     AppRoutingModule,
     HttpClientModule,
     MatListModule,
+    MatGridListModule,
     OAuthModule.forRoot()
   ],
   providers: [{
