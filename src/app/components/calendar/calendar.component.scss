@@ -12,6 +12,11 @@ $calendar-font-size:2em;
 $calendar-font-color:#2196F3;
 $calendar-alignment-of-text:center;
 
+$button-font:'Righteous', cursive;
+$button-font-size:2em;
+$button-font-color:#2196F3;
+$alignment-of-text:center;
+
 @include angular-material-theme($my-app-theme);
 
 .alternate-theme {
@@ -21,12 +26,6 @@ $calendar-alignment-of-text:center;
   @include angular-material-theme($alternate-theme);
 }
 
-.vertical-divider {
-  border-top-width: 0;
-  border-right-width: 1px;
-  border-right-style: solid;
-  height: 100%;
-}
 .parallax {
   background-image: url("src/assets/images/calendar.jpg");
   min-height: 500px;
@@ -35,7 +34,7 @@ $calendar-alignment-of-text:center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-ß
+
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -65,4 +64,16 @@ $calendar-alignment-of-text:center;
   color: $calendar-font-color;
   border-width: 1px;
   border-style: solid;
+}
+
+.button-font {
+  font-size: $button-font-size;
+  font-family: $button-font;
+  color: $button-font-color;
+  text-align: $alignment-of-text;
+  border: 0;
+}
+
+mat-grid-tile {
+  background: lightblue;
 }

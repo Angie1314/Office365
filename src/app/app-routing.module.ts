@@ -6,10 +6,10 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { HelpComponent } from './components/help/help.component';
 import { SettingComponent } from './components/setting/setting.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
-import { Profile } from 'selenium-webdriver/firefox';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactaddComponent } from './components/contactadd/contactadd.component';
+import { TasksComponent } from './components/tasks/tasks.component';
 
 const routes: Routes = [
   {
@@ -56,6 +56,10 @@ const routes: Routes = [
   {
     path: 'contactadd',
     component: ContactaddComponent
+  },
+  {
+    path: 'tasks',
+    component: TasksComponent
   }
 ];
 

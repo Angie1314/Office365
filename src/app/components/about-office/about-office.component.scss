@@ -9,6 +9,7 @@ $color-for-feature-text:#2196F3;
 $button-font:'Righteous', cursive;
 $button-font-size:2em;
 $alignment-of-text:center;
+$text-body-color:rgb(104, 98, 98);
 
 .text-heading {
   font-size: $button-font-size;
@@ -25,5 +26,5 @@ $alignment-of-text:center;
 .text-body {
   font-family: $text-body-text;
   size: $text-body-size;
-  color: rgb(104, 98, 98);
+  color:$text-body-color;
 }

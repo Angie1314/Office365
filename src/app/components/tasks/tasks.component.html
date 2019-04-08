@@ -1,0 +1,36 @@
+<p class="button-font">
+  Conference Rooms
+</p>
+
+<div fxLayout="row" fxLayoutAlign="start center">
+  <mat-card fxFlex="70%">
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="task">Room Name: {{ (task| async).value[0].name  }}</p>
+      </mat-card-subtitle>
+      <p *ngIf="task"> {{ (task| async).value[0].address }}</p>
+    </mat-card-title>
+  </mat-card>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="start center">
+    <mat-card fxFlex="70%">
+      <mat-card-title class="calendar-heading">
+        <mat-card-subtitle>
+          <p *ngIf="task">Room Name: {{ (task| async).value[1].name  }}</p>
+        </mat-card-subtitle>
+        <p *ngIf="task"> {{ (task| async).value[1].address }}</p>
+      </mat-card-title>
+    </mat-card>
+  </div>
+
+<div fxLayout="row" fxLayoutAlign="start center">
+    <mat-card fxFlex="70%">
+      <mat-card-title class="calendar-heading">
+        <mat-card-subtitle>
+          <p *ngIf="task">Room Name: {{ (task| async).value[1].name  }}</p>
+        </mat-card-subtitle>
+        <p *ngIf="task"> {{ (task| async).value[1].address }}</p>
+      </mat-card-title>
+    </mat-card>
+  </div>

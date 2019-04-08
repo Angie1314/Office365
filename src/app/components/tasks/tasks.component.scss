@@ -1,0 +1,88 @@
+
+@import "~@angular/material/theming";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-blue);
+$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+$min-widths: 600px;
+$max-widths: 800px;
+
+$button-font:'Righteous', cursive;
+$button-font-size:2em;
+$button-font-color:#2196F3;
+$alignment-of-text:center;
+
+$calendar-font:'Righteous', cursive;
+$calendar-font-size:2em;
+$calendar-font-color:#2196F3;
+$calendar-alignment-of-text:center;
+
+@include angular-material-theme($my-app-theme);
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-blue);
+  $alternate-accent: mat-palette($mat-pink, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
+.calendar-heading {
+    font-family: $calendar-font;
+    size: $calendar-font-size;
+    color:$calendar-font-color;
+  }
+  
+.button-font {
+    font-size: $button-font-size;
+    font-family: $button-font;
+    color: $button-font-color;
+    text-align: $alignment-of-text;
+    border: 0;
+}
+
+.mat-divider{
+    color: $calendar-font-color;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+.button-size {
+    width: 80%;
+    height: 80%;
+    border: 0;
+    padding: 50px;
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.button-size:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  @mixin min {
+    @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
+      @content;
+      word-wrap: break-word;
+      img.img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  
+  @mixin max {
+    @media (min-width: #{$max-widths}) {
+      @content;
+      word-wrap: break-word;
+      img.img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+

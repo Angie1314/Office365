@@ -1,59 +1,7 @@
 @import "~@angular/material/theming";
+@import"src/app/components/contact/variables.scss";
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
-@include mat-core();
 
-$my-app-primary: mat-palette($mat-blue);
-$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
-$my-app-warn: mat-palette($mat-deep-orange);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
-
-$calendar-font:'Righteous', cursive;
-$calendar-font-size:2em;
-$calendar-font-color:#2196F3;
-$calendar-alignment-of-text:center;
-
-$button-font:'Righteous', cursive;
-$button-font-size:2em;
-$button-font-color:#2196F3;
-$alignment-of-text:center;
-
-@include angular-material-theme($my-app-theme);
-
-.alternate-theme {
-  $alternate-primary: mat-palette($mat-light-blue);
-  $alternate-accent: mat-palette($mat-teal, 400);
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
-  @include angular-material-theme($alternate-theme);
-}
-
-.vertical-divider {
-  border-top-width: 0;
-  border-right-width: 1px;
-  border-right-style: solid;
-  height: 100%;
-}
-
-.parallax {
-  background-image: url("src/assets/images/calendar.jpg");
-  min-height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.center-content {
-  align-items: center;
-  justify-content: center;
-}
 
 .calendar-heading {
   font-family: $calendar-font;
@@ -63,14 +11,14 @@ $alignment-of-text:center;
 
 .mat-divider{
   color: $calendar-font-color;
-  border-width: 1px;
-  border-style: solid;
+  border-width: $mat-div-and-card-border-width;
+  border-style: $mat-div-and-card-border-style;
 }
 
 .mat-card{
   color: $calendar-font-color;
-  border-width: 1px;
-  border-style: solid;
+  border-width: $mat-div-and-card-border-width;
+  border-style: $mat-div-and-card-border-style;
 }
 
 .button-font {
@@ -78,6 +26,6 @@ $alignment-of-text:center;
     font-family: $button-font;
     color: $button-font-color;
     text-align: $alignment-of-text;
-    border: 0;
+    border: $mat-button-font-border;
   }
 

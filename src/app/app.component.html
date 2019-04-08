@@ -5,15 +5,19 @@
       <button *ngIf="!name;else content" (click)="login()" class="ripple" mat-flat-button color="primary"
         routerLink="/profile">{{ loginButton }}
       </button>
+
       <ng-template #content>
         <h1>Hallo {{ name }}</h1>
         <button (click)="logOut()" mat-flat-button color="primary">{{ Logout }}
         </button>
       </ng-template>
+
       <button routerLink="/profile" [(ngModel)]="unbounded" class="ripple" mat-flat-button
         color="primary">{{ seeFeautesText }}
       </button>
+
     </div>
+
     <mat-card id="my_centered_button" class="fade x-hidden-focus">
       <a mat-fab routerLink="/about-office" aria-label="Down
         keyboard_arrow_down">
@@ -21,6 +25,7 @@
         <mat-icon>{{ arrowDown }}</mat-icon>
       </a>
     </mat-card>
+
     <div class="alternate-theme button-login-feature centerize">
       <ng-template #content>
         <h1>Hallo {{ name }}.</h1>
@@ -28,7 +33,9 @@
         <button (click)="logOut()" mat-flat-button color="primary">Logout</button>
       </ng-template>
     </div>
+
   </nav>
+
 </header>
 <main>
   <router-outlet></router-outlet>
@@ -37,26 +44,29 @@
   <br />
   <br />
   <br />
+
   <mat-divider></mat-divider>
+
   <button mat-button>
     <img class="jpg-icon" [src]="srcUrlFB">
     <a href="https://www.linkedin.com/company/3509299"></a>
   </button>
+
   <button mat-button>
     <img class="jpg-icon" [src]="srcUrlInstagram">
     <a routerLink="/contact"></a>
   </button>
+
   <button mat-button>
     <img class="jpg-icon" [src]="srcUrlTwitter">
     <a routerLink="/setting"></a>
   </button>
+
 </main>
+
 <footer>
   <br />
   <br />
-  <p class="mat-display-1">
-    Office Use 365
-  </p>
 
   <p class="mat-display-1">
     Contact Us

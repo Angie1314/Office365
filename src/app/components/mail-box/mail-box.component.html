@@ -1,8 +1,8 @@
 <mat-card class="panel-calendar ">
   <mat-card-title class="button-font">
     MailBox
-    <div class="sidenav-content ripple button-login-feature button alternate-theme  ">
-      <button type="button" md-button (click)="sidenav.open()">
+    <div class="sidenav-content ripple">
+      <button type="button" md-button (click)="sidenav.open()" mat-flat-button color="primary">
         See Mail
       </button>
     </div>
@@ -15,7 +15,7 @@
           <mat-divider></mat-divider>
           <mat-list-item *ngIf="email">{{ (email| async).value[1].subject }}</mat-list-item> 
           <mat-divider></mat-divider>
-          <mat-list-item *ngIf="email">{{ (email| async).value[3].subject }}</mat-list-item>
+          <mat-list-item *ngIf="email">{{ (email| async).value[2].subject }}</mat-list-item>
           <mat-divider></mat-divider>
         </mat-list>
       </mat-sidenav>

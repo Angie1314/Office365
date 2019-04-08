@@ -1,3 +1,4 @@
+<p class="button-font"> Calendar Events</p>
 <nav>
   <div fxLayout="row" fxLayoutAlign="start center">
     <mat-card fxFlex="70%">
@@ -32,16 +33,13 @@
       <p *ngIf="calendar"> {{ (calendar| async).value[2].bodyPreview }}</p>
     </mat-card>
   </div>
-  <div class="example-button-row" fxFlex="30%" *ngIf="calendar"> 
+
+
+  <div class="example-button-row" fxFlex="30%" *ngIf="calendar">
+
     {{ (calendar| async).value[0].start.dateTime| date:"MMMM" }}
     <button mat-fab>{{ (calendar| async).value[0].start.dateTime| date:"dd" }}</button>
     <button mat-fab color="primary">{{ (calendar| async).value[1].start.dateTime| date:"dd" }}</button>
     <button mat-fab color="accent">{{ (calendar| async).value[2].start.dateTime| date:"dd" }}</button>
-    <button mat-fab color="warn">Warn</button>
-    <button mat-fab disabled>Disabled</button>
-    <button mat-fab>
-      <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-    </button>
-    <a mat-fab routerLink=".">Link</a>
   </div>
 </nav>
