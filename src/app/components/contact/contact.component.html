@@ -1,0 +1,105 @@
+<br />
+<br />
+
+<button mat-flat-button color="primary" routerLink="/contactadd"> Add contact </button>
+<p class="button-font"> Contact Cards</p>
+<!-- <mat-toolbar class="alternate-theme fixed-img">
+  <span class="alternate-theme">
+    <button mat-button>
+      <img [src]="icon">
+    </button>
+  </span>
+  <mat-menu #appMenu="matMenu" class="accent">
+    <button mat-menu-item>
+      <img class="jpg-icon" [src]="settings">
+      <a routerLink="/setting">Settings</a>
+    </button>
+    <button mat-menu-item>
+      <img class="jpg-icon" [src]="help">
+      <a routerLink="/help">Help</a></button>
+  </mat-menu>
+  <mat-toolbar color="accent">
+    <a routerLink="/login">Contacts</a>
+  </mat-toolbar>
+  <mat-toolbar color="accent">
+    <p>
+      <a routerLink="/mail-box">Mailbox</a>
+    </p>
+  </mat-toolbar>
+  <mat-toolbar color="accent">
+    <p>
+      <a routerLink="/calendar">Calendar</a>
+    </p>
+  </mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar> -->
+<br />
+<br />
+<div fxLayout="row" fxLayoutAlign="start center">
+  <mat-card fxFlex="70%">
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="contact">Company Name: {{ (contact| async).value[0].companyName }}</p>
+      </mat-card-subtitle>
+      <p *ngIf="contact">{{ (contact| async).value[0].displayName }}</p>
+    </mat-card-title>
+    <!-- <p *ngIf="contact">Surname: {{ (contact| async).value[0].surname }}</p> -->
+    <p *ngIf="contact">Mobile Number: {{ (contact| async).value[0].mobilePhone}}</p>
+  </mat-card>
+  <br />
+  <mat-card fxFlex="70%">
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="contact">Company Name: {{ (contact| async).value[1].companyName }}</p>
+      </mat-card-subtitle>
+      <p *ngIf="contact">{{ (contact| async).value[1].displayName }}</p>
+    </mat-card-title>
+    <!-- <p *ngIf="contact">Surname: {{ (contact| async).value[1].surname }}</p> -->
+    <p *ngIf="contact">Mobile Number: {{ (contact| async).value[1].mobilePhone}}</p>
+  </mat-card>
+  <br />
+  <mat-card fxFlex="70%">
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="contact">Company Name: {{ (contact| async).value[2].companyName }}</p>
+      </mat-card-subtitle>
+      <p *ngIf="contact">{{ (contact| async).value[2].displayName }}</p>
+    </mat-card-title>
+    <!-- <p *ngIf="contact">Surname: {{ (contact| async).value[1].surname }}</p> -->
+    <p *ngIf="contact">Mobile Number: {{ (contact| async).value[2].mobilePhone}}</p>
+  </mat-card>
+</div>
+<div fxLayout="row" fxLayoutAlign="start center">
+  <mat-card fxFlex="70%">
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="contact">Company Name: {{ (contact| async).value[3].companyName }}</p>
+      </mat-card-subtitle>
+      <p *ngIf="contact">{{ (contact| async).value[3].displayName }}</p>
+    </mat-card-title>
+    <!-- <p *ngIf="contact">Surname: {{ (contact| async).value[1].surname }}</p> -->
+    <p *ngIf="contact">Mobile Number: {{ (contact| async).value[3].mobilePhone}}</p>
+  </mat-card>
+  <mat-card fxFlex="70%">
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="contact">Company Name: {{ (contact| async).value[4].companyName }}</p>
+      </mat-card-subtitle>
+      <p *ngIf="contact">{{ (contact| async).value[4].displayName }}</p>
+    </mat-card-title>
+    <!-- <p *ngIf="contact">Surname: {{ (contact| async).value[1].surname }}</p> -->
+    <p *ngIf="contact">Mobile Number: {{ (contact| async).value[4].mobilePhone}}</p>
+  </mat-card>
+  <mat-card fxFlex="70%">
+    <mat-card-title class="calendar-heading">
+      <mat-card-subtitle>
+        <p *ngIf="contact">Company Name: {{ (contact| async).value[5].companyName }}</p>
+      </mat-card-subtitle>
+      <p *ngIf="contact">{{ (contact| async).value[5].displayName }}</p>
+    </mat-card-title>
+    <!-- <p *ngIf="contact">Surname: {{ (contact| async).value[1].surname }}</p> -->
+    <p *ngIf="contact">Mobile Number: {{ (contact| async).value[5].mobilePhone}}</p>
+  </mat-card>
+  </div>

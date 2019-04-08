@@ -1,0 +1,28 @@
+<form fxLayout="column" fxFlex="100%" fxFlex.gt-sm="40%" [ngFormOptions]="{ updateOn: 'blur' }" (ngSubmit)="submit()" #form="ngForm">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput name="hero" [(ngModel)]="hero.name" required #name="ngModel">
+      <mat-error *ngIf="name.hasError('required')">
+        Name is required.
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+        <input matInput placeholder="Enter your email" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+          <input matInput placeholder="Enter your email" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field>
+            <input matInput placeholder="Enter your email" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+  
+    <div fxLayout="row" fxLayoutAlign="flex-end" fxLayoutGap="8px">
+      <button type="submit" [disabled]="form.invalid" mat-flat-button color="primary">Add</button>
+    </div>
+    </form>

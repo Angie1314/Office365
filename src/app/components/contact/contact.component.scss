@@ -7,6 +7,11 @@ $my-app-accent: mat-palette($mat-pink, 500, 900, A100);
 $my-app-warn: mat-palette($mat-deep-orange);
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 
+$calendar-font:'Righteous', cursive;
+$calendar-font-size:2em;
+$calendar-font-color:#2196F3;
+$calendar-alignment-of-text:center;
+
 $button-font:'Righteous', cursive;
 $button-font-size:2em;
 $button-font-color:#2196F3;
@@ -29,7 +34,7 @@ $alignment-of-text:center;
 }
 
 .parallax {
-  background-image: url("src/assets/images/ideation.jpg");
+  background-image: url("src/assets/images/calendar.jpg");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -45,41 +50,34 @@ $alignment-of-text:center;
   width: 100%;
 }
 
-.side-container {
-  width: 100%;
-  height: 300px;
-  border: 1px solid rgba(111, 111, 111, 0.50);
-}
-
-.sidenav-content {
-  display: flex;
-  height: 100%;
+.center-content {
   align-items: center;
   justify-content: center;
 }
 
-.sidenav {
-  padding: 20px;
+.calendar-heading {
+  font-family: $calendar-font;
+  size: $calendar-font-size;
+  color:$calendar-font-color;
 }
 
-.panel-calendar {
-  margin: 10px;
+.mat-divider{
+  color: $calendar-font-color;
+  border-width: 1px;
+  border-style: solid;
 }
 
-.ripple {
-  margin: 6px 12px 6px 0;
-}
-
-.button-login-feature button,
-.button-login-feature a {
-  margin-right: 8px;
-  position: relative;
+.mat-card{
+  color: $calendar-font-color;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .button-font {
-  font-size: $button-font-size;
-  font-family: $button-font;
-  color: $button-font-color;
-  text-align: $alignment-of-text;
-  border: 0;
-}
+    font-size: $button-font-size;
+    font-family: $button-font;
+    color: $button-font-color;
+    text-align: $alignment-of-text;
+    border: 0;
+  }
+

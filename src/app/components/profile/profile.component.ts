@@ -16,6 +16,7 @@ export interface Tile {
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  seeFeautesText = 'Dashboard';
 
   profile: Observable<Profile>;
   officeMailImg: string;
@@ -45,7 +46,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.profile = this.graphApi.getProfile();
-    // this.photo=this.graphApi.getPhoto();
   }
 
 }

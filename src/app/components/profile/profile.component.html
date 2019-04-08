@@ -2,6 +2,7 @@
   <!-- <mat-card-title>
     <p *ngIf="profile | async"> Email:{{ (profile | async)?.mail }}</p>
   </mat-card-title> -->
+
   <mat-divider></mat-divider>
 </mat-card>
 <mat-card>
@@ -12,22 +13,22 @@
     <mat-grid-list cols="4" [style.background]="'#2196F3'">
       <mat-grid-tile>
           <button class="button-size" mat-menu-item>
-            <a routerLink="/mail-box"><img [src]="officeMailImg "></a>
+            <a routerLink="/mail-box"><img class="img" [src]="officeMailImg"></a>
           </button>
       </mat-grid-tile>
       <mat-grid-tile>
           <button class="button-size" mat-menu-item>
-            <a routerLink="/setting"><img [src]="officeContacts"></a>
+            <a routerLink="/contact"><img class="img" [src]="officeContacts"></a>
           </button>
       </mat-grid-tile>
       <mat-grid-tile>
           <button class="button-size" mat-menu-item>
-            <a routerLink="/help"><img [src]="officeTaskImg"></a>
+            <a routerLink="/help"><img class="img" [src]="officeTaskImg"></a>
           </button>
       </mat-grid-tile>
       <mat-grid-tile>
           <button class="button-size" mat-menu-item>
-            <a routerLink="/calendar"><img [src]="officeCalendar"></a>
+            <a routerLink="/calendar"><img class="img" [src]="officeCalendar"></a>
           </button>
       </mat-grid-tile>
     </mat-grid-list>

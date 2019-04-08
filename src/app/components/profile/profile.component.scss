@@ -7,6 +7,8 @@ $my-app-primary: mat-palette($mat-blue);
 $my-app-accent: mat-palette($mat-pink, 500, 900, A100);
 $my-app-warn: mat-palette($mat-deep-orange);
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+$min-widths: 600px;
+$max-widths: 800px;
 
 $button-font:'Righteous', cursive;
 $button-font-size:2em;
@@ -30,6 +32,11 @@ $alignment-of-text:center;
     border: 0;
 }
 
+// .responsive {
+//     width: 100px;
+//     height: 100px;
+//   }
+
 .button-size {
     width: 80%;
     height: 80%;
@@ -40,7 +47,30 @@ $alignment-of-text:center;
     height: 200px;
     margin: 0 auto;
 }
+
 .button-size:hover {
     transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  @mixin min {
+    @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
+      @content;
+      word-wrap: break-word;
+      img.img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  
+  @mixin max {
+    @media (min-width: #{$max-widths}) {
+      @content;
+      word-wrap: break-word;
+      img.img {
+        width: 100px;
+        height: 100px;
+      }
+    }
   }
 

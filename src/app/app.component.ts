@@ -16,7 +16,7 @@ export class AppComponent {
     title = 'OfficeApp';
     officeLogo = 'Welcome to Office 365';
     arrowDown = 'keyboard_arrow_down';
-    seeFeautesText = 'See Features';
+    seeFeautesText = 'Dashboard';
     loginButton = 'Login';
     logoutButton = 'Logout';
 

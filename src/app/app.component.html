@@ -3,7 +3,8 @@
     <div class="alternate-theme parallax image button-login-feature centerize">
       <h2 class="mat-display-3">{{ officeLogo }}</h2>
       <button *ngIf="!name;else content" (click)="login()" class="ripple" mat-flat-button color="primary"
-        routerLink="/profile">{{ loginButton }}</button>
+        routerLink="/profile">{{ loginButton }}
+      </button>
       <ng-template #content>
         <h1>Hallo {{ name }}</h1>
         <button (click)="logOut()" mat-flat-button color="primary">{{ Logout }}
@@ -27,64 +28,37 @@
         <button (click)="logOut()" mat-flat-button color="primary">Logout</button>
       </ng-template>
     </div>
-    <!-- <mat-card>
-      <mat-toolbar class="alternate-theme fixed-img">
-        <span class="alternate-theme">
-          <button mat-button>
-            <img [src]="icon">
-          </button>
-        </span>
-        <mat-menu #appMenu="matMenu" class="accent">
-          <button mat-menu-item>
-            <img class="jpg-icon" [src]="settings">
-            <a routerLink="/setting">Settings</a>
-          </button>
-          <button mat-menu-item>
-            <img class="jpg-icon" [src]="help">
-            <a routerLink="/help">Help</a></button>
-        </mat-menu>
-        <mat-toolbar color="accent">
-          <a routerLink="/login">Contacts</a>
-        </mat-toolbar>
-        <mat-toolbar color="accent">
-          <p>
-            <a routerLink="/mail-box">Mailbox</a>
-          </p>
-        </mat-toolbar>
-        <mat-toolbar color="accent">
-          <p>
-            <a routerLink="/calendar">Calendar</a>
-          </p>
-        </mat-toolbar>
-        <button mat-icon-button [matMenuTriggerFor]="appMenu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-      </mat-toolbar>
-    </mat-card> -->
   </nav>
 </header>
 <main>
   <router-outlet></router-outlet>
-</main>
-<br />
-<br />
-<br />
-<br />
-<mat-divider></mat-divider>
-<footer>
-<br />
-<br />
 
-  <button>
+  <br />
+  <br />
+  <br />
+  <br />
+  <mat-divider></mat-divider>
+  <button mat-button>
     <img class="jpg-icon" [src]="srcUrlFB">
     <a href="https://www.linkedin.com/company/3509299"></a>
   </button>
-  <button>
+  <button mat-button>
     <img class="jpg-icon" [src]="srcUrlInstagram">
-    <a routerLink="/setting"></a>
+    <a routerLink="/contact"></a>
   </button>
-  <button>
+  <button mat-button>
     <img class="jpg-icon" [src]="srcUrlTwitter">
     <a routerLink="/setting"></a>
   </button>
+</main>
+<footer>
+  <br />
+  <br />
+  <p class="mat-display-1">
+    Office Use 365
+  </p>
+
+  <p class="mat-display-1">
+    Contact Us
+  </p>
 </footer>

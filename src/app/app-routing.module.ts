@@ -8,7 +8,8 @@ import { SettingComponent } from './components/setting/setting.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
 import { Profile } from 'selenium-webdriver/firefox';
 import { ProfileComponent } from './components/profile/profile.component';
-
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactaddComponent } from './components/contactadd/contactadd.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,14 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+    path: 'contactadd',
+    component: ContactaddComponent
   }
 ];
 

@@ -16,6 +16,8 @@ import { AboutOfficeComponent } from './components/about-office/about-office.com
 import { MailBoxComponent } from './components/mail-box/mail-box.component';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactaddComponent } from './components/contactadd/contactadd.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MaterialModule } from './material';
 
@@ -43,6 +45,8 @@ import { OAuthModule } from 'angular-oauth2-oidc';
 import { AppRoutingModule } from './app-routing.module';
 import { TokenInterceptor } from 'src/interceptors/token-interceptor';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +58,8 @@ import { TokenInterceptor } from 'src/interceptors/token-interceptor';
     AboutOfficeComponent,
     CustomValidateDirective,
     ProfileComponent,
+    ContactComponent,
+    ContactaddComponent,
   ],
   imports: [
     BrowserModule,

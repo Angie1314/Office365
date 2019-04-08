@@ -109,8 +109,13 @@ a {
   text-decoration: none;
 }
 
-#my_centered_button {
+.mat-display-1 {
+  color:lighten($color: #2196F3, $amount: 35);
+  
+}
+
+footer {
   display: flex;
+  align-items: center;
   justify-content: center;
-  opacity: 1;
 }

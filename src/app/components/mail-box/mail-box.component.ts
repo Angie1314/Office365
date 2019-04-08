@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Email } from 'src/ models/email';
+import { Observable } from 'rxjs';
+import { EmailService } from 'src/services/email.service';
 @Component({
   selector: 'app-mail-box',
   templateUrl: './mail-box.component.html',
@@ -17,9 +19,12 @@ export class MailBoxComponent implements OnInit {
   mailboxText = 'Mail Box';
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
+  email: Observable<Email>;
+  constructor(private emailService: EmailService) { 
 
-  constructor() { }
+  }
 
   ngOnInit() {
+    this.email = this.emailService.getEmail();
   }
 }
