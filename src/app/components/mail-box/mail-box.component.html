@@ -13,19 +13,16 @@
       <mat-sidenav #sidenav class="sidenav">
         <mat-list>
           <mat-list-item *ngIf="email">{{ (email| async).value[0].subject }}
-            <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
           </mat-list-item>
 
           <mat-divider></mat-divider>
-
+          
           <mat-list-item *ngIf="email">{{ (email| async).value[1].subject }}
-            <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
           </mat-list-item>
 
           <mat-divider></mat-divider>
 
           <mat-list-item *ngIf="email">{{ (email| async).value[2].subject }}
-            <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
           </mat-list-item>
 
           <mat-divider></mat-divider>
