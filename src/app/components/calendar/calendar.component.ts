@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Calendar } from 'src/ models/calendar';
 import { Observable } from 'rxjs';
 import { CalendarService } from 'src/services/calendar.service';
-
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',

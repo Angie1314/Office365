@@ -1,28 +1,11 @@
 
 @import "~@angular/material/theming";
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
-@include mat-core();
-
-$my-app-primary: mat-palette($mat-blue);
-$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
-$my-app-warn: mat-palette($mat-deep-orange);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
-$min-widths: 600px;
-$max-widths: 800px;
 
 $button-font:'Righteous', cursive;
 $button-font-size:2em;
 $button-font-color:#2196F3;
 $alignment-of-text:center;
-
-@include angular-material-theme($my-app-theme);
-
-.alternate-theme {
-  $alternate-primary: mat-palette($mat-blue);
-  $alternate-accent: mat-palette($mat-pink, 400);
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
-  @include angular-material-theme($alternate-theme);
-}
 
 .button-font {
     font-size: $button-font-size;
@@ -32,24 +15,19 @@ $alignment-of-text:center;
     border: 0;
 }
 
-// .responsive {
-//     width: 100px;
-//     height: 100px;
-//   }
-
 .button-size {
     width: 80%;
     height: 80%;
     border: 0;
     padding: 50px;
-    transition: transform .2s; /* Animation */
+    transition: transform .2s;
     width: 200px;
     height: 200px;
     margin: 0 auto;
 }
 
 .button-size:hover {
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.5);
   }
 
   @mixin min {

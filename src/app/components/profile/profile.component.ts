@@ -3,7 +3,6 @@ import { GraphApiService } from 'src/services/graph-api.service';
 import { Observable } from 'rxjs';
 import { Profile } from 'src/ models/profile';
 import { Photo } from 'src/ models/photo';
-
 export interface Tile {
   cols: number;
   rows: number;
@@ -15,6 +14,7 @@ export interface Tile {
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
+
 export class ProfileComponent implements OnInit {
   seeFeautesText = 'Dashboard';
 
@@ -30,7 +30,6 @@ export class ProfileComponent implements OnInit {
     this.officeCalendar = "../../../../assets/images/officeCalendar.png";
     this.officeContacts= "../../../../assets/images/officeContacts.png";
   }
-
 
   color = 'primary';
   mode = 'determinate';

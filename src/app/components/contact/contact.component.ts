@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/ models/contact';
 import { Observable } from 'rxjs';
 import { ContactService } from 'src/services/contact.service';
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',

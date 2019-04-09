@@ -39,6 +39,7 @@ import { FormsModule } from '@angular/forms';
               MatListModule,
               MatGridListModule
             ],
+
     exports: [MatButtonModule, 
               MatProgressSpinnerModule,
               MatCheckboxModule, 
@@ -60,6 +61,7 @@ import { FormsModule } from '@angular/forms';
 
 
 })
+
 export class MaterialModule {
 
 }

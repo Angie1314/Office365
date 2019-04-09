@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-setting',
   templateUrl: './setting.component.html',
   styleUrls: ['./setting.component.scss']
 })
 export class SettingComponent implements OnInit {
-
   icon: string;
   settings: string;
   help: string;
@@ -16,7 +14,6 @@ export class SettingComponent implements OnInit {
     this.settings = "../../../../assets/images/settings.png";
     this.help = "../../../../assets/images/help.png";
   }
-
 
   settingsText = 'Settings';
   helpText = 'Help';

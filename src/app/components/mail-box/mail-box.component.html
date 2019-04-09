@@ -7,23 +7,36 @@
       </button>
     </div>
   </mat-card-title>
+
   <mat-card-content>
     <mat-sidenav-container class="side-container">
       <mat-sidenav #sidenav class="sidenav">
         <mat-list>
           <mat-list-item *ngIf="email">{{ (email| async).value[0].subject }}</mat-list-item>
+
           <mat-divider></mat-divider>
-          <mat-list-item *ngIf="email">{{ (email| async).value[1].subject }}</mat-list-item> 
+
+          <mat-list-item *ngIf="email">{{ (email| async).value[1].subject }}</mat-list-item>
+
           <mat-divider></mat-divider>
+
           <mat-list-item *ngIf="email">{{ (email| async).value[2].subject }}</mat-list-item>
+
           <mat-divider></mat-divider>
         </mat-list>
       </mat-sidenav>
     </mat-sidenav-container>
-
   </mat-card-content>
-
 </mat-card>
+
+
+
+
+
+
+
+
+
 
 
 

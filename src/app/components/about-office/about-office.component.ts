@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './about-office.component.html',
   styleUrls: ['./about-office.component.scss']
 })
+
 export class AboutOfficeComponent implements OnInit {
 
   imgOneNote: string;
@@ -15,11 +16,7 @@ export class AboutOfficeComponent implements OnInit {
   imgMonitor: string;
   imgDevices: string;
   imgComputer: string;
-
   imgEmail: string;
-
-
-
 
   textForFeatures = 'It’s the tools you need Be more creative and achieve what matter';
   matCardTitleUpToDate = 'Up to date';

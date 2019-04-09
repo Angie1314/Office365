@@ -19,7 +19,9 @@ export class MailBoxComponent implements OnInit {
   mailboxText = 'Mail Box';
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
+
   email: Observable<Email>;
+  
   constructor(private emailService: EmailService) { 
 
   }

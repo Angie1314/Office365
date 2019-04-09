@@ -46,9 +46,6 @@ import { OAuthModule } from 'angular-oauth2-oidc';
 import { AppRoutingModule } from './app-routing.module';
 import { TokenInterceptor } from 'src/interceptors/token-interceptor';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
