@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit {
   icon: string;
   settings: string;
   help: string;
+  avatar: string;
 
   settingsText = 'Settings';
   helpText = 'Help';
@@ -20,6 +21,8 @@ export class ContactComponent implements OnInit {
   officeLogo = 'Office 365';
 
   contact: Observable<Contact>;
+ 
+ 
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
@@ -28,5 +31,6 @@ export class ContactComponent implements OnInit {
     this.icon = "../../../../assets/images/icon.png";
     this.settings = "../../../../assets/images/settings.png";
     this.help = "../../../../assets/images/help.png";
+    this.avatar = "../../../../assets/images/avatar.png";
   }
 }

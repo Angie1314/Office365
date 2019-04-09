@@ -9,6 +9,7 @@
 <div fxLayout="row" fxLayoutAlign="start center">
   <mat-card fxFlex="70%">
     <mat-card-title class="calendar-heading">
+      <img class="jpg-icon left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company Name: {{ (contact| async).value[0].companyName }}</p>
       </mat-card-subtitle>
@@ -21,6 +22,7 @@
 
   <mat-card fxFlex="70%">
     <mat-card-title class="calendar-heading">
+      <img class="jpg-icon left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company Name: {{ (contact| async).value[1].companyName }}</p>
       </mat-card-subtitle>
@@ -33,6 +35,7 @@
 
   <mat-card fxFlex="70%">
     <mat-card-title class="calendar-heading">
+      <img class="jpg-icon left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company Name: {{ (contact| async).value[2].companyName }}</p>
       </mat-card-subtitle>
@@ -45,6 +48,7 @@
 <div fxLayout="row" fxLayoutAlign="start center">
   <mat-card fxFlex="70%">
     <mat-card-title class="calendar-heading">
+      <img class="jpg-icon left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company Name: {{ (contact| async).value[3].companyName }}</p>
       </mat-card-subtitle>
@@ -55,6 +59,7 @@
 
   <mat-card fxFlex="70%">
     <mat-card-title class="calendar-heading">
+      <img class="jpg-icon left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company Name: {{ (contact| async).value[4].companyName }}</p>
       </mat-card-subtitle>
@@ -62,9 +67,10 @@
     </mat-card-title>
     <p *ngIf="contact">Mobile Number: {{ (contact| async).value[4].mobilePhone}}</p>
   </mat-card>
-  
+
   <mat-card fxFlex="70%">
     <mat-card-title class="calendar-heading">
+      <img class="jpg-icon left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company Name: {{ (contact| async).value[5].companyName }}</p>
       </mat-card-subtitle>

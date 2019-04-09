@@ -2,7 +2,6 @@
 @import"src/app/components/contact/variables.scss";
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
 
-
 .calendar-heading {
   font-family: $calendar-font;
   size: $calendar-font-size;
@@ -27,5 +26,9 @@
     color: $button-font-color;
     text-align: $alignment-of-text;
     border: $mat-button-font-border;
+  }
+
+  .left-align-element{
+    float:$item-float;
   }
 

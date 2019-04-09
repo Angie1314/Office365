@@ -1,10 +1,4 @@
-<mat-card>
-  <!-- <mat-card-title>
-    <p *ngIf="profile | async"> Email:{{ (profile | async)?.mail }}</p>
-  </mat-card-title> -->
-
-  <mat-divider></mat-divider>
-</mat-card>
+<mat-divider></mat-divider>
 
 <mat-card>
   <mat-card-title class="button-font">
@@ -14,27 +8,27 @@
   <mat-card-content>
     <mat-grid-list cols="4" [style.background]="'#2196F3'">
       <mat-grid-tile>
-          <button class="button-size" mat-menu-item>
-            <a routerLink="/mail-box"><img class="img" [src]="officeMailImg"></a>
-          </button>
+        <button class="button-size" mat-menu-item>
+          <a routerLink="/mail-box"><img class="img" [src]="officeMailImg"></a>
+        </button>
       </mat-grid-tile>
 
       <mat-grid-tile>
-          <button class="button-size" mat-menu-item>
-            <a routerLink="/contact"><img class="img" [src]="officeContacts"></a>
-          </button>
+        <button class="button-size" mat-menu-item>
+          <a routerLink="/contact"><img class="img" [src]="officeContacts"></a>
+        </button>
       </mat-grid-tile>
 
       <mat-grid-tile>
-          <button class="button-size" mat-menu-item>
-            <a routerLink="/tasks"><img class="img" [src]="officeTaskImg"></a>
-          </button>
+        <button class="button-size" mat-menu-item>
+          <a routerLink="/tasks"><img class="img" [src]="officeTaskImg"></a>
+        </button>
       </mat-grid-tile>
-      
+
       <mat-grid-tile>
-          <button class="button-size" mat-menu-item>
-            <a routerLink="/calendar"><img class="img" [src]="officeCalendar"></a>
-          </button>
+        <button class="button-size" mat-menu-item>
+          <a routerLink="/calendar"><img class="img" [src]="officeCalendar"></a>
+        </button>
       </mat-grid-tile>
     </mat-grid-list>
   </mat-card-content>
