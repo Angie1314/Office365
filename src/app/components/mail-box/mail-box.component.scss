@@ -54,3 +54,12 @@ $item-float:right;
 .left-align-element{
   float:$item-float;
 }
+
+.parallax {
+  background-image: url("src/assets/images/mailbox.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
