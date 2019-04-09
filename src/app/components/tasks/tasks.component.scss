@@ -12,6 +12,8 @@ $calendar-font-size:2em;
 $calendar-font-color:#2196F3;
 $calendar-alignment-of-text:center;
 
+$item-float:right;
+
 .calendar-heading {
     font-family: $calendar-font;
     size: $calendar-font-size;
@@ -53,4 +55,9 @@ $calendar-alignment-of-text:center;
       }
     }
   }
+
+  .left-align-element{
+    float:$item-float;
+  }
+
 

@@ -20,7 +20,10 @@ export class CalendarComponent implements OnInit {
   officeLogo = 'Office 365';
 
   calendar: Observable<Calendar>;
-  constructor(private calendarService: CalendarService) { }
+  avatar: string;
+  constructor(private calendarService: CalendarService) { 
+    this.avatar = "../../../../assets/images/date.png";
+  }
 
   ngOnInit() {
     this.calendar = this.calendarService.getCalendar();
@@ -30,3 +33,5 @@ export class CalendarComponent implements OnInit {
     this.help = "../../../../assets/images/help.png";
   }
 }
+
+

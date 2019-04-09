@@ -1,5 +1,3 @@
-<button routerLink="/profile" [(ngModel)]="unbounded" class="ripple" mat-flat-button color="primary">Dashboard</button>
-
 <mat-card class="panel-calendar ">
   <mat-card-title class="button-font">
     MailBox
@@ -14,15 +12,21 @@
     <mat-sidenav-container class="side-container">
       <mat-sidenav #sidenav class="sidenav">
         <mat-list>
-          <mat-list-item *ngIf="email">{{ (email| async).value[0].subject }}</mat-list-item>
+          <mat-list-item *ngIf="email">{{ (email| async).value[0].subject }}
+            <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
+          </mat-list-item>
 
           <mat-divider></mat-divider>
 
-          <mat-list-item *ngIf="email">{{ (email| async).value[1].subject }}</mat-list-item>
+          <mat-list-item *ngIf="email">{{ (email| async).value[1].subject }}
+            <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
+          </mat-list-item>
 
           <mat-divider></mat-divider>
 
-          <mat-list-item *ngIf="email">{{ (email| async).value[2].subject }}</mat-list-item>
+          <mat-list-item *ngIf="email">{{ (email| async).value[2].subject }}
+            <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
+          </mat-list-item>
 
           <mat-divider></mat-divider>
         </mat-list>

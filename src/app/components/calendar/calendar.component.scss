@@ -17,6 +17,8 @@ $button-font-size:2em;
 $button-font-color:#2196F3;
 $alignment-of-text:center;
 
+$item-float:right;
+
 @include angular-material-theme($my-app-theme);
 
 .alternate-theme {
@@ -77,3 +79,7 @@ $alignment-of-text:center;
 mat-grid-tile {
   background: lightblue;
 }
+.left-align-element{
+  float:$item-float;
+}
+

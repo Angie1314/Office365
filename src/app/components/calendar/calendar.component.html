@@ -3,6 +3,7 @@
   <div fxLayout="row" fxLayoutAlign="start center">
     <mat-card fxFlex="70%">
       <mat-card-title class="calendar-heading">
+        <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
         <mat-card-subtitle>
           <p *ngIf="calendar">Date: {{ (calendar| async).value[0].start.dateTime| date  }}</p>
         </mat-card-subtitle>
@@ -14,6 +15,7 @@
       <mat-divider></mat-divider>
 
       <mat-card-title class="calendar-heading">
+        <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
         <mat-card-subtitle>
           <p *ngIf="calendar">Date: {{ (calendar| async).value[1].start.dateTime| date }}</p>
         </mat-card-subtitle>
@@ -27,6 +29,7 @@
       <mat-divider></mat-divider>
 
       <mat-card-title class="calendar-heading">
+        <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
         <mat-card-subtitle>
           <p *ngIf="calendar">Date: {{ (calendar| async).value[2].start.dateTime| date }}</p>
         </mat-card-subtitle>

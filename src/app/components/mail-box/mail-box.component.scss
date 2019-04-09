@@ -20,6 +20,7 @@ $side-nav-padding:20px;
 $panel-calendar-margin:10px;
 
 $button-font-border:0;
+$item-float:right;
 
 .side-container {
   width: $side-container-width;
@@ -48,4 +49,8 @@ $button-font-border:0;
   color: $button-font-color;
   text-align: $alignment-of-text;
   border: $button-font-border;
+}
+
+.left-align-element{
+  float:$item-float;
 }

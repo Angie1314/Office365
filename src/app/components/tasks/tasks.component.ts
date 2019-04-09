@@ -9,10 +9,16 @@ import { TaskService } from 'src/services/task.service';
 })
 
 export class TasksComponent implements OnInit {
+  
   task: Observable<Task>;
-  constructor(private taskService: TaskService) { }
+  avatar: string;
+  
+  constructor(private taskService: TaskService) { 
+    this.avatar = "../../../../assets/images/rooms.png";
+  }
 
   ngOnInit() {
     this.task = this.taskService.getTask();
   }
+ 
 }

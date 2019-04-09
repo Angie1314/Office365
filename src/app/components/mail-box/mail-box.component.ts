@@ -21,9 +21,10 @@ export class MailBoxComponent implements OnInit {
   officeLogo = 'Office 365';
 
   email: Observable<Email>;
-  
-  constructor(private emailService: EmailService) { 
+  avatar: string;
 
+  constructor(private emailService: EmailService) {
+    this.avatar = "../../../../assets/images/emails.png";
   }
 
   ngOnInit() {
