@@ -1,4 +1,5 @@
 <p class="button-font"> Calendar Events</p>
+
 <nav>
   <div fxLayout="row" fxLayoutAlign="start center">
     <mat-card fxFlex="70%">
@@ -38,7 +39,6 @@
       <p *ngIf="calendar"> {{ (calendar| async).value[2].bodyPreview }}</p>
     </mat-card>
   </div>
-
 
   <div class="example-button-row" fxFlex="30%" *ngIf="calendar">
 

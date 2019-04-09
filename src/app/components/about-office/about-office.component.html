@@ -15,6 +15,7 @@
          <img [src]="imgAccess">
       </button>
    </mat-card>
+
    <mat-card class="item item-5 features" fxFlex="300px">
       <mat-card-title>{{ matCardTitleUpToDate }}</mat-card-title>
       <p class="text-body">{{ upToDateText }}</p>
@@ -30,7 +31,7 @@
    <mat-card class="item item-5 features" fxFlex="300px">
       <mat-card-title>{{ matCardTitleCloud }}</mat-card-title>
       <p class="text-body">{{ matCardContentCloud }}</p>
-      <img [src]="imgComputer">
+      <img [src]="imgComputer" alt="computer image">
       <p *ngIf="profile | async">{{ (profile | async)?.mail }}</p>
    </mat-card>
 </div>

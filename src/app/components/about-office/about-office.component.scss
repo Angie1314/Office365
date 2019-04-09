@@ -1,15 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
-
-$about-office-font: 'Righteous', cursive;
-$text-body-size:2em;
-$text-body-text: "Source Sans Pro", sans-serif;
-$color-for-feature-text:#2196F3;
-$button-font:'Righteous', cursive;
-$button-font-size:2em;
-$alignment-of-text:center;
-$text-body-color:rgb(104, 98, 98);
+@import"src/app/components/about-office/variables.scss";
 
 .text-heading {
   font-size: $button-font-size;
