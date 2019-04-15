@@ -2,17 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { GraphApiService } from 'src/services/graph-api.service';
 import { Observable } from 'rxjs';
 import { Profile } from 'src/ models/profile';
-import { Photo } from 'src/ models/photo';
-export interface Tile {
-  cols: number;
-  rows: number;
-  text: string;
-  border: string;
-}
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
+})
+@NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class ProfileComponent implements OnInit {
@@ -23,25 +20,16 @@ export class ProfileComponent implements OnInit {
   officeTaskImg: string;
   officeCalendar: string;
   officeContacts: string;
+  icon: string;
 
   constructor(private graphApi: GraphApiService) {
     this.officeMailImg = "../../../../assets/images/officeMail.png";
     this.officeTaskImg= "../../../../assets/images/officeTask.png";
-    this.officeCalendar = "../../../../assets/images/officeCalendar.png";
+    this.officeCalendar = "../../../../assets/images/officeCalendar.jpeg";
     this.officeContacts= "../../../../assets/images/officeContacts.png";
+    this.icon = "../../../../assets/images/icon.png";
   }
-
-  color = 'primary';
-  mode = 'determinate';
-  value = 50;
-
   imgAccess = '../../../../assets/images/access.png';
-  tiles: Tile[] = [
-    { text: 'Tile 1', cols: 2, rows: 1, border: '3px double #2196F3' },
-    { text: 'Tile 2', cols: 2, rows: 1, border: '3px double #2196F3' },
-    { text: 'Tile 3', cols: 2, rows: 1, border: '3px double #2196F3' },
-    { text: 'Tile 4', cols: 2, rows: 1, border: '3px double #2196F3' },
-  ];
 
   ngOnInit() {
     this.profile = this.graphApi.getProfile();

@@ -1,0 +1,28 @@
+
+$item-float-left:left;
+$item-float-right:right;
+$mat-card-profile-pic:transparent !important;
+$item-float-center:center;
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
+
+$office-logo: "serif";
+
+.align-left {
+  float:$item-float-left;
+}
+
+.align-right {
+  float:$item-float-right;
+
+}
+
+.align-center {
+  float: $item-float-center;
+}
+
+.mat-card-background{
+  background-color: $mat-card-profile-pic;
+  font-family: $office-logo;
+  border: none !important;
+  color: black;
+}

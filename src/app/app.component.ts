@@ -4,13 +4,15 @@ import { JwksValidationHandler } from 'angular-oauth2-oidc';
 import { authConfig } from '../auth-config';
 import openIdConfig from '../openid-config.json';
 import openIdConfigKeys from '../openid-config.keys.json';
-import { RouterLink } from '@angular/router';
-
+import { Photo } from 'src/ models/photo';
+import { Observable } from 'rxjs';
+import { PhotoService } from 'src/services/photo.service';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
+
 
 export class AppComponent {
     title = 'OfficeApp';
@@ -26,17 +28,22 @@ export class AppComponent {
     icon: string;
     settings: string;
     help: string;
+    avatarImg: string;
 
+    photo: Observable<Photo>;
 
-    constructor(private oauthService: OAuthService) {
+    constructor(private oauthService: OAuthService ,private photoservice: PhotoService) {
         this.srcUrlFB = "../../../../assets/images/fb.png";
         this.srcUrlInstagram = "../../../../assets/images/instagram.png";
         this.srcUrlTwitter = "../../../../assets/images/twitter.png";
         this.icon = "../../../../assets/images/icon.png";
         this.settings = "../../../../assets/images/settings.png";
         this.help = "../../../../assets/images/help.png";
+        this.avatarImg= "../../../../assets/images/a2.jpg";
 
         const config = openIdConfig as any;
+        this.photo = this.photoservice.getPhoto();
+
 
         Object.assign(authConfig, {
             loginUrl: config.authorization_endpoint,
@@ -74,18 +81,6 @@ export class AppComponent {
         return (claims as any).name;
     }
 
-    // public get photo(){
-    //     return =this.
-    // }
-    public get calendar() {
-        const claims = this.oauthService.getIdentityClaims();
-
-        if (!claims) {
-            return null;
-        }
-
-        return (claims as any).calendar;
-    }
 }
 
 

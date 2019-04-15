@@ -4,7 +4,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
 
@@ -19,23 +19,27 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactaddComponent } from './components/contactadd/contactadd.component';
 import { TasksComponent } from './components/tasks/tasks.component';
+import { NewEventComponent } from './components/new-event/new-event.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { MaterialModule } from './material';
 
+
+import {MatGridListModule} from '@angular/material/grid-list';
+
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 import { MatToolbarModule,
-         MatIconModule,
          MatMenuModule,
          MatSidenavModule,
          MatStepperModule,
          MatFormFieldModule,
          MatDividerModule,
-         MatCardModule,
          MatInputModule,
          MatProgressBarModule,
          MatButtonModule,
          MatRippleModule,
          MatListModule,
-         MatGridListModule,
+         MatCheckboxModule,
          
          } from '@angular/material';
          
@@ -45,6 +49,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { AppRoutingModule } from './app-routing.module';
 import { TokenInterceptor } from 'src/interceptors/token-interceptor';
+// import { SearchComponent } from './components/search/search.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -60,11 +66,15 @@ import { TokenInterceptor } from 'src/interceptors/token-interceptor';
     ContactComponent,
     ContactaddComponent,
     TasksComponent,
+    NewEventComponent,
+    AppComponent,
+    // SearchComponent,
+
   ],
+  
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
     MatToolbarModule,
     MatIconModule,
     MatProgressSpinnerModule,
@@ -86,15 +96,40 @@ import { TokenInterceptor } from 'src/interceptors/token-interceptor';
     HttpClientModule,
     MatListModule,
     MatGridListModule,
+    NgxPageScrollCoreModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
     OAuthModule.forRoot()
+  ],
+  exports: [MatButtonModule, 
+    MatProgressSpinnerModule,
+    MatCheckboxModule, 
+    MatToolbarModule,
+    MatIconModule, 
+    MatMenuModule, 
+    MatSidenavModule,
+    MatStepperModule, 
+    MatFormFieldModule, 
+    MatDividerModule,
+    MatCardModule, 
+    MatInputModule,
+    FormsModule, 
+    MatProgressBarModule, 
+    MatRippleModule,
+    MatListModule,
+    MatGridListModule,
+    MatDatepickerModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true
-  }
+  },
+  
   ],
-  bootstrap: [AppComponent]
-   
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA ]
+ 
 })
 export class AppModule { }

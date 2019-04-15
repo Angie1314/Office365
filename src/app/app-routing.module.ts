@@ -9,21 +9,36 @@ import { AboutOfficeComponent } from './components/about-office/about-office.com
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactaddComponent } from './components/contactadd/contactadd.component';
+import { AppComponent } from '../../src/app/app.component';
 import { TasksComponent } from './components/tasks/tasks.component';
+import { NewEventComponent } from './components/new-event/new-event.component';
 
 const routes: Routes = [
+  {
+    path: 'app',
+    component: AppComponent
+  },
+
   {
     path: 'profile',
     component: ProfileComponent
   },
+
   {
     path: 'login',
     component: LoginComponent
   },
 
+  { path: 'logout/:id',      
+    component: AppComponent },
   {
     path: 'mail-box',
     component: MailBoxComponent
+  },
+
+  {
+    path: 'new-event',
+    component: NewEventComponent
   },
 
   {
@@ -45,18 +60,22 @@ const routes: Routes = [
     path: 'about-office',
     component: AboutOfficeComponent
   },
+
   {
     path: 'profile',
     component: ProfileComponent
   },
+
   {
     path: 'contact',
     component: ContactComponent
   },
+
   {
     path: 'contactadd',
     component: ContactaddComponent
   },
+
   {
     path: 'tasks',
     component: TasksComponent

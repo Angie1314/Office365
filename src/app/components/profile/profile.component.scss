@@ -19,7 +19,7 @@ $alignment-of-text:center;
     width: 80%;
     height: 80%;
     border: 0;
-    padding: 50px;
+    padding: 30px;
     transition: transform .2s;
     width: 200px;
     height: 200px;
@@ -34,9 +34,9 @@ $alignment-of-text:center;
     @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
       @content;
       word-wrap: break-word;
-      img.img {
-        width: 100px;
-        height: 100px;
+      .button-size {
+        width: 48px;
+        height: 48px;
       }
     }
   }
@@ -45,9 +45,10 @@ $alignment-of-text:center;
     @media (min-width: #{$max-widths}) {
       @content;
       word-wrap: break-word;
-      img.img {
-        width: 100px;
-        height: 100px;
+      .button-size{
+          img.img{
+        width: 48px;
+        height: 48px;}
       }
     }
   }

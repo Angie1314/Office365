@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Email } from 'src/ models/email';
 import { Observable } from 'rxjs';
 import { EmailService } from 'src/services/email.service';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+@NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
 @Component({
   selector: 'app-mail-box',
   templateUrl: './mail-box.component.html',

@@ -2,6 +2,8 @@
 @import"src/app/components/contact/variables.scss";
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
 
+$mat-card-padding: 10px ;
+
 .calendar-heading {
   font-family: $calendar-font;
   size: $calendar-font-size;
@@ -18,6 +20,10 @@
   color: $calendar-font-color;
   border-width: $mat-div-and-card-border-width;
   border-style: $mat-div-and-card-border-style;
+  padding:$mat-card-padding;
+  margin-left: $mat-card-padding;
+  margin-bottom:$mat-card-padding;
+  margin-right: $mat-card-padding;
 }
 
 .button-font {
@@ -40,4 +46,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+ 
+
+ 
 

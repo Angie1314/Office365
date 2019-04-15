@@ -1,3 +1,7 @@
+import { MatIcon } from '@angular/material';
+
 export interface Photo {
-    photo: string;
+   size:string;
+   width:Int16Array;
+   height:Int16Array;
 }

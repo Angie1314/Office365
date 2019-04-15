@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
 import { Email } from 'src/ models/email';
-
 
 const baseUrl = 'https://graph.microsoft.com/v1.0';
 

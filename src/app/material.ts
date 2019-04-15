@@ -1,25 +1,25 @@
 import { MatButtonModule, 
          MatCheckboxModule,
          MatToolbarModule,
-         MatIconModule,
          MatMenuModule,
          MatSidenavModule,
          MatStepperModule,
          MatFormFieldModule,
          MatDividerModule,
-         MatCardModule,
          MatInputModule,
          MatProgressBarModule,
          MatRippleModule,
          MatProgressSpinnerModule,
          MatListModule,
-         MatGridListModule,  
- } 
+       
+ } from '@angular/material';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
- from '@angular/material';
-
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 @NgModule({
     imports: [MatButtonModule,
               MatProgressSpinnerModule,
@@ -37,7 +37,8 @@ import { FormsModule } from '@angular/forms';
               MatProgressBarModule, 
               MatRippleModule,
               MatListModule,
-              MatGridListModule
+              MatGridListModule,
+              MatDatepickerModule,
             ],
 
     exports: [MatButtonModule, 
@@ -56,10 +57,10 @@ import { FormsModule } from '@angular/forms';
               MatProgressBarModule, 
               MatRippleModule,
               MatListModule,
-              MatGridListModule
+              MatGridListModule,
+              MatDatepickerModule,
             ],
-
-
+            schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
 })
 
 export class MaterialModule {

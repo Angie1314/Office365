@@ -3,4 +3,4 @@ export interface Profile {
     givenName: string;
     mail: string;
     surname: string;
-}
+} 

@@ -1,21 +1,30 @@
 <header>
   <nav>
-    <div class="alternate-theme parallax image button-login-feature centerize">
-      <h2 class="mat-display-3">{{ officeLogo }}</h2>
-      <button *ngIf="!name;else content" (click)="login()" class="ripple" mat-flat-button color="primary"
-        routerLink="/profile">{{ loginButton }}
-      </button>
-
-      <ng-template #content>
-        <h1>Hallo {{ name }}</h1>
-        <button (click)="logOut()" mat-flat-button color="primary">{{ Logout }}
+    <mat-card>
+      <div class="alternate-theme parallax image button-login-feature centerize" >
+        <h2 class="mat-display-3">{{ officeLogo }}</h2>
+        <button *ngIf="!name;else content" (click)="login()" class="ripple align-right" mat-flat-button color="primary"
+          routerLink="/profile">{{ loginButton }}
         </button>
-      </ng-template>
+        <!-- <img mat-card-image *ngIf="photo" src="{{ (photo | async |json )}}"/> -->
+        <ng-template #content>
+          <div class="align-left">
+            <mat-card class="mat-card-background">
+              <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre" class="align-center">
+              <br />
+              <h1 mat-display-1>{{ name }}</h1>
+            </mat-card>
+          </div>
 
-      <button routerLink="/profile" [(ngModel)]="unbounded" class="ripple" mat-flat-button
-        color="primary">{{ seeFeautesText }}
-      </button>
-    </div>
+          <button (click)="logOut()" mat-flat-button color="primary" id="logout" class="align-right">{{ Logout }}
+          </button>
+        </ng-template>
+
+        <button routerLink="/profile" class="ripple align-right" mat-flat-button
+          color="primary">{{ seeFeautesText }}
+        </button>
+      </div>
+    </mat-card>
 
     <mat-card id="my_centered_button" class="fade x-hidden-focus">
       <a mat-fab routerLink="/about-office" aria-label="Down
@@ -25,18 +34,26 @@
       </a>
     </mat-card>
 
-    <div class="alternate-theme button-login-feature centerize">
-      <ng-template #content>
-        <h1>Hallo {{ name }}.</h1>
-        <a routerLink="/calendar"></a>
-        <button (click)="logOut()" mat-flat-button color="primary">Logout</button>
-      </ng-template>
-    </div>
-
+    <mat-card>
+      <div class="alternate-theme button-login-feature centerize">
+        <ng-template #content>
+          <div class="align-left">
+            <mat-card class="mat-card-background">
+              <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre" class="align-center">
+              <br />
+              <h1 mat-display-1>{{ name }}</h1>
+            </mat-card>
+          </div>
+          <a routerLink="/calendar"></a>
+          <button (click)="logOut()" mat-flat-button color="primary" id="logout" class="align-right">Logout</button>
+        </ng-template>
+      </div>
+    </mat-card>
   </nav>
 
 </header>
 <main>
+
   <router-outlet></router-outlet>
 
   <br />
@@ -48,7 +65,6 @@
 
   <button mat-button>
     <img class="jpg-icon" [src]="srcUrlFB">
-    <a href="https://www.linkedin.com/company/3509299"></a>
   </button>
 
   <button mat-button>
@@ -60,18 +76,19 @@
     <img class="jpg-icon" [src]="srcUrlTwitter">
     <a routerLink="/setting"></a>
   </button>
-
 </main>
 
 <footer>
   <br />
   <br />
 
-  <p class="mat-display-1">
-    Contact Us
-    Twitter
-    Instagram 
-    Facebook
-  </p>
+  <div class="mat-display-1">
+    <!-- <p><a routerLink="/app-component" fragment="logout"></a>Logout</p> -->
+    <p>Contact Us</p>
+    <a pageScroll href="#logout">Testing</a>
+    <p>Logout</p>
+    <p>Dashboard</p>
+
+  </div>
 
 </footer>

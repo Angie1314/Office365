@@ -1,0 +1,44 @@
+
+
+<mat-card>
+  <form id="event-form" [formGroup]="eventForm" (ngSubmit)="onSubmit()"
+    fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <div class="form-group">
+
+      <mat-label class="field-label">Subject: </mat-label>
+      <mat-form-field hintLabel="Add the subject of the event here">
+        <input class="form-control" matInput formControlName="subject">
+        <!-- <mat-error>Cannot be left empty.</mat-error> -->
+      </mat-form-field>
+
+      <br />
+
+      <!-- <span *ngIf="subject.invalid">Subject is invalid.</span> -->
+      <mat-label class="field-label">Start Time: </mat-label>
+      <mat-form-field>
+        <input class="form-control" matInput formControlName="start">
+        <mat-hint>Add the start time of the event here. </mat-hint>
+        <!-- <mat-error>Cannot be left empty.</mat-error> -->
+      </mat-form-field>
+
+      <br />
+
+      <!-- <span *ngIf="subject.invalid">Start time needed.</span> -->
+      <mat-label class="field-label">End Time: </mat-label>
+      <mat-form-field>
+        <input class="form-control" matInput placeholder="End"
+          formControlName="end">
+        <mat-hint>Add the end time of the event here. </mat-hint>
+        <!-- <mat-error>Cannot be left empty.</mat-error> -->
+      </mat-form-field>
+      <br />
+
+
+      <!-- <span *ngIf="subject.invalid" flexAlign="end end">End time needed.</span> -->
+    </div>
+    <button mat-flat-button color="primary" type="submit"
+      [disabled]="!eventForm.valid">Save</button>
+
+    <button mat-flat-button color="primary" routerLink="/calendar">See Calendar</button>
+  </form>
+</mat-card>

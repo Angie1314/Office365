@@ -1,4 +1,5 @@
-<p class="button-font"> Calendar Events</p>
+<p class="button-font"> Calendar Events
+</p>
 
 <nav>
   <div fxLayout="row" fxLayoutAlign="start center">
@@ -41,11 +42,13 @@
   </div>
 
   <div class="example-button-row" fxFlex="30%" *ngIf="calendar">
-
-    {{ (calendar| async).value[0].start.dateTime| date:"MMMM" }}
+    <!-- {{ (calendar| async).value[0].start.dateTime| date:"MMMM" }} -->
     <button mat-fab>{{ (calendar| async).value[0].start.dateTime| date:"dd" }}</button>
     <button mat-fab color="primary">{{ (calendar| async).value[1].start.dateTime| date:"dd" }}</button>
     <button mat-fab color="accent">{{ (calendar| async).value[2].start.dateTime| date:"dd" }}</button>
+    <button routerLink="/new-event" [(ngModel)]="unbounded" class="ripple align-right" mat-flat-button color="primary">add
+      event
+    </button>
   </div>
 </nav>
 

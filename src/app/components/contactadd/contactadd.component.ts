@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { ContactAddService } from 'src/services/addcontact.service';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+@NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+
+@NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+
 @Component({
   selector: 'app-contactadd',
   templateUrl: './contactadd.component.html',
@@ -12,9 +23,11 @@ export class ContactaddComponent implements OnInit {
         this.email.hasError('email') ? 'Not a valid email' :
             '';
   }
-  constructor() { }
+  contactadd: Observable<ContactAddService>;
+  constructor(private contactService:  ContactAddService) { }
 
   ngOnInit() {
+    // this.contactadd = this.contactService.getContact();
   }
 
 }
