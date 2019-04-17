@@ -1,26 +1,32 @@
 @import "~@angular/material/theming";
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
 
-$button-font:'Righteous', cursive;
-$button-font-size:2em;
-$button-font-color:#2196F3;
-$alignment-of-text:center;
+$button-font: 'Righteous', cursive;
+$button-font-size: 2em;
+$button-font-color :#2196F3;
+$alignment-of-text: center;
 
-$side-container-width:100%;
-$side-container-height:300px;
+$side-container-width: 100%;
+$side-container-height: 300px;
 $side-container-border: 1px solid rgba(111, 111, 111, 0.50);
 
-$side-nav-display:flex;
-$side-nav-height:100%;
-$side-nav-alignment:center;
-$side-nav-content:center;
+$side-nav-display: flex;
+$side-nav-height: 100%;
+$side-nav-alignment: center;
+$side-nav-content: center;
 
-$side-nav-padding:20px;
+$side-nav-padding: 20px;
 
-$panel-calendar-margin:10px;
+$panel-calendar-margin: 10px;
 
-$button-font-border:0;
-$item-float:right;
+$button-font-border: 0;
+$item-float: right;
+
+$parallax-calendar-min-height: 500px;
+$parallax-calendar-bg-attach: fixed;
+$parallax-calendar-position: center;
+$parallax-calendar-repeat: no-repeat;
+$parallax-calendar-bg-size: cover;
 
 .side-container {
   width: $side-container-width;
@@ -57,9 +63,9 @@ $item-float:right;
 
 .parallax {
   background-image: url("src/assets/images/mailbox.jpg");
-  min-height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-height: $parallax-calendar-min-height;
+  background-attachment: $parallax-calendar-bg-attach;
+  background-position: $parallax-calendar-position;
+  background-repeat: $parallax-calendar-repeat;
+  background-size: $parallax-calendar-bg-size;
 }

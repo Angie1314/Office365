@@ -1,8 +1,10 @@
-<mat-card class="panel-calendar ">
+<mat-card class="panel-calendar">
   <mat-card-title class="button-font">
     MailBox
     <div class="sidenav-content ripple">
-      <button type="button" md-button (click)="sidenav.open()" mat-flat-button color="primary">
+      <button type="button" md-button (click)="sidenav.open().toggle()"
+        mat-flat-button
+        color="primary">
         See Mail
       </button>
     </div>
@@ -10,17 +12,34 @@
 
   <mat-card-content>
     <mat-sidenav-container class="side-container">
-      <mat-sidenav #sidenav class="sidenav">
+      <mat-sidenav #sidenav class="sidenav" role="navigation">
         <mat-list>
-          <mat-list-item *ngIf="email">{{ (email| async).value[0].subject }}</mat-list-item>
+          <mat-list-item *ngIf="email">
+            <button mat-flat-button
+              (click)="sidenav.close();sideNavMailContent()">
+              {{ (email | async).value[0].subject }}
+            </button>
+          </mat-list-item>
 
           <mat-divider></mat-divider>
-          
-          <mat-list-item *ngIf="email">{{ (email| async).value[1].subject }}</mat-list-item>
+
+          <a href="www.google.com">
+            <mat-list-item *ngIf="email">
+              <button mat-flat-button>
+                {{ (email | async).value[1].subject }}
+              </button>
+            </mat-list-item>
+          </a>
 
           <mat-divider></mat-divider>
 
-          <mat-list-item *ngIf="email">{{ (email| async).value[2].subject }}</mat-list-item>
+          <a href="www.google.com">
+            <mat-list-item *ngIf="email">
+              <button mat-flat-button>
+                {{ (email | async).value[2].subject }}
+              </button>
+            </mat-list-item>
+          </a>
 
           <mat-divider></mat-divider>
         </mat-list>
@@ -30,58 +49,3 @@
 </mat-card>
 
 <div class="alternate-theme parallax image button-login-feature centerize"></div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <nav>
-  <div class="parallax"></div>
-  <mat-card>
-    <mat-toolbar class="alternate-theme fixed-img">
-      <span class="alternate-theme">
-        <button mat-button>
-          <img src="{{ icon }}">
-        </button>
-      </span>
-      <mat-menu #appMenu="matMenu" class="accent">
-        <button mat-menu-item>
-          <img class="jpg-icon" src="{{ settings }}">
-          <a routerLink="/setting"> {{ settingsText }}</a></button>
-        <button mat-menu-item>
-          <img class="jpg-icon" src="{{ help }}">
-          <a routerLink="/help">{{ helpText }}</a></button>
-      </mat-menu>
-      <mat-toolbar color="accent">
-        <p class="logo">{{ officeLogo }}
-          <a routerLink="/login">{{ signupText }}</a>
-        </p>
-      </mat-toolbar>
-      <mat-toolbar color="accent">
-        <p>
-          <a routerLink="/mail-box"> {{ mailboxText }}}</a>
-        </p>
-      </mat-toolbar>
-      <mat-toolbar color="accent">
-        <p>
-          <a routerLink="/calendar">{{ calendarText }}</a>
-        </p>
-      </mat-toolbar>
-      <button mat-icon-button [matMenuTriggerFor]="appMenu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-    </mat-toolbar>
-  </mat-card>
-  <div layout="row" layout-margin layout-wrap layout-align="center center"></div>
-  <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
-    fxLayoutGap="0.5%" fxLayoutAlign="center">
-    <div fxFlex="20%">
-    </div>
-  </div>
-</nav> -->

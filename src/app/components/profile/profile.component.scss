@@ -7,37 +7,56 @@ $button-font-size:2em;
 $button-font-color:#2196F3;
 $alignment-of-text:center;
 
+$button-font-border: 0;
+
+$button-size-width: 80%;
+$button-size-height: 80%;
+$button-size-border: 0;
+$button-size-padding: 30px;
+$button-size-transition: .2s;
+$button-size-width-height: 200px;
+$button-size-margin: 0 auto;
+
+$mat-card-bg-color: #2196F3;
+$mat-card-transition: none !important;
+$mat-card-box-shadow: none !important;
+
+
 .button-font {
     font-size: $button-font-size;
     font-family: $button-font;
     color: $button-font-color;
     text-align: $alignment-of-text;
-    border: 0;
+    border: $button-font-border;
 }
 
 .button-size {
-    width: 80%;
-    height: 80%;
-    border: 0;
-    padding: 30px;
-    transition: transform .2s;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
+    width: $button-size-width;
+    height: $button-size-height;
+    border: $button-size-border;
+    padding: $button-size-padding;
+    transition: transform $button-size-transition;
+    width: $button-size-width-height;
+    height: $button-size-width-height;
+    margin: $button-size-margin;
 }
 
 .button-size:hover {
     transform: scale(1.5);
   }
 
+  .mat-card {
+    background-color: $mat-card-bg-color;
+    transition: $mat-card-transition;
+    box-shadow: $mat-card-box-shadow;
+  }
+ 
+
   @mixin min {
     @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
       @content;
       word-wrap: break-word;
-      .button-size {
-        width: 48px;
-        height: 48px;
-      }
+    
     }
   }
   
@@ -45,11 +64,7 @@ $alignment-of-text:center;
     @media (min-width: #{$max-widths}) {
       @content;
       word-wrap: break-word;
-      .button-size{
-          img.img{
-        width: 48px;
-        height: 48px;}
-      }
-    }
+      
   }
 
+  }

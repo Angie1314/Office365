@@ -11,6 +11,7 @@ import { CalendarService } from 'src/services/calendar.service';import { NgModul
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.scss']
 })
+
 export class CalendarComponent implements OnInit {
   icon: string;
   settings: string;
@@ -36,6 +37,23 @@ export class CalendarComponent implements OnInit {
     this.settings = "../../../../assets/images/settings.png";
     this.help = "../../../../assets/images/help.png";
   }
+
+  onScroll(){
+    let one = document.querySelector("#one");
+    let two= document.querySelector('#two');
+    let three = document.querySelector('#three');
+
+    if (one){
+        one.scrollIntoView();
+    }
+    else if(two){
+        two.scrollIntoView();
+    }
+    else if(three){
+        three.scrollIntoView();
+    }
+  }
 }
+
 
 

@@ -17,8 +17,10 @@ $item-float:right;
 
 $mat-card-padding: 10px ;
 
+$-mat-form-field-width: 300px;
+
 mat-form-field{
-    width:300px;
+    width: $-mat-form-field-width;
 }
 
 .field-label {

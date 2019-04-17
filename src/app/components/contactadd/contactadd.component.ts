@@ -7,16 +7,13 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-@NgModule({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-})
-
 @Component({
   selector: 'app-contactadd',
   templateUrl: './contactadd.component.html',
   styleUrls: ['./contactadd.component.scss']
 })
 export class ContactaddComponent implements OnInit {
+  progress=0;
   email = new FormControl('', [Validators.required, Validators.email]);
   getErrorMessage() {
     return this.email.hasError('required') ? 'You must enter a value' :
@@ -27,7 +24,9 @@ export class ContactaddComponent implements OnInit {
   constructor(private contactService:  ContactAddService) { }
 
   ngOnInit() {
-    // this.contactadd = this.contactService.getContact();
+    setInterval(()=>{
+      this.progress=this.progress+5;
+    },1000)
   }
 
 }

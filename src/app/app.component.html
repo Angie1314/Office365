@@ -1,59 +1,79 @@
 <header>
-  <nav>
-    <mat-card>
-      <div class="alternate-theme parallax image button-login-feature centerize" >
+  <!-- <form class="form-inline md-form form-sm active-cyan active-cyan-2">
+
+    <mat-form-field hintLabel="Search here">
+      <input class="form-control form-control-sm ml-3 w-75" type="text"
+        placeholder="Search">
+    </mat-form-field>
+  </form> -->
+  <nav id='choice'>
+    <mat-card class="mat-card-background">
+      <div class="alternate-theme parallax image button-login-feature
+        centerize">
         <h2 class="mat-display-3">{{ officeLogo }}</h2>
-        <button *ngIf="!name;else content" (click)="login()" class="ripple align-right" mat-flat-button color="primary"
+        <button *ngIf="!name;else content" (click)="login()" class="ripple
+          align-right" mat-flat-button color="primary"
           routerLink="/profile">{{ loginButton }}
         </button>
         <!-- <img mat-card-image *ngIf="photo" src="{{ (photo | async |json )}}"/> -->
         <ng-template #content>
           <div class="align-left">
-            <mat-card class="mat-card-background">
-              <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre" class="align-center">
+            <mat-card class="mat-card-profile">
+              <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre"
+                class="align-center">
               <br />
               <h1 mat-display-1>{{ name }}</h1>
             </mat-card>
           </div>
 
-          <button (click)="logOut()" mat-flat-button color="primary" id="logout" class="align-right">{{ Logout }}
+          <button (click)="logOut()" mat-flat-button color="primary" id="logout"
+            class="align-right">{{ Logout }}
+          </button>
+
+          <button routerLink="/profile" class="ripple align-right"
+            mat-flat-button
+            color="primary">{{ seeFeautesText }}
           </button>
         </ng-template>
 
-        <button routerLink="/profile" class="ripple align-right" mat-flat-button
-          color="primary">{{ seeFeautesText }}
-        </button>
+
       </div>
     </mat-card>
 
-    <mat-card id="my_centered_button" class="fade x-hidden-focus">
-      <a mat-fab routerLink="/about-office" aria-label="Down
+    <mat-card id="my_centered_button" class="fade x-hidden-focus
+      mat-card-background">
+      <a id='about' mat-fab routerLink="/about-office" aria-label="Down
         keyboard_arrow_down">
         {{ clickMessage }}
         <mat-icon>{{ arrowDown }}</mat-icon>
       </a>
     </mat-card>
 
-    <mat-card>
-      <div class="alternate-theme button-login-feature centerize">
-        <ng-template #content>
-          <div class="align-left">
-            <mat-card class="mat-card-background">
-              <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre" class="align-center">
-              <br />
-              <h1 mat-display-1>{{ name }}</h1>
-            </mat-card>
-          </div>
-          <a routerLink="/calendar"></a>
-          <button (click)="logOut()" mat-flat-button color="primary" id="logout" class="align-right">Logout</button>
-        </ng-template>
-      </div>
-    </mat-card>
+    <div class="alternate-theme button-login-feature centerize">
+      <ng-template #content>
+        <div class="align-left">
+          <mat-card class="mat-card-background">
+            <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre"
+              class="align-center">
+            <br />
+            <h1 mat-display-1>{{ name }}</h1>
+          </mat-card>
+        </div>
+        <a routerLink="/calendar"></a>
+        <button (click)="logOut()" mat-flat-button color="primary" id='logout'
+          class="align-right">Logout</button>
+
+        <button routerLink="/profile" class="ripple align-right"
+          mat-flat-button
+          color="primary" id='dashboard'>{{ seeFeautesText }}
+        </button>
+      </ng-template>
+    </div>
   </nav>
 
 </header>
 <main>
-
+ 
   <router-outlet></router-outlet>
 
   <br />
@@ -61,20 +81,22 @@
   <br />
   <br />
 
-  <mat-divider></mat-divider>
+  <mat-divider id='contact'></mat-divider>
 
   <button mat-button>
-    <img class="jpg-icon" [src]="srcUrlFB">
+    <a href="https://www.facebook.com/Office"> <img class="jpg-icon"
+        [src]="srcUrlFB"></a>
   </button>
 
   <button mat-button>
-    <img class="jpg-icon" [src]="srcUrlInstagram">
-    <a routerLink="/contact"></a>
+    <a href="https://www.linkedin.com/showcase/microsoft-office/"><img
+        class="jpg-icon"
+        [src]="srcUrlInstagram"></a>
   </button>
 
   <button mat-button>
-    <img class="jpg-icon" [src]="srcUrlTwitter">
-    <a routerLink="/setting"></a>
+    <a href="https://twitter.com/office"> <img class="jpg-icon"
+        [src]="srcUrlTwitter"></a>
   </button>
 </main>
 
@@ -82,13 +104,16 @@
   <br />
   <br />
 
-  <div class="mat-display-1">
-    <!-- <p><a routerLink="/app-component" fragment="logout"></a>Logout</p> -->
-    <p>Contact Us</p>
-    <a pageScroll href="#logout">Testing</a>
-    <p>Logout</p>
-    <p>Dashboard</p>
-
+  <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="right"
+    fxLayoutGap="10px">
+    <section>
+      <p><a class="mat-display-1" (click)="onScroll()">Logout</a></p>
+    </section>
+    <section>
+      <p><a class="mat-display-1" (click)="onScroll()">Dashboard</a></p>
+    </section>
+    <section>
+      <p><a class="mat-display-1" (click)="onScroll()">Profile</a></p>
+    </section>
   </div>
-
 </footer>

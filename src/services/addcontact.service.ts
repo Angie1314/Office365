@@ -11,6 +11,7 @@ const contentType="application/json";
 export class ContactAddService{
 
   constructor(private http: HttpClient) {
+    
   }
 
   setContact(): Observable<ContactAdd> {

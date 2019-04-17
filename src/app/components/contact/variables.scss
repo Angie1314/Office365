@@ -1,15 +1,31 @@
 $calendar-font:'Righteous', cursive;
-$calendar-font-size:2em;
-$calendar-font-color:#2196F3;
-$calendar-alignment-of-text:center;
+$calendar-font-size: 2em;
+$calendar-font-color :#2196F3;
+$calendar-alignment-of-text: center;
 
 $button-font:'Righteous', cursive;
-$button-font-size:2em;
+$button-font-size: 2em;
 $button-font-color:#2196F3;
-$alignment-of-text:center;
+$alignment-of-text: center center;
 
-$mat-div-and-card-border-width:1px;
-$mat-div-and-card-border-style:solid;
-$mat-button-font-border:0;
+$mat-div-and-card-border-width: 1px;
+$mat-div-and-card-border-style: solid;
+$mat-button-font-border: 0;
 
-$item-float:right;
+$item-float: right;
+
+$mat-card-padding: 10px ;
+$panel-calendar-margin: 10px;
+$mat-card-no-border-transition: none !important;
+$mat-card-no-border-shadow: none !important;
+$padding-of-spinner: 30px;
+
+$parallax-calendar-min-height: 500px;
+$parallax-calendar-bg-attach: fixed;
+$parallax-calendar-position: center;
+$parallax-calendar-repeat: no-repeat;
+$parallax-calendar-bg-size: cover;
+
+$search-min-width: 150px;
+$search-mx-width: 500px;
+$search-width: 100%;

@@ -7,18 +7,19 @@ $calendar-font-color:#2196F3;
 $button-font:'Righteous', cursive;
 $button-font-size:2em;
 $button-font-color:#2196F3;
-$alignment-of-text:center;
+$alignment-of-text: center;
 
-$mat-div-and-card-border-width:1px;
-$mat-div-and-card-border-style:solid;
-$mat-button-font-border:0;
+$mat-div-and-card-border-width: 1px;
+$mat-div-and-card-border-style: solid;
+$mat-button-font-border: 0;
 
-$item-float:right;
+$item-float: right;
 
 $mat-card-padding: 10px ;
+$mat-form-field-width: 300px;
 
 mat-form-field{
-    width:300px;
+    width: $mat-form-field-width;
 }
 
 .field-label {
@@ -31,7 +32,7 @@ mat-form-field{
     color: $calendar-font-color;
     border-width: $mat-div-and-card-border-width;
     border-style: $mat-div-and-card-border-style;
-    padding:$mat-card-padding;
+    padding: $mat-card-padding;
     margin-left: $mat-card-padding;
     margin-bottom:$mat-card-padding;
     margin-right: $mat-card-padding;

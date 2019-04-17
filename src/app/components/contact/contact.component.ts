@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/ models/contact';
-import { Observable } from 'rxjs';
 import { ContactService } from 'src/services/contact.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
@@ -18,6 +17,7 @@ export class ContactComponent implements OnInit {
   settings: string;
   help: string;
   avatar: string;
+  search: string;
 
   settingsText = 'Settings';
   helpText = 'Help';
@@ -26,18 +26,46 @@ export class ContactComponent implements OnInit {
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
 
-  contact: Observable<Contact>;
+  usersArray:[];
+
+  contact: Contact[]=[];
  
- 
-  constructor(private contactService: ContactService) { }
+  constructor(private contactService: ContactService) {
+  
+
+   }
 
   ngOnInit() {
-    this.contact = this.contactService.getContact();
-   
+
+        this.contactService.getContact()
+        .subscribe(x=>{ this.contact =x;
+        });
+        
+       
 
     this.icon = "../../../../assets/images/icon.png";
     this.settings = "../../../../assets/images/settings.png";
     this.help = "../../../../assets/images/help.png";
     this.avatar = "../../../../assets/images/avatar.png";
-  }
+    this.search = "../../../../assets/images/search.png";
+ 
 }
+}
+
+
+// export class TasksComponent implements OnInit {
+  
+//   task: Task[]=[];
+//   avatar: string;
+
+//   constructor(private taskService: TaskService) { 
+//     this.avatar = "../../../../assets/images/rooms.png";
+//   }
+
+//   ngOnInit() {
+//   this.taskService.getTask()
+//   .subscribe(x=>{ this.task =x;
+//   });
+//   }
+ 
+// }

@@ -18,3 +18,4 @@ export class CalendarService {
     return this.http.get<Calendar>(`${baseUrl}/me/events?$select=subject,body,bodyPreview,organizer,attendees,start,end,location`);
   }
 }
+

@@ -20,14 +20,15 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ContactaddComponent } from './components/contactadd/contactadd.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule,
          MatMenuModule,
          MatSidenavModule,
@@ -51,6 +52,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { TokenInterceptor } from 'src/interceptors/token-interceptor';
 // import { SearchComponent } from './components/search/search.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MailingComponent } from './components/mailing/mailing.component';
+import { MailspinnerComponent } from './components/mailspinner/mailspinner.component';
+import { CalendarspinnerComponent } from './components/calendarspinner/calendarspinner.component';
+
 
 @NgModule({
   declarations: [
@@ -68,6 +73,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     TasksComponent,
     NewEventComponent,
     AppComponent,
+    SpinnerComponent,
+    MailingComponent,
+    MailspinnerComponent,
+    CalendarspinnerComponent,
     // SearchComponent,
 
   ],
