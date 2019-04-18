@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ContactAdd } from '../ models/addcontact';
+import { Addcontact} from '../ models/addcontact';
+import { map, mergeAll } from 'rxjs/operators';
 
-const baseUrl = 'https://graph.microsoft.com/v2.0';
-const contentType="application/json";
+const baseUrl = 'https://graph.microsoft.com/v1.0';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,21 +14,31 @@ export class ContactAddService{
     
   }
 
-  setContact(): Observable<ContactAdd> {
-    return this.http.post<ContactAdd>(`${baseUrl}/me/contacts`,`${contentType}`);
-      
-  //   post<T>(url: string, body: any | null, options?: {
-  //     headers?: HttpHeaders | {
-  //         [header: string]: string | string[];
-  //     };
-  //     observe?: 'body';
-  //     params?: HttpParams | {
-  //         [param: string]: string | string[];
-  //     };
-  //     reportProgress?: boolean;
-  //     responseType?: 'json';
-  //     withCredentials?: boolean;
-  // }): Observable<T>;
-  // }
+  getContacts(): Observable<Addcontact> {
+    return this.http
+        .get(`${baseUrl}/me/contacts`)
+        .pipe(
+          map(x => (x as any).value),
+          mergeAll()
+        );
 }
+
+createContact(contact: Addcontact) {
+  return this.http.post(`https://graph.microsoft.com/v1.0/me/contacts`, contact);
 }
+
+}
+
+// getEvents(): Observable<Event> {
+//   return this.http
+//     .get(`${baseUrl}/me/events`)
+//     .pipe(
+//       map(x => (x as any).value),
+//       mergeAll()
+//     );
+// }
+
+// createEvent(event: CalendarEvent) {
+//   return this.http.post(`${baseUrl}/me/events`, event);
+// }
+// }

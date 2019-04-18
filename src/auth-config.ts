@@ -7,5 +7,5 @@ export const authConfig: AuthConfig = {
 
   clientId: '8faad26f-980e-441d-9f63-f3b50b071d20',
 
-  scope: 'openid profile User.ReadBasic.All Calendars.Read Mail.Read Contacts.Read Calendars.ReadWrite' 
+  scope: 'openid profile User.ReadBasic.All Calendars.Read Mail.Read Contacts.Read Contacts.ReadWrite  Calendars.ReadWrite' 
 };
