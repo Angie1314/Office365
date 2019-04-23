@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { MailBoxComponent } from './components/mail-box/mail-box.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { HelpComponent } from './components/help/help.component';
 import { SettingComponent } from './components/setting/setting.component';
@@ -15,6 +14,7 @@ import { NewEventComponent } from './components/new-event/new-event.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { MailspinnerComponent } from './components/mailspinner/mailspinner.component';
 import { CalendarspinnerComponent } from './components/calendarspinner/calendarspinner.component';
+import { MailingComponent } from './components/mailing/mailing.component';
 
 const routes: Routes = [
   {
@@ -36,8 +36,8 @@ const routes: Routes = [
     component: AppComponent },
 
   {
-    path: 'mail-box',
-    component: MailBoxComponent
+    path: 'mailing',
+    component: MailingComponent
   },
 
   {

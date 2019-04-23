@@ -13,7 +13,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { HelpComponent } from './components/help/help.component';
 import { SettingComponent } from './components/setting/setting.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
-import { MailBoxComponent } from './components/mail-box/mail-box.component';
+// import { MailBoxComponent } from './components/mail-box/mail-box.component';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -55,6 +55,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MailingComponent } from './components/mailing/mailing.component';
 import { MailspinnerComponent } from './components/mailspinner/mailspinner.component';
 import { CalendarspinnerComponent } from './components/calendarspinner/calendarspinner.component';
+// import { MailBoxComponent } from './components/mail-box/mail-box.component';
 
 
 @NgModule({
@@ -62,7 +63,7 @@ import { CalendarspinnerComponent } from './components/calendarspinner/calendars
     AppComponent,
     LoginComponent,
     CalendarComponent,
-    MailBoxComponent,
+    // MailBoxComponent,
     HelpComponent,
     SettingComponent,
     AboutOfficeComponent,
@@ -77,6 +78,7 @@ import { CalendarspinnerComponent } from './components/calendarspinner/calendars
     MailingComponent,
     MailspinnerComponent,
     CalendarspinnerComponent,
+    // MailBoxComponent,
     // SearchComponent,
 
   ],

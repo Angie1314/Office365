@@ -1,0 +1,71 @@
+@import "~@angular/material/theming";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
+
+$button-font: 'Righteous', cursive;
+$button-font-size: 2em;
+$button-font-color :#2196F3;
+$alignment-of-text: center;
+
+$side-container-width: 100%;
+$side-container-height: 300px;
+$side-container-border: 1px solid rgba(111, 111, 111, 0.50);
+
+$side-nav-display: flex;
+$side-nav-height: 100%;
+$side-nav-alignment: center;
+$side-nav-content: center;
+
+$side-nav-padding: 20px;
+
+$panel-calendar-margin: 10px;
+
+$button-font-border: 0;
+$item-float: right;
+
+$parallax-calendar-min-height: 500px;
+$parallax-calendar-bg-attach: fixed;
+$parallax-calendar-position: center;
+$parallax-calendar-repeat: no-repeat;
+$parallax-calendar-bg-size: cover;
+
+.side-container {
+  width: $side-container-width;
+  height: $side-container-height;
+  border: $side-container-border;
+}
+
+.sidenav-content {
+  display: $side-nav-display;
+  height: $side-nav-height;
+  align-items: $side-nav-alignment;
+  justify-content: $side-nav-content;
+}
+
+.sidenav {
+  padding: $side-nav-padding;
+}
+
+.panel-calendar {
+  margin: $panel-calendar-margin;
+}
+
+.button-font {
+  font-size: $button-font-size;
+  font-family: $button-font;
+  color: $button-font-color;
+  text-align: $alignment-of-text;
+  border: $button-font-border;
+}
+
+.left-align-element{
+  float:$item-float;
+}
+
+.parallax {
+  background-image: url("src/assets/images/mailbox.jpg");
+  min-height: $parallax-calendar-min-height;
+  background-attachment: $parallax-calendar-bg-attach;
+  background-position: $parallax-calendar-position;
+  background-repeat: $parallax-calendar-repeat;
+  background-size: $parallax-calendar-bg-size;
+}
