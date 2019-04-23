@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { HelpComponent } from './components/help/help.component';
 import { SettingComponent } from './components/setting/setting.component';
@@ -25,11 +24,6 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent
-  },
-
-  {
-    path: 'login',
-    component: LoginComponent
   },
 
   { path: 'logout/:id',      

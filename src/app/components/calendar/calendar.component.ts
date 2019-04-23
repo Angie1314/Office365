@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Calendar } from 'src/ models/calendar';
 import { Observable } from 'rxjs';
-import { CalendarService } from 'src/services/calendar.service';import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CalendarService } from 'src/services/calendar.service';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
@@ -26,6 +27,7 @@ export class CalendarComponent implements OnInit {
 
   calendar: Observable<Calendar>;
   avatar: string;
+  
   constructor(private calendarService: CalendarService) { 
     this.avatar = "../../../../assets/images/date.png";
   }

@@ -1,37 +1,40 @@
 <mat-card class="panel-calendar">
+  <mat-card-title class="button-font">
+   Mail Box
+  </mat-card-title>
 
-    <mat-card-content>
-          <mat-list>
-            <mat-list-item *ngIf="email">
-              <button mat-flat-button
-                (click)="sidenav.close();sideNavMailContent()">
-                {{ (email | async).value[0].subject }}
-              </button>
-            </mat-list-item>
-  
-            <mat-divider></mat-divider>
-  
-            <a href="www.google.com">
-              <mat-list-item *ngIf="email">
-                <button mat-flat-button>
-                  {{ (email | async).value[1].subject }}
-                </button>
-              </mat-list-item>
-            </a>
-  
-            <mat-divider></mat-divider>
-  
-            <a href="www.google.com">
-              <mat-list-item *ngIf="email">
-                <button mat-flat-button>
-                  {{ (email | async).value[2].subject }}
-                </button>
-              </mat-list-item>
-            </a>
-  
-            <mat-divider></mat-divider>
-          </mat-list>
-    </mat-card-content>
-  </mat-card>
-  
-  <div class="alternate-theme parallax image button-login-feature centerize"></div>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngIf="email">
+        <button mat-flat-button
+          (click)="sidenav.close();sideNavMailContent()">
+          {{ (email | async).value[0].subject }}
+        </button>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+
+      <a href='/mailspecified'>
+        <mat-list-item *ngIf="email">
+          <button mat-flat-button>
+            {{ (email | async).value[1].subject }}
+          </button>
+        </mat-list-item>
+      </a>
+
+      <mat-divider></mat-divider>
+
+      <a href="www.google.com">
+        <mat-list-item *ngIf="email">
+          <button mat-flat-button>
+            {{ (email | async).value[2].subject }}
+          </button>
+        </mat-list-item>
+      </a>
+
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<div class="alternate-theme parallax image button-login-feature centerize"></div>

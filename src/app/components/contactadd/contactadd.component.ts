@@ -5,7 +5,6 @@ import { ContactAddService } from 'src/services/addcontact.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Addcontact } from 'src/ models/addcontact';
 import Swal from 'sweetalert2';
-
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
@@ -18,7 +17,7 @@ import Swal from 'sweetalert2';
 export class ContactaddComponent implements OnInit {
 
   contact: Addcontact = {
-    givenName: 'Hey You',
+    givenName: 'Jack Johnson',
   };
 
   contactadd: Observable<ContactAddService>;
@@ -39,7 +38,7 @@ export class ContactaddComponent implements OnInit {
         this.contactService
           .createContact(this.contact)
           .subscribe(() => this.eventForm.reset());
-          
+
           Swal.fire({
             position: 'center',
             type: 'success',
@@ -48,11 +47,7 @@ export class ContactaddComponent implements OnInit {
             timer: 1500
           })
       }
-  
-    
-
     }
-   
 }
 
 
