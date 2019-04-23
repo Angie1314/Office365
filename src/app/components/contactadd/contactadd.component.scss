@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
+
+$calendar-font:'Righteous', cursive;
+$calendar-font-size:2em;
+$calendar-font-color:#2196F3;
+$button-font:'Righteous', cursive;
+$button-font-size:2em;
+$button-font-color:#2196F3;
+$alignment-of-text: center;
+
+$mat-div-and-card-border-width: 1px;
+$mat-div-and-card-border-style: solid;
+$mat-button-font-border: 0;
+
+$item-float: right;
+
+$mat-card-padding: 10px ;
+$mat-form-field-width: 300px;
+
+mat-form-field{
+    width: $mat-form-field-width;
+}
+
+.field-label {
+    font-family: $calendar-font;
+    size: $calendar-font-size;
+    color:$calendar-font-color;
+  }
+
+.mat-card{
+    color: $calendar-font-color;
+    border-width: $mat-div-and-card-border-width;
+    border-style: $mat-div-and-card-border-style;
+    padding: $mat-card-padding;
+    margin-left: $mat-card-padding;
+    margin-bottom:$mat-card-padding;
+    margin-right: $mat-card-padding;
+  }
+  

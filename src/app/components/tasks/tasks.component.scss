@@ -1,0 +1,108 @@
+
+@import "~@angular/material/theming";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
+
+$button-font:'Righteous', cursive;
+$button-font-size:2em;
+$button-font-color:#2196F3;
+$alignment-of-text:center;
+
+$calendar-font:'Righteous', cursive;
+$calendar-font-size:2em;
+$calendar-font-color:#2196F3;
+$calendar-alignment-of-text:center;
+
+$button-font:'Righteous', cursive;
+$button-font-size:2em;
+$button-font-color:#2196F3;
+$alignment-of-text:center;
+
+$mat-div-and-card-border-width:1px;
+$mat-div-and-card-border-style:solid;
+$mat-button-font-border:0;
+$mat-card-padding: 10px ;
+
+$mat-divider-border-width: 1px;
+$mat-divider-border-style: solid;
+
+$item-float:right;
+
+$parallax-calendar-min-height: 500px;
+$parallax-calendar-bg-attach: fixed;
+$parallax-calendar-position: center;
+$parallax-calendar-repeat: no-repeat;
+$parallax-calendar-bg-size: cover;
+
+$button-font-border: 0;
+
+$img-width-media-screens: 100px;
+
+.calendar-heading {
+    font-family: $calendar-font;
+    size: $calendar-font-size;
+    color:$calendar-font-color;
+  }
+
+
+  
+.button-font {
+    font-size: $button-font-size;
+    font-family: $button-font;
+    color: $button-font-color;
+    text-align: $alignment-of-text;
+    border: $button-font-border;
+}
+
+.mat-divider{
+    color: $calendar-font-color;
+    border-width: $mat-divider-border-width;
+    border-style: $mat-divider-border-style;
+  }
+
+  @mixin min {
+    @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
+      @content;
+      word-wrap: break-word;
+      img.img {
+        width: $img-width-media-screens;
+        height: $img-width-media-screens;
+      }
+    }
+  }
+  
+  @mixin max {
+    @media (min-width: #{$max-widths}) {
+      @content;
+      word-wrap: break-word;
+      img.img {
+        width: $img-width-media-screens;
+        height: $img-width-media-screens;
+      }
+    }
+  }
+
+  .left-align-element{
+    float:$item-float;
+  }
+
+  .parallax {
+    background-image: url("src/assets/images/tasks.jpg");
+    min-height: $parallax-calendar-min-height;
+    background-attachment: $parallax-calendar-bg-attach;
+    background-position: $parallax-calendar-position;
+    background-repeat: $parallax-calendar-repeat;
+    background-size: $parallax-calendar-bg-size;
+  }
+
+  .mat-card{
+    color: $calendar-font-color;
+    border-width: $mat-div-and-card-border-width;
+    border-style: $mat-div-and-card-border-style;
+    padding:$mat-card-padding;
+    margin-left: $mat-card-padding;
+    margin-bottom:$mat-card-padding;
+    margin-right: $mat-card-padding;
+  }
+  
+
+

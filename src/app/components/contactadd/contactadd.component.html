@@ -1,0 +1,36 @@
+<mat-card>
+  <form id="event-form" [formGroup]="eventForm" (ngSubmit)="onSubmit()"
+    fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <div class="form-group">
+
+      <mat-label class="field-label">Company: </mat-label>
+      <mat-form-field hintLabel="Add the subject of the event here">
+        <input class="form-control" matInput formControlName="companyName">
+      </mat-form-field>
+
+      <br />
+
+      <mat-label class="field-label">Name: </mat-label>
+      <mat-form-field>
+        <input class="form-control" matInput formControlName="givenName">
+        <mat-hint>Add the start time of the event here. </mat-hint>
+      </mat-form-field>
+
+      <br />
+
+      <mat-label class="field-label">Mobile Number: </mat-label>
+      <mat-form-field>
+        <input class="form-control" matInput placeholder="">
+        <mat-hint>Add the end time of the event here. </mat-hint>
+      </mat-form-field>
+
+      <br />
+
+    </div>
+    <button mat-flat-button color="primary" type="submit"
+      [disabled]="!eventForm.valid">Save
+    </button>
+
+    <button mat-flat-button color="primary" routerLink="/contact">See Contacts</button>
+  </form>
+</mat-card>

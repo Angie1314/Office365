@@ -1,0 +1,101 @@
+<nav>
+  <mat-card fxHide.gt-xs>
+    <mat-toolbar color="primary">
+
+      <span class="alternate-theme">
+        <button mat-button>
+          <img src="{{ icon }}">
+        </button>
+      </span>
+
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>
+          <img class="jpg-icon" src="{{ settings }}">
+          <a routerLink="/setting">Settings</a>
+        </button>
+        <button color="primary" mat-menu-item>
+          <img class="jpg-icon" src="{{ help }}">
+          <a routerLink="/help">Help</a>
+        </button>
+      </mat-menu>
+
+      <mat-toolbar color="primary">
+        <p>
+          <a routerLink="/mailing">Mail</a>
+        </p>
+      </mat-toolbar>
+
+      <mat-toolbar color="primary">
+        <p>
+          <a routerLink="/calendarspinner">Calendar</a>
+        </p>
+      </mat-toolbar>
+
+      <mat-toolbar color="primary">
+        <p>
+          <a routerLink="/mailspinner">Tasks</a>
+        </p>
+      </mat-toolbar>
+
+      <mat-toolbar color="primary">
+        <p>
+          <a routerLink="/spinner">Contacts</a>
+        </p>
+      </mat-toolbar>
+
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-toolbar>
+  </mat-card>
+</nav>
+<mat-card fxHide.xs>
+  <mat-card-title class="button-font">
+    Your Dashboard
+  </mat-card-title>
+
+  <mat-card-content>
+
+    <mat-grid-list cols="4" [style.background]="'#2196F3'">
+
+      <mat-grid-tile>
+        <mat-card class="mat-cards">
+          <button class="button-size" mat-menu-item>
+            <a routerLink="/mailing"><img class="example-card"
+                [src]="officeMailImg"></a>
+            <img class="example-card"
+              [src]="officeMailImg">
+          </button>
+        </mat-card>
+      </mat-grid-tile>
+
+
+      <mat-grid-tile>
+        <mat-card class="mat-cards">
+          <button class="button-size" mat-menu-item>
+            <a routerLink="/spinner"><img class="example-card"
+                [src]="officeContacts"></a>
+          </button>
+        </mat-card>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-card class="mat-cards">
+          <button class="button-size" mat-menu-item>
+            <a routerLink="/mailspinner"><img class="example-card"
+                [src]="officeTaskImg"></a>
+          </button>
+        </mat-card>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-card class="mat-cards example-card">
+          <button class="button-size" mat-menu-item>
+            <a routerLink="/calendarspinner"><img class="example-card"
+                [src]="officeCalendar"></a>
+          </button>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+</mat-card>

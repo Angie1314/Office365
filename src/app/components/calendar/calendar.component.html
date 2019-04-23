@@ -1,0 +1,70 @@
+<p class="button-font"> Calendar Events</p>
+
+<section>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <mat-card fxFlex="70%">
+      <mat-card-title class="calendar-heading">
+        <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
+        <mat-card-subtitle>
+          <p id='one' *ngIf="calendar">Date: {{ (calendar|
+            async).value[0].start.dateTime| date }}</p>
+        </mat-card-subtitle>
+        <p *ngIf="calendar"> {{ (calendar| async).value[0].subject }}</p>
+      </mat-card-title>
+
+      <p *ngIf="calendar"> {{ (calendar| async).value[0].bodyPreview }}</p>
+      <br />
+      <mat-divider></mat-divider>
+
+      <mat-card-title class="calendar-heading">
+        <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
+        <mat-card-subtitle>
+          <p id='two' *ngIf="calendar">Date: {{ (calendar|
+            async).value[1].start.dateTime| date }}</p>
+        </mat-card-subtitle>
+        <p *ngIf="calendar"> {{ (calendar| async).value[1].subject }}</p>
+      </mat-card-title>
+
+      <p *ngIf="calendar"> {{ (calendar| async).value[1].bodyPreview }}</p>
+
+      <br />
+
+      <mat-divider></mat-divider>
+
+      <mat-card-title class="calendar-heading">
+        <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
+        <mat-card-subtitle>
+          <p id='three' *ngIf="calendar">Date: {{ (calendar|
+            async).value[2].start.dateTime| date }}</p>
+        </mat-card-subtitle>
+        <p *ngIf="calendar"> {{ (calendar| async).value[2].subject }}</p>
+      </mat-card-title>
+      <p *ngIf="calendar"> {{ (calendar| async).value[2].bodyPreview }}</p>
+    </mat-card>
+  </div>
+
+  <div fxFlex="30%" *ngIf="calendar">
+    {{ (calendar| async).value[0].start.dateTime| date:"MMMM" }}
+    <button (click)="onScroll()" mat-fab>{{ (calendar|
+      async).value[0].start.dateTime| date:"dd" }}
+    </button>
+
+    <button (click)="onScroll()" mat-fab color="primary">{{ (calendar|
+      async).value[1].start.dateTime| date:"dd" }}
+    </button>
+
+    <button (click)="onScroll()" mat-fab color="accent">{{ (calendar|
+      async).value[2].start.dateTime| date:"dd" }}
+    </button>
+
+    <button routerLink="/new-event" [(ngModel)]="unbounded" class="ripple
+      align-right" mat-flat-button color="primary">add
+      event
+    </button>
+  </div>
+</section>
+
+<br />
+<br />
+
+<div class="alternate-theme parallax image button-login-feature centerize"></div>

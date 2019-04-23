@@ -1,73 +1,119 @@
 <header>
-  <nav>
-    <div class="alternate-theme parallax image button-login-feature centerize">
-      <h2 class="mat-display-3">{{ officeLogo }}</h2>
-      <button *ngIf="!name;else content" class="btn btn-default"
-        (click)="login()" class="ripple" mat-flat-button
-        color="primary" routerLink="/calendar">{{ loginButton }}</button>
-      <ng-template #content>
-        <h1>Hallo {{ name }}.</h1>
-        <button class="alternate-theme parallax image button-login-feature
-          centerize" (click)="logOut()">Logout </button>
-      </ng-template>
-      <button routerLink="/about-office" [(ngModel)]="unbounded" class="ripple"
-        mat-flat-button
-        color="primary">{{ seeFeautesText }}
-      </button>
-    </div>
-    <mat-card id="my_centered_button" class="fade x-hidden-focus">
-      <a mat-fab routerLink="/about-office" aria-label="Down
+  <!-- <form class="form-inline md-form form-sm active-cyan active-cyan-2">
+
+    <mat-form-field hintLabel="Search here">
+      <input class="form-control form-control-sm ml-3 w-75" type="text"
+        placeholder="Search">
+    </mat-form-field>
+  </form> -->
+  <nav id='choice'>
+    <mat-card class="mat-card-background">
+      <div class="alternate-theme parallax image button-login-feature
+        centerize">
+        <h2 class="mat-display-3">{{ officeLogo }}</h2>
+        <button *ngIf="!name;else content" (click)="login()" class="ripple
+          align-right" mat-flat-button color="primary"
+          routerLink="/profile">{{ loginButton }}
+        </button>
+        <!-- <img mat-card-image *ngIf="photo" src="{{ (photo | async |json )}}"/> -->
+        <ng-template #content>
+          <div class="align-left">
+            <mat-card class="mat-card-profile">
+              <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre"
+                class="align-center">
+              <br />
+              <h1 mat-display-1>{{ name }}</h1>
+            </mat-card>
+          </div>
+
+          <button (click)="logOut()" mat-flat-button color="primary" id="logout"
+            class="align-right">{{ Logout }}
+          </button>
+
+          <button routerLink="/profile" class="ripple align-right"
+            mat-flat-button
+            color="primary">{{ seeFeautesText }}
+          </button>
+        </ng-template>
+
+
+      </div>
+    </mat-card>
+
+    <mat-card id="my_centered_button" class="fade x-hidden-focus
+      mat-card-background">
+      <a id='about' mat-fab routerLink="/about-office" aria-label="Down
         keyboard_arrow_down">
         {{ clickMessage }}
         <mat-icon>{{ arrowDown }}</mat-icon>
       </a>
     </mat-card>
-    <ng-template #content>
-      <h1>Hallo {{ name }}.</h1>
-      <a routerLink="/calendar"></a>
-      <button class="btn btn-default alternate-themeß" (click)="logOut()">Logout</button>
-    </ng-template>
-    <mat-card>
-      <mat-toolbar class="alternate-theme fixed-img">
-        <span class="alternate-theme">
-          <button mat-button>
-            <img src="../../../../assets/images/icon.png">
-          </button>
-        </span>
-        <mat-menu #appMenu="matMenu" class="accent">
-          <button mat-menu-item><img class="jpg-icon"
-              src="../../../../assets/images/settings.png"><a
-              routerLink="/setting">Settings</a></button>
-          <button mat-menu-item><img class="jpg-icon"
-              src="../../../../assets/images/help.png">
-            <a routerLink="/help">Help</a></button>
-        </mat-menu>
-        <mat-toolbar color="accent">
-          <a routerLink="/login">Sign up</a>
-        </mat-toolbar>
-        <mat-toolbar color="accent">
-          <p>
-            <a routerLink="/mail-box">Mailbox</a>
-          </p>
-        </mat-toolbar>
-        <mat-toolbar color="accent">
-          <p>
-            <a routerLink="/calendar">Calendar</a>
-          </p>
-        </mat-toolbar>
-        <button mat-icon-button [matMenuTriggerFor]="appMenu">
-          <mat-icon>more_vert</mat-icon>
+
+    <div class="alternate-theme button-login-feature centerize">
+      <ng-template #content>
+        <div class="align-left">
+          <mat-card class="mat-card-background">
+            <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre"
+              class="align-center">
+            <br />
+            <h1 mat-display-1>{{ name }}</h1>
+          </mat-card>
+        </div>
+        <a routerLink="/calendar"></a>
+        <button (click)="logOut()" mat-flat-button color="primary" id='logout'
+          class="align-right">Logout</button>
+
+        <button routerLink="/profile" class="ripple align-right"
+          mat-flat-button
+          color="primary" id='dashboard'>{{ seeFeautesText }}
         </button>
-      </mat-toolbar>
-    </mat-card>
-    <div layout="row" layout-margin layout-wrap layout-align="center center"></div>
-    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
-      fxLayoutGap="0.5%" fxLayoutAlign="center">
-      <div fxFlex="20%"></div>
+      </ng-template>
     </div>
   </nav>
+
 </header>
 <main>
+ 
   <router-outlet></router-outlet>
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <mat-divider id='contact'></mat-divider>
+
+  <button mat-button>
+    <a href="https://www.facebook.com/Office"> <img class="jpg-icon"
+        [src]="srcUrlFB"></a>
+  </button>
+
+  <button mat-button>
+    <a href="https://www.linkedin.com/showcase/microsoft-office/"><img
+        class="jpg-icon"
+        [src]="srcUrlInstagram"></a>
+  </button>
+
+  <button mat-button>
+    <a href="https://twitter.com/office"> <img class="jpg-icon"
+        [src]="srcUrlTwitter"></a>
+  </button>
 </main>
-<footer></footer>
+
+<footer>
+  <br />
+  <br />
+
+  <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="right"
+    fxLayoutGap="10px">
+    <section>
+      <p><a class="mat-display-1" (click)="onScroll()">Logout</a></p>
+    </section>
+    <section>
+      <p><a class="mat-display-1" (click)="onScroll()">Dashboard</a></p>
+    </section>
+    <section>
+      <p><a class="mat-display-1" (click)="onScroll()">Profile</a></p>
+    </section>
+  </div>
+</footer>

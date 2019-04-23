@@ -1,123 +1,53 @@
+
+$item-float-left:left;
+$item-float-right:right;
+$mat-card-profile-pic:transparent !important;
+$item-float-center:center;
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
 
-$office-logo: "ZCOOL XiaoWei", serif;
-$card-width: 100%;
-$card-height: auto;
-$parent-overflow: hidden;
-$img-postition: relative;
-$img-width: 100%;
-$h2-postition-on-img: absolute;
-$h2-top-position-on-img: 200px;
-$h2-left-position-on-img: 0;
-$h2-width-on-img: 100%;
+$office-logo: "serif";
 
-.logo {
+.align-left {
+  float:$item-float-left;
+}
+
+.align-right {
+  float:$item-float-right;
+
+}
+
+.align-center {
+  float: $item-float-center;
+}
+
+.mat-card-background{
+  background-color: $mat-card-profile-pic;
   font-family: $office-logo;
+  border: none !important;
+  color: black;
+  transition: none !important;
+  box-shadow: none !important;
 }
 
-.parent {
-  overflow: $parent-overflow;
-}
-
-.card img {
-  width: $card-width;
-  height: $card-height;
-}
-
-.image {
-  position: $img-postition;
-  width: $img-width;
-}
-
-h2 {
-  position: $h2-postition-on-img;
-  top: $h2-top-position-on-img;
-  left: $h2-left-position-on-img;
-  width: $h2-width-on-img;
+.mat-card-profile{
+  background-color: $mat-card-profile-pic;
   font-family: $office-logo;
-  margin: 12px;
+  color: black;
+  border: none !important;
 
-  .btn {
-    position: $h2-postition-on-img;
-    top: 50%;
-    left: $h2-left-position-on-img;
-    width: $h2-width-on-img;
-    font-family: $office-logo;
+}
+
+.active-cyan-2 input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
   }
-}
-
-#my_centered_button {
-  display: flex;
-  justify-content: center;
-}
-
-@import "~@angular/material/theming";
-@include mat-core();
-
-$my-app-primary: mat-palette($mat-blue);
-$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
-$my-app-warn: mat-palette($mat-deep-orange);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
-
-@include angular-material-theme($my-app-theme);
-
-.alternate-theme {
-  $alternate-primary: mat-palette($mat-blue);
-  $alternate-accent: mat-palette($mat-pink, 400);
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
-  @include angular-material-theme($alternate-theme);
-}
-
-.vertical-divider {
-  border-top-width: 0;
-  border-right-width: 1px;
-  border-right-style: solid;
-  height: 100%;
-}
-
-.parallax {
-  background-image: url("src/assets/images/pplWork.jpg");
-  min-height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.button-login-feature button,
-.button-login-feature a {
-  margin-right: 8px;
-  position: relative;
-}
-
-.centerize {
-  text-align: center;
-  margin-right: 8px;
-}
-
-.ripple {
-  margin: 6px 12px 6px 0;
-}
-
-.mat-display-3 {
-  color: whitesmoke;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-#my_centered_button {
-  display: flex;
-  justify-content: center;
-  opacity: 1;
-}
+  
+  .active-cyan input[type=text] {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+  
+  .active-cyan .fa,
+  .active-cyan-2 .fa {
+  color: #4dd0e1;
+  }

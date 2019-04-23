@@ -1,53 +1,94 @@
 
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
 import { Routes, RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import simpleParallax from 'simple-parallax-js';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatStepperModule } from '@angular/material/stepper';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatCardModule } from '@angular/material/card';
-import { LoginComponent } from './login/login.component';
-import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatRippleModule } from '@angular/material/core';
-import { CalendarComponent } from './calendar/calendar.component';
-import { MailBoxComponent } from './mail-box/mail-box.component';
-import { HelpComponent } from './help/help.component';
-import { SettingComponent } from './setting/setting.component';
-import { OAuthModule, OAuthService, JwksValidationHandler } from 'angular-oauth2-oidc';
-import { HttpClientModule } from '@angular/common/http';
-import { AboutOfficeComponent } from './about-office/about-office.component';
+import { FormsModule } from '@angular/forms';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
+
+import { LoginComponent } from './components/login/login.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { HelpComponent } from './components/help/help.component';
+import { SettingComponent } from './components/setting/setting.component';
+import { AboutOfficeComponent } from './components/about-office/about-office.component';
+// import { MailBoxComponent } from './components/mail-box/mail-box.component';
+import { AppComponent } from './app.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactaddComponent } from './components/contactadd/contactadd.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { NewEventComponent } from './components/new-event/new-event.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+
+import { MatGridListModule } from '@angular/material/grid-list';
+
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule,
+         MatMenuModule,
+         MatSidenavModule,
+         MatStepperModule,
+         MatFormFieldModule,
+         MatDividerModule,
+         MatInputModule,
+         MatProgressBarModule,
+         MatButtonModule,
+         MatRippleModule,
+         MatListModule,
+         MatCheckboxModule,
+         
+         } from '@angular/material';
+         
+import { CustomValidateDirective } from '../directive/custom-validate.directive';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
+import { AppRoutingModule } from './app-routing.module';
+import { TokenInterceptor } from 'src/interceptors/token-interceptor';
+// import { SearchComponent } from './components/search/search.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MailingComponent } from './components/mailing/mailing.component';
+import { MailspinnerComponent } from './components/mailspinner/mailspinner.component';
+import { CalendarspinnerComponent } from './components/calendarspinner/calendarspinner.component';
+// import { MailBoxComponent } from './components/mail-box/mail-box.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     CalendarComponent,
-    MailBoxComponent,
+    // MailBoxComponent,
     HelpComponent,
     SettingComponent,
     AboutOfficeComponent,
+    CustomValidateDirective,
+    ProfileComponent,
+    ContactComponent,
+    ContactaddComponent,
+    TasksComponent,
+    NewEventComponent,
+    AppComponent,
+    SpinnerComponent,
+    MailingComponent,
+    MailspinnerComponent,
+    CalendarspinnerComponent,
+    // MailBoxComponent,
+    // SearchComponent,
+
   ],
+  
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
     MatToolbarModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     MatMenuModule,
     MatSidenavModule,
     MatStepperModule,
@@ -64,9 +105,42 @@ import { AboutOfficeComponent } from './about-office/about-office.component';
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
+    MatListModule,
+    MatGridListModule,
+    NgxPageScrollCoreModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
     OAuthModule.forRoot()
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [MatButtonModule, 
+    MatProgressSpinnerModule,
+    MatCheckboxModule, 
+    MatToolbarModule,
+    MatIconModule, 
+    MatMenuModule, 
+    MatSidenavModule,
+    MatStepperModule, 
+    MatFormFieldModule, 
+    MatDividerModule,
+    MatCardModule, 
+    MatInputModule,
+    FormsModule, 
+    MatProgressBarModule, 
+    MatRippleModule,
+    MatListModule,
+    MatGridListModule,
+    MatDatepickerModule,
+  ],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  },
+  
+  ],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA ]
+ 
 })
 export class AppModule { }

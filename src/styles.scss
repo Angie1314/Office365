@@ -1,2 +1,165 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
+@import url("/Users/Akock/Desktop/OfficeUse365/src/variables.scss");
+$office-logo: "ZCOOL XiaoWei", serif;
+$card-width: 100%;
+$card-height: auto;
+$parent-overflow: hidden;
+$img-postition: relative;
+$img-width: 100%;
+
+$h2-postition-on-img: absolute;
+$h2-top-position-on-img: 200px;
+$h2-left-position-on-img: 0;
+$h2-width-on-img: 100%;
+
+$parallax-background:fixed;
+$parallax-background-position:center;
+$parallax-background-repeat:no-repeat;
+$parallax-background-size:cover;
+
+$centered-button-display:flex;
+$centered-button-content:center;
+
+$navbar-overflow:hidden;
+$navbar-bgCol:#333;
+$navbar-position:fixed;
+$navbar-top:0;
+$navbar-width:100;
+
+$but-log-margin:8px;
+$but-log-postion:relative;
+
+$center-components-text-align:center;
+$center-components-margin:8px;
+
+$button-ripple-margin:6px 12px 6px 0;
+
+$mat-display-3-color:whitesmoke;
+
+$anchor-tag-color:white;
+$anchor-tag-tect-dec:none;
+
+
+$footer-display:flex;
+$footer-alignment:center;
+$footer-content-justify:center;
+
+
+.logo {
+  font-family: $office-logo;
+}
+
+.parent {
+  overflow: $parent-overflow;
+}
+
+.card img {
+  width: $card-width;
+  height: $card-height;
+}
+
+.image {
+  position: $img-postition;
+  width: $img-width;
+}
+
+h2 {
+  position: $h2-postition-on-img;
+  top: $h2-top-position-on-img;
+  left: $h2-left-position-on-img;
+  width: $h2-width-on-img;
+  font-family: $office-logo;
+  margin: 12px;
+
+  .btn {
+    position: $h2-postition-on-img;
+    top: 50%;
+    left: $h2-left-position-on-img;
+    width: $h2-width-on-img;
+    font-family: $office-logo;
+  }
+}
+
+#my_centered_button {
+  display: $centered-button-display;
+  justify-content: $centered-button-content;
+}
+
+@import "~@angular/material/theming";
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-blue);
+$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-blue); 
+  $alternate-accent: mat-palette($mat-pink, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
+.parallax {
+  background-image: url("src/assets/images/pplWork.jpg");
+  min-height: 500px;
+  background-attachment: $parallax-background;
+  background-position: $parallax-background-position;
+  background-repeat: $parallax-background-repeat;
+  background-size: $parallax-background-size;
+}
+
+.navbar {
+  overflow:$navbar-overflow;
+  background-color:$navbar-bgCol;
+  position: $navbar-position;
+  top: $navbar-top;
+  width: $navbar-width;
+}
+
+.button-login-feature button,
+.button-login-feature a {
+  margin-right: $but-log-margin;
+  position: $but-log-postion;
+}
+
+.centerize {
+  text-align: $center-components-text-align;
+  margin-right: $center-components-margin;
+}
+
+.left-float{
+    float: left;
+}
+
+.ripple {
+  margin: $button-ripple-margin;
+}
+
+.mat-display-3 {
+  color:$mat-display-3-color;
+}
+
+a {
+  color: $anchor-tag-color;
+  text-decoration: $anchor-tag-tect-dec;
+}
+
+.mat-display-1 {
+  color:lighten($color: #2196F3, $amount: 35);
+  
+}
+
+footer {
+  display: $footer-display;
+  align-items: $footer-alignment;
+  justify-content: $footer-content-justify;
+}
+
+.white-menu{
+    color:lighten($color: #2196F3, $amount: 35);
+}
