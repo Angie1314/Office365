@@ -8,19 +8,16 @@ import { NgModule ,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
 
-import { LoginComponent } from './components/login/login.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { HelpComponent } from './components/help/help.component';
 import { SettingComponent } from './components/setting/setting.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
-// import { MailBoxComponent } from './components/mail-box/mail-box.component';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactaddComponent } from './components/contactadd/contactadd.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
@@ -50,20 +47,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { AppRoutingModule } from './app-routing.module';
 import { TokenInterceptor } from 'src/interceptors/token-interceptor';
-// import { SearchComponent } from './components/search/search.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MailingComponent } from './components/mailing/mailing.component';
-import { MailspinnerComponent } from './components/mailspinner/mailspinner.component';
-import { CalendarspinnerComponent } from './components/calendarspinner/calendarspinner.component';
-// import { MailBoxComponent } from './components/mail-box/mail-box.component';
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     CalendarComponent,
-    // MailBoxComponent,
     HelpComponent,
     SettingComponent,
     AboutOfficeComponent,
@@ -74,13 +63,7 @@ import { CalendarspinnerComponent } from './components/calendarspinner/calendars
     TasksComponent,
     NewEventComponent,
     AppComponent,
-    SpinnerComponent,
     MailingComponent,
-    MailspinnerComponent,
-    CalendarspinnerComponent,
-    // MailBoxComponent,
-    // SearchComponent,
-
   ],
   
   imports: [

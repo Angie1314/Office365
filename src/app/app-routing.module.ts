@@ -10,9 +10,6 @@ import { ContactaddComponent } from './components/contactadd/contactadd.componen
 import { AppComponent } from '../../src/app/app.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
-import { MailspinnerComponent } from './components/mailspinner/mailspinner.component';
-import { CalendarspinnerComponent } from './components/calendarspinner/calendarspinner.component';
 import { MailingComponent } from './components/mailing/mailing.component';
 
 const routes: Routes = [
@@ -78,21 +75,6 @@ const routes: Routes = [
     path: 'tasks',
     component: TasksComponent
   },
-
-  {
-    path: 'spinner',
-    component: SpinnerComponent
-  },
-
-  {
-  path: 'mailspinner',
-  component: MailspinnerComponent
-},
-
-{
-  path: 'calendarspinner',
-  component: CalendarspinnerComponent
-},
 
 ];
 
