@@ -29,6 +29,7 @@ export class SettingComponent implements OnInit {
   officeLogo = 'Office 365';
 
   ngOnInit() {
+    
   }
 
 }

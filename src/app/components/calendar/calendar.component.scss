@@ -53,7 +53,7 @@ $mat-grid-tile-color:lightblue;
   min-height: $parallax-calendar-min-height;
   background-attachment: $parallax-calendar-bg-attach;
   background-position: $parallax-calendar-position;
-  background-repeat:$parallax-calendar-repeat;
+  background-repeat: $parallax-calendar-repeat;
   background-size: $parallax-calendar-bg-size;
 }
 
@@ -101,6 +101,6 @@ mat-grid-tile {
 }
 
 .left-align-element{
-    float:$item-float;
+    float: $item-float;
   }
 

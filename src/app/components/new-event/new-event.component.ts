@@ -39,15 +39,13 @@ export class NewEventComponent {
         .createEvent(this.event)
         .subscribe(() => this.eventForm.reset());
 
-        Swal.fire({
-          position: 'center',
-          type: 'success',
-          title: 'Event Added!',
-          showConfirmButton: false,
-          timer: 1500
-        })
-
+      Swal.fire({
+        position: 'center',
+        type: 'success',
+        title: 'Event Added!',
+        showConfirmButton: false,
+        timer: 1500
+      })
     }
   }
-
 }

@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
   officeLogo = 'Office 365';
 
   contact: Contact[] = [];
-  dataSource=new MatTableDataSource <Contact>();
+  dataSource = new MatTableDataSource<Contact>();
 
   constructor(private contactService: ContactService) {
     this.icon = "../../../../assets/images/icon.png";
@@ -51,7 +51,7 @@ export class ContactComponent implements OnInit {
 
     this.contactService.getContact()
       .subscribe(x => {
-      this.contact = x;
+        this.contact = x;
       });
   }
 
