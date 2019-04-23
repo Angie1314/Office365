@@ -9,8 +9,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
 
 import { CalendarComponent } from './components/calendar/calendar.component';
-import { HelpComponent } from './components/help/help.component';
-import { SettingComponent } from './components/setting/setting.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -53,8 +51,6 @@ import { MailingComponent } from './components/mailing/mailing.component';
   declarations: [
     AppComponent,
     CalendarComponent,
-    HelpComponent,
-    SettingComponent,
     AboutOfficeComponent,
     CustomValidateDirective,
     ProfileComponent,
