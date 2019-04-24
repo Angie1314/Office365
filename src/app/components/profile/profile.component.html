@@ -1,3 +1,5 @@
+<mat-card><h2 class="mat-display-3">{{ officeLogo }}</h2></mat-card>
+
 <p class="button-font"> Your Dashboard</p>
 
 <br />
@@ -7,36 +9,19 @@
   <mat-card fxHide.gt-xs>
     <mat-toolbar color="primary">
 
-      <span class="alternate-theme">
-        <button mat-button>
-          <img src="{{ icon }}">
-        </button>
-      </span>
-
-      <mat-menu #appMenu="matMenu">
-        <button mat-menu-item>
-          <img class="jpg-icon" src="{{ settings }}">
-          <a routerLink="/setting">Settings</a>
-        </button>
-        <button color="primary" mat-menu-item>
-          <img class="jpg-icon" src="{{ help }}">
-          <a routerLink="/help">Help</a>
-        </button>
-      </mat-menu>
+      <a class="alternate-theme">
+        <img src="{{ icon }}">
+      </a>
 
       <mat-toolbar color="primary">
-        <p>
-          <a routerLink="/calendarspinner">Calendar</a>
-        </p>
+        <a routerLink="/calendar">Calendar</a>
       </mat-toolbar>
 
       <mat-toolbar color="primary">
-        <p>
-          <a routerLink="/spinner">Contacts</a>
-        </p>
+          <a routerLink="/contact">Contacts</a>
       </mat-toolbar>
 
-      <button mat-icon-button [matMenuTriggerFor]="appMenu"></button>
+      <!-- <button mat-icon-button [matMenuTriggerFor]="appMenu"></button> -->
     </mat-toolbar>
   </mat-card>
 </nav>
@@ -51,20 +36,18 @@
       <mat-grid-tile>
         <mat-card class="mat-cards">
           <button class="button-size" mat-menu-item>
-            <a routerLink="/contact"><img class="example-card"
-                [src]="officeContacts"></a>
+            <a routerLink="/contact"><img class="example-card" [src]="officeContacts"></a>
           </button>
         </mat-card>
       </mat-grid-tile>
 
       <mat-grid-tile>
-          <mat-card class="mat-cards">
-            <button class="button-size" mat-menu-item>
-              <a routerLink="/calendar"><img class="example-card"
-                  [src]="officeCalendar"></a>
-            </button>
-          </mat-card>
-        </mat-grid-tile>
+        <mat-card class="mat-cards">
+          <button class="button-size" mat-menu-item>
+            <a routerLink="/calendar"><img class="example-card" [src]="officeCalendar"></a>
+          </button>
+        </mat-card>
+      </mat-grid-tile>
     </mat-grid-list>
   </mat-card-content>
 </mat-card>
