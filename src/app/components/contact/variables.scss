@@ -1,10 +1,10 @@
-$calendar-font:'Righteous', cursive;
-$calendar-font-size: 2em;
+$calendar-font:"Source Sans Pro", sans-serif;
+$calendar-font-size: 24px;
 $calendar-font-color :#2196F3;
 $calendar-alignment-of-text: center;
 
-$button-font:'Righteous', cursive;
-$button-font-size: 2em;
+$button-font:"Source Sans Pro", sans-serif;
+$button-font-size: 48px;
 $button-font-color:#2196F3;
 $alignment-of-text: center center;
 
@@ -29,3 +29,9 @@ $parallax-calendar-bg-size: cover;
 $search-min-width: 150px;
 $search-mx-width: 500px;
 $search-width: 100%;
+
+$button-font:"Source Sans Pro", sans-serif;
+$button-font-size:48px;
+$button-font-color:#2196F3;
+$alignment-of-text:center;
+$button-font-border: 0;

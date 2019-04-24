@@ -162,15 +162,11 @@ a {
 
 .mat-display-1 {
   color:$mat-display-3-color;
-  font-family: $office-logo;
+  size: 10px;
 }
 
 footer {
   display: $footer-display;
   align-items: $footer-alignment;
   justify-content: $footer-content-justify;
-}
-
-.white-menu{
-    color:lighten($color: #2196F3, $amount: 35);
 }
