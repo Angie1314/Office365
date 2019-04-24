@@ -1,8 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
-@import url("/Users/Akock/Desktop/OfficeUse365/src/variables.scss");
-$office-logo: "ZCOOL XiaoWei", serif;
+
 $card-width: 100%;
 $card-height: auto;
 $parent-overflow: hidden;
@@ -36,7 +34,7 @@ $center-components-margin:8px;
 
 $button-ripple-margin:6px 12px 6px 0;
 
-$mat-display-3-color:whitesmoke;
+$mat-display-3-color:#333;
 
 $anchor-tag-color:white;
 $anchor-tag-tect-dec:none;
@@ -45,6 +43,9 @@ $anchor-tag-tect-dec:none;
 $footer-display:flex;
 $footer-alignment:center;
 $footer-content-justify:center;
+$office-logo: "Roboto, Helvetica Neue, sans-serif";
+$mat-card-profile-pic:transparent !important;
+
 
 
 .logo {
@@ -124,6 +125,7 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 .button-login-feature button,
 .button-login-feature a {
   margin-right: $but-log-margin;
+  margin-top: 10%;
   position: $but-log-postion;
 }
 
@@ -140,8 +142,17 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
   margin: $button-ripple-margin;
 }
 
+.mat-card-profile{
+  background-color: $mat-card-profile-pic;
+  font-family: $office-logo;
+  color: black;
+  border: none !important;
+
+}
+
 .mat-display-3 {
   color:$mat-display-3-color;
+  size: 12px;
 }
 
 a {
@@ -150,8 +161,8 @@ a {
 }
 
 .mat-display-1 {
-  color:lighten($color: #2196F3, $amount: 35);
-  
+  color:$mat-display-3-color;
+  font-family: $office-logo;
 }
 
 footer {

@@ -1,119 +1,18 @@
-<header>
-  <!-- <form class="form-inline md-form form-sm active-cyan active-cyan-2">
+<app-header></app-header>
 
-    <mat-form-field hintLabel="Search here">
-      <input class="form-control form-control-sm ml-3 w-75" type="text"
-        placeholder="Search">
-    </mat-form-field>
-  </form> -->
-  <nav id='choice'>
-    <mat-card class="mat-card-background">
-      <div class="alternate-theme parallax image button-login-feature
-        centerize">
-        <h2 class="mat-display-3">{{ officeLogo }}</h2>
-        <button *ngIf="!name;else content" (click)="login()" class="ripple
-          align-right" mat-flat-button color="primary"
-          routerLink="/profile">{{ loginButton }}
-        </button>
-        <!-- <img mat-card-image *ngIf="photo" src="{{ (photo | async |json )}}"/> -->
-        <ng-template #content>
-          <div class="align-left">
-            <mat-card class="mat-card-profile">
-              <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre"
-                class="align-center">
-              <br />
-              <h1 mat-display-1>{{ name }}</h1>
-            </mat-card>
-          </div>
+<!-- <app-about-office></app-about-office> -->
 
-          <button (click)="logOut()" mat-flat-button color="primary" id="logout"
-            class="align-right">{{ Logout }}
-          </button>
+<router-outlet></router-outlet>
 
-          <button routerLink="/profile" class="ripple align-right"
-            mat-flat-button
-            color="primary">{{ seeFeautesText }}
-          </button>
-        </ng-template>
+<br />
+<br />
 
+<mat-divider></mat-divider>
 
-      </div>
-    </mat-card>
+<br />
+<br />
 
-    <mat-card id="my_centered_button" class="fade x-hidden-focus
-      mat-card-background">
-      <a id='about' mat-fab routerLink="/about-office" aria-label="Down
-        keyboard_arrow_down">
-        {{ clickMessage }}
-        <mat-icon>{{ arrowDown }}</mat-icon>
-      </a>
-    </mat-card>
+<app-pagefooter></app-pagefooter>
 
-    <div class="alternate-theme button-login-feature centerize">
-      <ng-template #content>
-        <div class="align-left">
-          <mat-card class="mat-card-background">
-            <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre"
-              class="align-center">
-            <br />
-            <h1 mat-display-1>{{ name }}</h1>
-          </mat-card>
-        </div>
-        <a routerLink="/calendar"></a>
-        <button (click)="logOut()" mat-flat-button color="primary" id='logout'
-          class="align-right">Logout</button>
-
-        <button routerLink="/profile" class="ripple align-right"
-          mat-flat-button
-          color="primary" id='dashboard'>{{ seeFeautesText }}
-        </button>
-      </ng-template>
-    </div>
-  </nav>
-
-</header>
-<main>
- 
-  <router-outlet></router-outlet>
-
-  <br />
-  <br />
-  <br />
-  <br />
-
-  <mat-divider id='contact'></mat-divider>
-
-  <button mat-button>
-    <a href="https://www.facebook.com/Office"> <img class="jpg-icon"
-        [src]="srcUrlFB"></a>
-  </button>
-
-  <button mat-button>
-    <a href="https://www.linkedin.com/showcase/microsoft-office/"><img
-        class="jpg-icon"
-        [src]="srcUrlInstagram"></a>
-  </button>
-
-  <button mat-button>
-    <a href="https://twitter.com/office"> <img class="jpg-icon"
-        [src]="srcUrlTwitter"></a>
-  </button>
-</main>
-
-<footer>
-  <br />
-  <br />
-
-  <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="right"
-    fxLayoutGap="10px">
-    <section>
-      <p><a class="mat-display-1" (click)="onScroll()">Logout</a></p>
-    </section>
-    <section>
-      <p><a class="mat-display-1" (click)="onScroll()">Dashboard</a></p>
-    </section>
-    <section>
-      <p><a class="mat-display-1" (click)="onScroll()">Profile</a></p>
-    </section>
-  </div>
-</footer>
+<br />
+<br />

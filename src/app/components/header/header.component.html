@@ -1,0 +1,59 @@
+<mat-card class="mat-card-background">
+  <br />
+  <br />
+
+  <div class="image button-login-feature
+      centerize">
+    <button *ngIf="!name;else content" (click)="login()" class="ripple
+        align-right" mat-flat-button color="primary" routerLink="/profile">{{ loginButton }}
+    </button>
+    <ng-template #content>
+      <div class="align-left">
+        <mat-card class="mat-card-profile">
+
+          <h1 class="mat-display-3">{{ name }}</h1>
+        </mat-card>
+      </div>
+
+      <button (click)="logOut()" mat-flat-button color="primary" id="logout" class="align-right">{{ Logout }}
+      </button>
+
+      <button routerLink="/profile" class="ripple align-right" mat-flat-button color="primary">{{ seeFeautesText }}
+      </button>
+    </ng-template>
+  </div>
+</mat-card>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<div class="alternate-theme parallax image button-login-feature
+centerize"></div>
+<div class="alternate-theme button-login-feature centerize">
+  <ng-template #content>
+    <div class="align-left">
+      <mat-card class="mat-card-profile">
+        <br />
+        <h1 class="mat-display-3">{{ name }}</h1>
+      </mat-card>
+    </div>
+    <a routerLink="/calendar"></a>
+    <button (click)="logOut()" mat-flat-button color="primary" id='logout' class="align-right">Logout</button>
+
+    <button routerLink="/profile" class="ripple align-right" mat-flat-button color="primary"
+      id='dashboard'>{{ seeFeautesText }}
+    </button>
+  </ng-template>
+</div>
+<div class="alternate-theme button-login-feature centerize">
+  <h2 class="mat-display-3">{{ officeLogo }}</h2>
+</div>
+
+<br />
+<br />
+<br />

@@ -13,11 +13,9 @@ const contentType = "application/json";
 export class ContactService {
 
   constructor(private http: HttpClient) {
+    
   }
 
-  // getContact(): Observable<Contact> {
-  //   return this.http.get<Contact>(`${baseUrl}/me/contacts`);
-  // }
   getContact(): Observable<Contact[]> {
     return this.http.get<Contact>(`${baseUrl}/me/contacts`)
       .pipe(map(x => (x as any).value));
@@ -27,22 +25,4 @@ export class ContactService {
 
   }
 }
-    // import { Observable } from 'rxjs';
-    // import { Task } from '../ models/task';
-    // import { map } from 'rxjs/operators';
-
-    // const baseUrl = 'https://graph.microsoft.com/beta';
-    // @Injectable({
-    //   providedIn: 'root'
-    // })
-    // export class TaskService {
-
-    //   constructor(private http: HttpClient) {
-    //   }
-
-    //   getTask(): Observable<Task[]> {
-    //     return this.http.get<Task>(`${baseUrl}/me/findRooms`)
-    //     .pipe(map(x=>(x as any).value));
-    //   }
-    // }
 

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup, AbstractControl} from '@angular/forms';
 import { Observable } from 'rxjs';
-import { ContactAddService } from 'src/services/addcontact.service';
+import { ContactAddService } from 'src/app/services/addcontact.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { Addcontact } from 'src/ models/addcontact';
+import { Addcontact } from 'src/app/ models/addcontact';
 import Swal from 'sweetalert2';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

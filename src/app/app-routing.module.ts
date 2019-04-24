@@ -4,11 +4,12 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ContactaddComponent } from './components/contactadd/contactadd.component';
+import { ContactaddComponent } from './components/contact-add/contactadd.component';
 import { AppComponent } from '../../src/app/app.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
-import { MailingComponent } from './components/mailing/mailing.component';
+import { PagefooterComponent } from './components/page-footer/pagefooter.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [
   {
@@ -23,11 +24,6 @@ const routes: Routes = [
 
   { path: 'logout/:id',      
     component: AppComponent },
-
-  {
-    path: 'mailing',
-    component: MailingComponent
-  },
 
   {
     path: 'new-event',
@@ -53,7 +49,6 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent
   },
-
   {
     path: 'contactadd',
     component: ContactaddComponent
@@ -63,6 +58,16 @@ const routes: Routes = [
     path: 'tasks',
     component: TasksComponent
   },
+
+ {
+   path:'page-footer',
+   component:PagefooterComponent 
+ },
+
+ {
+  path:'header',
+  component:HeaderComponent 
+ }
 
 ];
 

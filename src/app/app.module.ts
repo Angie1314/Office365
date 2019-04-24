@@ -1,6 +1,3 @@
-
-
-
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
@@ -13,13 +10,10 @@ import { AboutOfficeComponent } from './components/about-office/about-office.com
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ContactaddComponent } from './components/contactadd/contactadd.component';
+import { ContactaddComponent } from './components/contact-add/contactadd.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
-
-import { MatGridListModule } from '@angular/material/grid-list';
 
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { MatCardModule } from '@angular/material/card';
@@ -38,15 +32,15 @@ import { MatToolbarModule,
          MatCheckboxModule,
          
          } from '@angular/material';
-         
-import { CustomValidateDirective } from '../directive/custom-validate.directive';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { CustomValidateDirective } from './directives/custom-validate.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { AppRoutingModule } from './app-routing.module';
-import { TokenInterceptor } from 'src/interceptors/token-interceptor';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MailingComponent } from './components/mailing/mailing.component';
+import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';;
+import { PagefooterComponent } from './components/page-footer/pagefooter.component';
+import { HeaderComponent } from './components/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +53,8 @@ import { MailingComponent } from './components/mailing/mailing.component';
     TasksComponent,
     NewEventComponent,
     AppComponent,
-    MailingComponent,
+    PagefooterComponent,
+    HeaderComponent,
   ],
   
   imports: [
@@ -89,7 +84,6 @@ import { MailingComponent } from './components/mailing/mailing.component';
     NgxPageScrollCoreModule,
     BrowserModule,
     ReactiveFormsModule,
-    MatDatepickerModule,
     OAuthModule.forRoot()
   ],
   exports: [MatButtonModule, 
@@ -109,7 +103,6 @@ import { MailingComponent } from './components/mailing/mailing.component';
     MatRippleModule,
     MatListModule,
     MatGridListModule,
-    MatDatepickerModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

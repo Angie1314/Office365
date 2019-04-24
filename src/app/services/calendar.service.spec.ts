@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TaskService } from './task.service';
+import { CalendarService } from './calendar.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-describe('TaskService', () => {
+describe('CalendarService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
       FormsModule,
@@ -14,7 +14,7 @@ describe('TaskService', () => {
   }));
 
   it('should be created', () => {
-    const service: TaskService = TestBed.get(TaskService);
+    const service: CalendarService = TestBed.get(CalendarService);
     expect(service).toBeTruthy();
   });
 });

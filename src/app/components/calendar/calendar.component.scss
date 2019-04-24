@@ -1,5 +1,8 @@
 @import "~@angular/material/theming";
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
 @include mat-core();
 
 $my-app-primary: mat-palette($mat-blue);
@@ -7,13 +10,13 @@ $my-app-accent: mat-palette($mat-pink, 500, 900, A100);
 $my-app-warn: mat-palette($mat-deep-orange);
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 
-$calendar-font:'Righteous', cursive;
-$calendar-font-size:2em;
+$calendar-font:"Source Sans Pro", sans-serif;
+$calendar-font-size:24px;
 $calendar-font-color:#2196F3;
 $calendar-alignment-of-text:center;
 
-$button-font:'Righteous', cursive;
-$button-font-size:2em;
+$button-font:"Source Sans Pro", sans-serif;
+$button-font-size:48px;
 $button-font-color:#2196F3;
 $alignment-of-text:center;
 $button-font-border: 0;

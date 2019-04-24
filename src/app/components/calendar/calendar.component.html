@@ -1,5 +1,15 @@
 <p class="button-font"> Calendar Events</p>
 
+<div>
+  <button routerLink="/new-event" class="ripple
+    align-right" mat-flat-button color="primary">Add
+    Event
+  </button>
+</div>
+
+<br />
+<br />
+
 <section>
   <div fxLayout="row" fxLayoutAlign="start center">
     <mat-card fxFlex="70%">
@@ -15,7 +25,7 @@
       <p *ngIf="calendar"> {{ (calendar| async).value[0].bodyPreview }}</p>
 
       <br />
-      
+
       <mat-divider></mat-divider>
 
       <mat-card-title class="calendar-heading">
@@ -43,26 +53,6 @@
       </mat-card-title>
       <p *ngIf="calendar"> {{ (calendar| async).value[2].bodyPreview }}</p>
     </mat-card>
-  </div>
-
-  <div fxFlex="30%" *ngIf="calendar">
-    {{ (calendar| async).value[0].start.dateTime| date:"MMMM" }}
-    <button (click)="onScroll()" mat-fab>{{ (calendar|
-      async).value[0].start.dateTime| date:"dd" }}
-    </button>
-
-    <button (click)="onScroll()" mat-fab color="primary">{{ (calendar|
-      async).value[1].start.dateTime| date:"dd" }}
-    </button>
-
-    <button (click)="onScroll()" mat-fab color="accent">{{ (calendar|
-      async).value[2].start.dateTime| date:"dd" }}
-    </button>
-
-    <button routerLink="/new-event" [(ngModel)]="unbounded" class="ripple
-      align-right" mat-flat-button color="primary">add
-      event
-    </button>
   </div>
 </section>
 

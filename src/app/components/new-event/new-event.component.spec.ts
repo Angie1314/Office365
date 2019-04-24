@@ -3,8 +3,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewEventComponent } from './new-event.component';
-import { GraphApiService } from 'src/services/graph-api.service';
-import { CalendarEvent } from 'src/ models/calendar-event';
+import { GraphApiService } from 'src/app/services/graph-api.service';
+import { CalendarEvent } from 'src/app/ models/calendar-event';
 import { Observable, of } from 'rxjs';
 
 class GraphApiServiceMock {

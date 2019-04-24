@@ -1,3 +1,7 @@
+
+<br />
+<br />
+
 <p class="text-heading">
    About Office 365
 </p>
@@ -8,12 +12,7 @@
       <mat-card-title>{{ matCardTitleFeatures }}</mat-card-title>
       <p class="text-body">{{ textForFeatures }}</p>
       <button mat-button>
-         <img [src]="imgEmail">
          <img [src]="imgOneNote">
-         <img [src]="imgWord">
-         <img [src]="imgExcel">
-         <img [src]="imgPowerpoint">
-         <img [src]="imgAccess">
       </button>
    </mat-card>
 
@@ -33,6 +32,5 @@
       <mat-card-title>{{ matCardTitleCloud }}</mat-card-title>
       <p class="text-body">{{ matCardContentCloud }}</p>
       <img [src]="imgComputer" alt="computer image">
-      <p *ngIf="profile | async">{{ (profile | async)?.mail }}</p>
    </mat-card>
 </div>

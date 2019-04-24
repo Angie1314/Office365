@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from 'src/ models/task';
-import { TaskService } from 'src/services/task.service';
+import { Task } from 'src/app/ models/task';
+
 
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 @NgModule({
@@ -18,14 +18,12 @@ export class TasksComponent implements OnInit {
   task: Task[]=[];
   avatar: string;
 
-  constructor(private taskService: TaskService) { 
-    this.avatar = "../../../../assets/images/rooms.png";
+  constructor() { 
+
   }
 
   ngOnInit() {
-  this.taskService.getTask()
-  .subscribe(x=>{ this.task =x;
-  });
+
   }
  
 }

@@ -1,11 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
-
-$calendar-font:'Righteous', cursive;
-$calendar-font-size:2em;
+$calendar-font: "Source Sans Pro", sans-serif;
+$calendar-font-size:24px;
 $calendar-font-color:#2196F3;
-$button-font:'Righteous', cursive;
-$button-font-size:2em;
+$button-font:"Source Sans Pro", sans-serif;
+$button-font-size:48px;
 $button-font-color:#2196F3;
 $alignment-of-text: center;
 
@@ -17,6 +17,8 @@ $item-float: right;
 
 $mat-card-padding: 10px ;
 $mat-form-field-width: 300px;
+
+$button-font-border: 0;
 
 mat-form-field{
     width: $mat-form-field-width;
@@ -37,4 +39,12 @@ mat-form-field{
     margin-bottom:$mat-card-padding;
     margin-right: $mat-card-padding;
   }
+
+.button-font {
+  font-size: $button-font-size;
+  font-family: $button-font;
+  color: $button-font-color;
+  text-align: $alignment-of-text;
+  border: $button-font-border;
+}
   

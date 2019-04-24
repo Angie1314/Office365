@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from 'src/ models/contact';
-import { ContactService } from 'src/services/contact.service';
+import { Contact } from 'src/app/ models/contact';
+import { ContactService } from 'src/app/services/contact.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Pipe, PipeTransform } from '@angular/core';
 import { parsePhoneNumber, CountryCode } from 'libphonenumber-js/min';

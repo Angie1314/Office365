@@ -1,25 +1,30 @@
 
 @import "~@angular/material/theming";
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
-$button-font:'Righteous', cursive;
-$button-font-size:2em;
+$button-font:"Source Sans Pro", sans-serif;
+$button-font-size:48px;
 $button-font-color:#2196F3;
 $alignment-of-text:center;
 
 $button-font-border: 0;
 
-$button-size-width: 80%;
-$button-size-height: 80%;
+$button-size-width: 100%;
+$button-size-height: 100%;
 $button-size-border: 0;
 $button-size-padding: 30px;
 $button-size-transition: .2s;
-$button-size-width-height: 200px;
+$button-size-width-height: 500px;
 $button-size-margin: 0 auto;
 
 $mat-card-bg-color: #2196F3;
 $mat-card-transition: none !important;
 $mat-card-box-shadow: none !important;
+$office-logo: "Source Sans Pro", sans-serif;
+
+$mat-card-profile-pic:transparent !important;
 
 
 .button-font {
@@ -50,21 +55,18 @@ $mat-card-box-shadow: none !important;
     transition: $mat-card-transition;
     box-shadow: $mat-card-box-shadow;
   }
+
+  .mat-card-background{
+    background-color: $mat-card-profile-pic;
+    font-family: $office-logo;
+    border: none !important;
+    color: black;
+    transition: none !important;
+    box-shadow: none !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border: none !important;
+  }
  
-
-  @mixin min {
-    @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
-      @content;
-      word-wrap: break-word;
-    
-    }
-  }
-  
-  @mixin max {
-    @media (min-width: #{$max-widths}) {
-      @content;
-      word-wrap: break-word;
-      
-  }
-
-  }

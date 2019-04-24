@@ -3,22 +3,18 @@
 
 <p class="button-font" fxLayoutAlign="center center"> Contact Cards</p>
 
-<div fxLayoutAlign="center center">
+<div>
   <button mat-flat-button color="primary" routerLink="/contactadd"> Add contact</button>
 </div>
 
-<div fxLayout="row" FxLayoutAlign="start center">
+<br />
+<br />
 
-  <form class="search" fxFlex.xs="100%" fxFlex="31.6%">
-    <mat-form-field class="search-width">
-      <div><img class="jpg-icon" [src]="search"></div>
-      <input id='myInput'  type="text" matInput (keyup)="searchFuction($event.target.value)">
-    </mat-form-field>
-  </form>
-</div>
 
-<table mat-table [dataSource]='dataSource'>
 <div fxLayout="row" fxLayoutAlign="start center">
+
+  <br />
+
   <mat-card fxFlex.xs="100%" fxFlex="70%">
     <mat-card-title class="calendar-heading">
       <img class="jpg-icon left-align-element" [src]="avatar">
@@ -27,11 +23,8 @@
       </mat-card-subtitle>
       <p *ngIf="contact">{{ contact[0].displayName }} </p>
     </mat-card-title>
-    <!-- https://medium.com/@Pierre_anthill/angular-2-4-pretty-phone-number-pipe-2da3fab8fe6e -->
     <p *ngIf="contact">Mobile Number: {{ contact[0].mobilePhone }} </p>
   </mat-card>
-
-  <br />
 
   <mat-card fxFlex.xs="100%" fxFlex="70%">
     <mat-card-title class="calendar-heading">
@@ -92,5 +85,5 @@
     <p *ngIf="contact">Mobile Number: {{ contact[5].mobilePhone }} </p>
   </mat-card>
 </div>
-</table>
+
 <div class="alternate-theme parallax image button-login-feature centerize"></div>
