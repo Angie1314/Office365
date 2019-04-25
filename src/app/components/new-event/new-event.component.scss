@@ -1,25 +1,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Cinzel");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-
-$calendar-font:"Source Sans Pro", sans-serif;
-$calendar-font-size:24px;
-$calendar-font-color:#2196F3;
-$button-font:"Source Sans Pro", sans-serif;
-$button-font-size:48px;
-$button-font-color:#2196F3;
-$alignment-of-text:center;
-$button-font-border: 0;
-
-$mat-div-and-card-border-width:1px;
-$mat-div-and-card-border-style:solid;
-$mat-button-font-border:0;
-
-$item-float:right;
-
-$mat-card-padding: 10px ;
-
-$-mat-form-field-width: 300px;
+@import "src/app/components/new-event/event-variables.scss";
 
 mat-form-field{
     width: $-mat-form-field-width;

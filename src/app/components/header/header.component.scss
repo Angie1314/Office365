@@ -1,33 +1,15 @@
+@import "src/app/components/header/header-variables.scss";
 
-$office-logo: "serif";
-
-.mat-card-background{
+.mat-card-background {
     font-family: $office-logo;
-    border: none !important;
-    color: black;
-    transition: none !important;
-    box-shadow: none !important;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    border: none !important;
+    border: $mat-card-border;
+    color: $mat-card-bg-color;
+    transition: $mat-card-border-transition-shadow;
+    box-shadow: $mat-card-border-transition-shadow;
+    padding-top: $mat-card-bg-padding;
+    padding-bottom: $mat-card-bg-padding;
+    padding-left: $mat-card-bg-padding;
+    padding-right: $mat-card-bg-padding;
   }
 
-  @mixin min {
-    @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
-      @content;
-      word-wrap: break-word;
-    
-    }
-  }
-  
-  @mixin max {
-    @media (min-width: #{$max-widths}) {
-      @content;
-      word-wrap: break-word;
-      
-  }
-
-  }
   
