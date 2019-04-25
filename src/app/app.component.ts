@@ -13,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class AppComponent {
     title = 'OfficeApp';
-    officeLogo = 'Welcome to Office 365';
+    officeLogo = 'Office 365';
     seeFeautesText = 'Dashboard';
     loginButton = 'Login';
     logoutButton = 'Logout';

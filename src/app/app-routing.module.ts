@@ -6,10 +6,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactaddComponent } from './components/contact-add/contactadd.component';
 import { AppComponent } from '../../src/app/app.component';
-import { TasksComponent } from './components/tasks/tasks.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 
 const routes: Routes = [
   {
@@ -54,11 +54,6 @@ const routes: Routes = [
     component: ContactaddComponent
   },
 
-  {
-    path: 'tasks',
-    component: TasksComponent
-  },
-
  {
    path:'page-footer',
    component:PagefooterComponent 
@@ -67,6 +62,10 @@ const routes: Routes = [
  {
   path:'header',
   component:HeaderComponent 
+ },
+ {
+   path:'menu-bar',
+   component:MenuBarComponent
  }
 
 ];

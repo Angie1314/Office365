@@ -14,8 +14,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeaderComponent {
   title = 'OfficeApp';
-  officeLogo = 'Welcome to Office 365';
+  officeLogo = 'Office 365';
   seeFeautesText = 'Dashboard';
+  aboutOfficeText = 'About Office';
   loginButton = 'Login';
   logoutButton = 'Logout';
 

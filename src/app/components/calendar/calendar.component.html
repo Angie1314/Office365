@@ -1,4 +1,8 @@
 <p class="button-font"> Calendar Events</p>
+<app-menu-bar></app-menu-bar>
+
+<br />
+<br />
 
 <div>
   <button routerLink="/new-event" class="ripple
@@ -14,7 +18,7 @@
   <div fxLayout="row" fxLayoutAlign="start center">
     <mat-card fxFlex="70%">
       <mat-card-title class="calendar-heading">
-        <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
+        <p><img class="left-align-element"[src]="avatar"></p>
         <mat-card-subtitle>
           <p id='one' *ngIf="calendar">Date: {{ (calendar|
             async).value[0].start.dateTime| date }}</p>
@@ -29,7 +33,7 @@
       <mat-divider></mat-divider>
 
       <mat-card-title class="calendar-heading">
-        <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
+        <p><img class="left-align-element" [src]="avatar"></p>
         <mat-card-subtitle>
           <p id='two' *ngIf="calendar">Date: {{ (calendar|
             async).value[1].start.dateTime| date }}</p>
@@ -44,7 +48,7 @@
       <mat-divider></mat-divider>
 
       <mat-card-title class="calendar-heading">
-        <p><img class="jpg-icon left-align-element" [src]="avatar"></p>
+        <p><img class="left-align-element" [src]="avatar"></p>
         <mat-card-subtitle>
           <p id='three' *ngIf="calendar">Date: {{ (calendar|
             async).value[2].start.dateTime| date }}</p>

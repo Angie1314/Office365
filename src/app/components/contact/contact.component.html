@@ -3,6 +3,11 @@
 
 <p class="button-font" fxLayoutAlign="center center"> Contact Cards</p>
 
+<app-menu-bar></app-menu-bar>
+
+<br />
+<br />
+
 <div>
   <button mat-flat-button color="primary" routerLink="/contactadd"> Add contact</button>
 </div>
@@ -17,7 +22,7 @@
 
   <mat-card fxFlex.xs="100%" fxFlex="70%">
     <mat-card-title class="calendar-heading">
-      <img class="jpg-icon left-align-element" [src]="avatar">
+      <img class="left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company: {{ contact[0].companyName }} </p>
       </mat-card-subtitle>
@@ -28,7 +33,7 @@
 
   <mat-card fxFlex.xs="100%" fxFlex="70%">
     <mat-card-title class="calendar-heading">
-      <img class="jpg-icon left-align-element" [src]="avatar">
+      <img class="left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company: {{ contact[1].companyName }} </p>
       </mat-card-subtitle>
@@ -41,7 +46,7 @@
 
   <mat-card fxFlex.xs="100%" fxFlex="70%">
     <mat-card-title class="calendar-heading">
-      <img class="jpg-icon left-align-element" [src]="avatar">
+      <img class="left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company: {{ contact[2].companyName }} </p>
       </mat-card-subtitle>
@@ -54,7 +59,7 @@
 <div fxLayout="row" fxLayoutAlign="start center">
   <mat-card fxFlex.xs="100%" fxFlex="70%">
     <mat-card-title class="calendar-heading">
-      <img class="jpg-icon left-align-element" [src]="avatar">
+      <img class="left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company: {{ contact[3].companyName }} </p>
       </mat-card-subtitle>
@@ -65,7 +70,7 @@
 
   <mat-card fxFlex.xs="100%" fxFlex="70%">
     <mat-card-title class="calendar-heading">
-      <img class="jpg-icon left-align-element" [src]="avatar">
+      <img class="left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company: {{ contact[4].companyName }} </p>
       </mat-card-subtitle>
@@ -76,7 +81,7 @@
 
   <mat-card fxFlex.xs="100%" fxFlex="70%">
     <mat-card-title class="calendar-heading">
-      <img class="jpg-icon left-align-element" [src]="avatar">
+      <img class="left-align-element" [src]="avatar">
       <mat-card-subtitle>
         <p *ngIf="contact">Company: {{ contact[5].companyName }} </p>
       </mat-card-subtitle>

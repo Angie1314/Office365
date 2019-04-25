@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactaddComponent } from './components/contact-add/contactadd.component';
-import { TasksComponent } from './components/tasks/tasks.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
@@ -41,6 +40,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';;
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,11 +50,11 @@ import { HeaderComponent } from './components/header/header.component';
     ProfileComponent,
     ContactComponent,
     ContactaddComponent,
-    TasksComponent,
     NewEventComponent,
     AppComponent,
     PagefooterComponent,
     HeaderComponent,
+    MenuBarComponent,
   ],
   
   imports: [

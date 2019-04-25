@@ -1,12 +1,12 @@
-
- <mat-card class="mat-card-background">
-  <br />
-  <br />
+<mat-card class="mat-card-background">
   <div class="image button-login-feature
       centerize">
     <button *ngIf="!name;else content" (click)="login()" class="ripple
         align-right" mat-flat-button color="primary" routerLink="/profile">{{ loginButton }}
     </button>
+    <button routerLink="/about-office" class="ripple align-right" mat-flat-button color="primary">{{ aboutOfficeText }}
+    </button>
+   
     <ng-template #content>
       <div class="align-left">
         <mat-card class="mat-card-profile">
@@ -24,20 +24,15 @@
 </mat-card>
 
 <br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
 
 <div class="alternate-theme parallax image button-login-feature
 centerize"></div>
+
 <div class="alternate-theme button-login-feature centerize">
   <ng-template #content>
     <div class="align-left">
       <mat-card class="mat-card-profile">
-        <br />
+
         <h1 fxLayoutAlign="right right" class="mat-display-1">{{ name }}</h1>
       </mat-card>
     </div>
@@ -49,9 +44,3 @@ centerize"></div>
     </button>
   </ng-template>
 </div>
-
-<div class="alternate-theme button-login-feature centerize"></div>
-
-<br />
-<br />
-<br />

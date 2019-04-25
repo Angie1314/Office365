@@ -13,4 +13,21 @@ $office-logo: "serif";
     padding-right: 0;
     border: none !important;
   }
+
+  @mixin min {
+    @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
+      @content;
+      word-wrap: break-word;
+    
+    }
+  }
+  
+  @mixin max {
+    @media (min-width: #{$max-widths}) {
+      @content;
+      word-wrap: break-word;
+      
+  }
+
+  }
   
