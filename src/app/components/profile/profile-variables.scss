@@ -1,10 +1,8 @@
+/* Button styling */
 $button-font:"Source Sans Pro", sans-serif;
 $button-font-size:48px;
 $button-font-color:#2196F3;
-$alignment-of-text:center;
-
 $button-font-border: 0;
-
 $button-size-width: 100%;
 $button-size-height: 100%;
 $button-size-border: 0;
@@ -12,14 +10,16 @@ $button-size-padding: 30px;
 $button-size-transition: .2s;
 $button-size-width-height: 300px;
 $button-size-margin: 0 auto;
+$office-logo: "Source Sans Pro", sans-serif;
 
+/* Material card styling */
 $mat-card-bg-color: #2196F3;
 $mat-card-transition: none !important;
 $mat-card-box-shadow: none !important;
 $mat-card-profile-pic:transparent !important;
-$office-logo: "Source Sans Pro", sans-serif;
-
 $mat-card-border-transition-shadow: none !important;
 $mat-card-bg-padding: 0;
 $mat-card-border: none !important;
-$mat-card-bg-color: black;
+
+/* Alignment of items */
+$alignment-of-text:center;

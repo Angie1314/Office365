@@ -24,14 +24,11 @@ export class ProfileComponent implements OnInit {
 
   profile: Observable<Profile>;
 
-
-
   constructor(private graphApi: GraphApiService) {
-    this.officeCalendar = "../../../../assets/images/officeCalendar.jpeg";
-    this.officeContacts = "../../../../assets/images/officeContacts.jpeg";
-    this.icon = "../../../../assets/images/icon.png";
+    this.officeCalendar = '../../../../assets/images/officeCalendar.jpeg';
+    this.officeContacts = '../../../../assets/images/officeContacts.jpeg';
+    this.icon = '../../../../assets/images/icon.png';
   }
-
 
   ngOnInit() {
     this.profile = this.graphApi.getProfile();

@@ -28,33 +28,19 @@ export class CalendarComponent implements OnInit {
   calendar: Observable<Calendar>;
   avatar: string;
 
-  constructor(private calendarService: CalendarService) { 
-    this.avatar = "../../../../assets/images/date.png";
+  constructor(private calendarService: CalendarService) {
+    this.avatar = '../../../../assets/images/date.png';
   }
 
   ngOnInit() {
     this.calendar = this.calendarService.getCalendar();
 
-    this.icon = "../../../../assets/images/icon.png";
-    this.settings = "../../../../assets/images/settings.png";
-    this.help = "../../../../assets/images/help.png";
+    this.icon = '../../../../assets/images/icon.png';
+    this.settings = '../../../../assets/images/settings.png';
+    this.help = '../../../../assets/images/help.png';
   }
 
-  onScroll(){
-    let one = document.querySelector("#one");
-    let two= document.querySelector('#two');
-    let three = document.querySelector('#three');
 
-    if (one){
-        one.scrollIntoView();
-    }
-    else if(two){
-        two.scrollIntoView();
-    }
-    else if(three){
-        three.scrollIntoView();
-    }
-  }
 }
 
 

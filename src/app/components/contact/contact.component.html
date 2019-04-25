@@ -8,87 +8,16 @@
 <br />
 <br />
 
-<div>
-  <button mat-flat-button color="primary" routerLink="/contactadd"> Add contact</button>
-</div>
-
-<br />
-<br />
-
-
-<div fxLayout="row" fxLayoutAlign="start center">
-
-  <br />
-
-  <mat-card fxFlex.xs="100%" fxFlex="70%">
-    <mat-card-title class="contact-heading">
+<table mat-table>
+  <div fxLayout="column " fxLayoutAlign="start center">
+    <mat-card class="example-card" *ngFor="let element of contact" [type]="element">{{ element.displayName }}
       <img class="left-align-element" [src]="avatar">
-      <mat-card-subtitle>
-        <p *ngIf="contact">Company: {{ contact[0].companyName }} </p>
-      </mat-card-subtitle>
-      <p *ngIf="contact">{{ contact[0].displayName }} </p>
-    </mat-card-title>
-    <p *ngIf="contact">Mobile Number: {{ contact[0].mobilePhone }} </p>
-  </mat-card>
+        <mat-card-content>
+         <div> {{ element.mail }} </div> 
+        </mat-card-content>
+    </mat-card>
+  </div>
+</table>
 
-  <mat-card fxFlex.xs="100%" fxFlex="70%">
-    <mat-card-title class="contact-heading">
-      <img class="left-align-element" [src]="avatar">
-      <mat-card-subtitle>
-        <p *ngIf="contact">Company: {{ contact[1].companyName }} </p>
-      </mat-card-subtitle>
-      <p *ngIf="contact">{{ contact[1].displayName }} </p>
-    </mat-card-title>
-    <p *ngIf="contact">Mobile Number: {{ contact[1].mobilePhone }} </p>
-  </mat-card>
-
-  <br />
-
-  <mat-card fxFlex.xs="100%" fxFlex="70%">
-    <mat-card-title class="contact-heading">
-      <img class="left-align-element" [src]="avatar">
-      <mat-card-subtitle>
-        <p *ngIf="contact">Company: {{ contact[2].companyName }} </p>
-      </mat-card-subtitle>
-      <p *ngIf="contact">{{ contact[2].displayName }} </p>
-    </mat-card-title>
-    <p *ngIf="contact">Mobile Number: {{ contact[2].mobilePhone }} </p>
-  </mat-card>
-</div>
-
-<div fxLayout="row" fxLayoutAlign="start center">
-  <mat-card fxFlex.xs="100%" fxFlex="70%">
-    <mat-card-title class="contact-heading">
-      <img class="left-align-element" [src]="avatar">
-      <mat-card-subtitle>
-        <p *ngIf="contact">Company: {{ contact[3].companyName }} </p>
-      </mat-card-subtitle>
-      <p *ngIf="contact">{{ contact[3].displayName }} </p>
-    </mat-card-title>
-    <p *ngIf="contact">Mobile Number: {{ contact[3].mobilePhone }} </p>
-  </mat-card>
-
-  <mat-card fxFlex.xs="100%" fxFlex="70%">
-    <mat-card-title class="contact-heading">
-      <img class="left-align-element" [src]="avatar">
-      <mat-card-subtitle>
-        <p *ngIf="contact">Company: {{ contact[4].companyName }} </p>
-      </mat-card-subtitle>
-      <p *ngIf="contact">{{ contact[4].displayName }} </p>
-    </mat-card-title>
-    <p *ngIf="contact">Mobile Number: {{ contact[4].mobilePhone }} </p>
-  </mat-card>
-
-  <mat-card fxFlex.xs="100%" fxFlex="70%">
-    <mat-card-title class="contact-heading">
-      <img class="left-align-element" [src]="avatar">
-      <mat-card-subtitle>
-        <p *ngIf="contact">Company: {{ contact[5].companyName }} </p>
-      </mat-card-subtitle>
-      <p *ngIf="contact">{{ contact[5].displayName }} </p>
-    </mat-card-title>
-    <p *ngIf="contact">Mobile Number: {{ contact[5].mobilePhone }} </p>
-  </mat-card>
-</div>
 
 <div class="alternate-theme parallax image button-login-feature centerize"></div>

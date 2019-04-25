@@ -9,13 +9,17 @@ const baseUrl = 'https://graph.microsoft.com/v1.0';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class CalendarService {
 
   constructor(private http: HttpClient) {
   }
 
   getCalendar(): Observable<Calendar> {
-    return this.http.get<Calendar>(`${baseUrl}/me/events?$select=subject,body,bodyPreview,organizer,attendees,start,end,location`);
+    return this.http.get<Calendar>(`${baseUrl}/me/events`);
   }
 }
+
+
 

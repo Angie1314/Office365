@@ -1,7 +1,7 @@
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import { NgModule ,CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
 
@@ -10,7 +10,6 @@ import { AboutOfficeComponent } from './components/about-office/about-office.com
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ContactaddComponent } from './components/contact-add/contactadd.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
@@ -29,15 +28,13 @@ import { MatToolbarModule,
          MatRippleModule,
          MatListModule,
          MatCheckboxModule,
-         
          } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { CustomValidateDirective } from './directives/custom-validate.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { AppRoutingModule } from './app-routing.module';
-import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';;
+import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
@@ -46,17 +43,14 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
     AppComponent,
     CalendarComponent,
     AboutOfficeComponent,
-    CustomValidateDirective,
     ProfileComponent,
     ContactComponent,
-    ContactaddComponent,
     NewEventComponent,
     AppComponent,
     PagefooterComponent,
     HeaderComponent,
     MenuBarComponent,
   ],
-  
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -86,20 +80,20 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
     ReactiveFormsModule,
     OAuthModule.forRoot()
   ],
-  exports: [MatButtonModule, 
+  exports: [MatButtonModule,
     MatProgressSpinnerModule,
-    MatCheckboxModule, 
+    MatCheckboxModule,
     MatToolbarModule,
-    MatIconModule, 
-    MatMenuModule, 
+    MatIconModule,
+    MatMenuModule,
     MatSidenavModule,
-    MatStepperModule, 
-    MatFormFieldModule, 
+    MatStepperModule,
+    MatFormFieldModule,
     MatDividerModule,
-    MatCardModule, 
+    MatCardModule,
     MatInputModule,
-    FormsModule, 
-    MatProgressBarModule, 
+    FormsModule,
+    MatProgressBarModule,
     MatRippleModule,
     MatListModule,
     MatGridListModule,
@@ -109,10 +103,10 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
     useClass: TokenInterceptor,
     multi: true
   },
-  
   ],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA ]
- 
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
 })
-export class AppModule { }
+export class AppModule {
+
+}

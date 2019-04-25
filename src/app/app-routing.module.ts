@@ -4,7 +4,6 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ContactaddComponent } from './components/contact-add/contactadd.component';
 import { AppComponent } from '../../src/app/app.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
@@ -22,7 +21,7 @@ const routes: Routes = [
     component: ProfileComponent
   },
 
-  { path: 'logout/:id',      
+  { path: 'logout/:id',
     component: AppComponent },
 
   {
@@ -34,7 +33,7 @@ const routes: Routes = [
     path: 'calendar',
     component: CalendarComponent
   },
-  
+
   {
     path: 'about-office',
     component: AboutOfficeComponent
@@ -49,28 +48,24 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent
   },
-  {
-    path: 'contactadd',
-    component: ContactaddComponent
-  },
 
  {
-   path:'page-footer',
-   component:PagefooterComponent 
+   path: 'page-footer',
+   component: PagefooterComponent
  },
 
  {
-  path:'header',
-  component:HeaderComponent 
+  path: 'header',
+  component: HeaderComponent
  },
  {
-   path:'menu-bar',
-   component:MenuBarComponent
+   path: 'menu-bar',
+   component: MenuBarComponent
  }
 
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

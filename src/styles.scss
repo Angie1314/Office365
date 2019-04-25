@@ -20,12 +20,6 @@ $parallax-background-size:cover;
 $centered-button-display:flex;
 $centered-button-content:center;
 
-$navbar-overflow:hidden;
-$navbar-bgCol:#333;
-$navbar-position:fixed;
-$navbar-top:0;
-$navbar-width:100;
-
 $but-log-margin:8px;
 $but-log-postion:relative;
 
@@ -112,14 +106,6 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
   background-position: $parallax-background-position;
   background-repeat: $parallax-background-repeat;
   background-size: $parallax-background-size;
-}
-
-.navbar {
-  overflow:$navbar-overflow;
-  background-color:$navbar-bgCol;
-  position: $navbar-position;
-  top: $navbar-top;
-  width: $navbar-width;
 }
 
 .button-login-feature button,

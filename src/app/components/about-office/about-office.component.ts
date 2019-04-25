@@ -17,7 +17,6 @@ export class AboutOfficeComponent implements OnInit {
   imgDevices: string;
   imgComputer: string;
 
-
   textForFeatures = 'It’s the tools you need be more creative.';
   matCardTitleUpToDate = 'Up to date';
   matCardTitleFeatures = 'Features';
@@ -25,7 +24,7 @@ export class AboutOfficeComponent implements OnInit {
   devicesMatCardTitle = 'It is on all of your devices';
   devicesMatCardContent = 'Productivity wherever you are.';
   matCardTitleCloud = 'Cloud Features';
-  matCardContentCloud= 'Its is your great work, in the cloud';
+  matCardContentCloud = 'Its is your great work, in the cloud';
 
   constructor() {
 

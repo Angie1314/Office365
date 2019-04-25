@@ -20,7 +20,7 @@ export class HeaderComponent {
   loginButton = 'Login';
   logoutButton = 'Logout';
 
-  constructor(private oauthService: OAuthService,private route: ActivatedRoute) {
+  constructor(private oauthService: OAuthService, private route: ActivatedRoute) {
     const config = openIdConfig as any;
 
     Object.assign(authConfig, {
@@ -61,6 +61,5 @@ public get name() {
 
     return (claims as any).name;
 }
-
    }
 

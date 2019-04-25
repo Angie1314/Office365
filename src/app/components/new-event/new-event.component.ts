@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { CalendarEvent } from 'src/app/ models/calendar-event';
 import { GraphApiService } from 'src/app/services/graph-api.service';
@@ -18,7 +18,7 @@ export class NewEventComponent {
   eventForm: FormGroup;
 
   event: CalendarEvent = {
-    subject: 'Angular workshop!',
+    subject: '',
     start: { dateTime: '2019-04-10T17:00:00,', timeZone: 'UTC' },
     end: { dateTime: '2019-04-10T18:00:00', timeZone: 'UTC' }
   };
@@ -45,7 +45,7 @@ export class NewEventComponent {
         title: 'Event Added!',
         showConfirmButton: false,
         timer: 1500
-      })
+      });
     }
   }
 }

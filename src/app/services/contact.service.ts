@@ -5,24 +5,20 @@ import { Contact } from '../ models/contact';
 import { map } from 'rxjs/operators';
 
 const baseUrl = 'https://graph.microsoft.com/v1.0';
-const contentType = "application/json";
 @Injectable({
   providedIn: 'root'
 })
 
 export class ContactService {
+  mail: any;
 
   constructor(private http: HttpClient) {
-    
+
   }
 
   getContact(): Observable<Contact[]> {
-    return this.http.get<Contact>(`${baseUrl}/me/contacts`)
+    return this.http.get<Contact>(`${baseUrl}/users`)
       .pipe(map(x => (x as any).value));
-  }
-  setContact(): Observable<Contact> {
-    return this.http.post<Contact>(`${baseUrl}/me/contacts`, `${contentType}`);
-
   }
 }
 

@@ -27,12 +27,12 @@ export class AppComponent {
 
     constructor(private oauthService: OAuthService, private route: ActivatedRoute) {
 
-        this.srcUrlFB = "../../../../assets/images/fb.png";
-        this.srcUrlInstagram = "../../../../assets/images/instagram.png";
-        this.srcUrlTwitter = "../../../../assets/images/twitter.png";
-        this.icon = "../../../../assets/images/icon.png";
-        this.settings = "../../../../assets/images/settings.png";
-        this.help = "../../../../assets/images/help.png";
+        this.srcUrlFB = '../../../../assets/images/fb.png';
+        this.srcUrlInstagram = '../../../../assets/images/instagram.png';
+        this.srcUrlTwitter = '../../../../assets/images/twitter.png';
+        this.icon = '../../../../assets/images/icon.png';
+        this.settings = '../../../../assets/images/settings.png';
+        this.help = '../../../../assets/images/help.png';
 
         const config = openIdConfig as any;
 

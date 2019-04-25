@@ -24,6 +24,7 @@
   margin-left: $mat-card-padding;
   margin-bottom: $mat-card-padding;
   margin-right: $mat-card-padding;
+  width: $mat-card-width;
 }
 
   .left-align-element {
@@ -46,6 +47,18 @@
   text-align: $alignment-of-text;
   border: $button-font-border;
 }
+
+table {
+  width: 100%;
+  height: 50%;
+}
+
+div {
+  word-wrap: break-word;
+}
+
+
+
 
 
   

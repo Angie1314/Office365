@@ -10,14 +10,14 @@ export class PagefooterComponent implements OnInit {
   srcUrlInstagram: string;
   srcUrlTwitter: string;
 
-  constructor() { 
-    this.srcUrlFB = "../../../../assets/images/fb.png";
-    this.srcUrlInstagram = "../../../../assets/images/instagram.png";
-    this.srcUrlTwitter = "../../../../assets/images/twitter.png";
+  constructor() {
+    this.srcUrlFB = '../../../../assets/images/fb.png';
+    this.srcUrlInstagram = '../../../../assets/images/instagram.png';
+    this.srcUrlTwitter = '../../../../assets/images/twitter.png';
   }
 
   ngOnInit() {
-    
+
   }
 
 }

@@ -8,6 +8,7 @@ import { FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material';
 
 
+// tslint:disable-next-line:use-pipe-transform-interface
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
@@ -34,16 +35,17 @@ export class ContactComponent implements OnInit {
   mailboxText = 'Mail Box';
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
+  displayedColumns: string[] = ['Display name', 'name', 'weight', 'symbol'];
 
   contact: Contact[] = [];
   dataSource = new MatTableDataSource<Contact>();
 
   constructor(private contactService: ContactService) {
-    this.icon = "../../../../assets/images/icon.png";
-    this.settings = "../../../../assets/images/settings.png";
-    this.help = "../../../../assets/images/help.png";
-    this.avatar = "../../../../assets/images/avatar.png";
-    this.search = "../../../../assets/images/search.png";
+    this.icon = '../../../../assets/images/icon.png';
+    this.settings = '../../../../assets/images/settings.png';
+    this.help = '../../../../assets/images/help.png';
+    this.avatar = '../../../../assets/images/avatar.png';
+    this.search = '../../../../assets/images/search.png';
 
   }
 
@@ -55,39 +57,6 @@ export class ContactComponent implements OnInit {
       });
   }
 
-  searchFunction(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
-}
-
-export class PhonePipe implements PipeTransform {
-
-  transform(phoneValue: number | string, country: string): any {
-    try {
-      const phoneNumber = parsePhoneNumber(phoneValue + '', country as CountryCode);
-      return phoneNumber.formatNational();
-    } catch (error) {
-      return phoneValue;
-    }
-  }
-
-
 }
 
 
-// export class TasksComponent implements OnInit {
-
-//   task: Task[]=[];
-//   avatar: string;
-
-//   constructor(private taskService: TaskService) { 
-//     this.avatar = "../../../../assets/images/rooms.png";
-//   }
-
-//   ngOnInit() {
-//   this.taskService.getTask()
-//   .subscribe(x=>{ this.task =x;
-//   });
-//   }
-
-// }
