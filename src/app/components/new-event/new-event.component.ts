@@ -18,7 +18,7 @@ export class NewEventComponent {
   eventForm: FormGroup;
 
   event: CalendarEvent = {
-    subject: 'Angular workshop!',
+    subject: 'Code review!',
     start: { dateTime: '2019-04-18T17:00:00', timeZone: 'UTC' },
     end: { dateTime: '2019-04-18T18:00:00', timeZone: 'UTC' }
   };
