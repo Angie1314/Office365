@@ -20,6 +20,8 @@ export class HeaderComponent {
   loginButton = 'Login';
   logoutButton = 'Logout';
 
+  photoUrl: string;
+
   constructor(private oauthService: OAuthService, private route: ActivatedRoute) {
     const config = openIdConfig as any;
 
@@ -38,9 +40,7 @@ export class HeaderComponent {
     this.oauthService.configure(authConfig);
     this.oauthService.tokenValidationHandler = new JwksValidationHandler();
     this.oauthService.tryLogin();
-}
-getLocation(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+
 }
 
 public login(): void {
@@ -61,5 +61,6 @@ public get name() {
 
     return (claims as any).name;
 }
+
    }
 

@@ -1,5 +1,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
 $card-width: 100%;
 $card-height: auto;
@@ -32,6 +33,13 @@ $mat-display-3-color:#333;
 
 $anchor-tag-color:white;
 $anchor-tag-tect-dec:none;
+
+/* Button styles */
+$button-font:"Source Sans Pro", sans-serif;
+$button-font-size:48px;
+$button-font-color:#2196F3;
+$alignment-of-text:center;
+$button-font-border: 0;
 
 
 $footer-display:flex;
