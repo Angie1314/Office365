@@ -9,7 +9,6 @@ import { NewEventComponent } from './components/new-event/new-event.component';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 
 const routes: Routes = [
   {
@@ -64,10 +63,6 @@ const routes: Routes = [
    path: 'menu-bar',
    component: MenuBarComponent
  },
- {
-  path: 'spinner',
-  component: SpinnerComponent
-},
 
 ];
 @NgModule({
