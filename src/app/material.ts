@@ -1,21 +1,20 @@
-import { MatButtonModule,
-         MatCheckboxModule,
-         MatToolbarModule,
-         MatMenuModule,
-         MatSidenavModule,
-         MatStepperModule,
-         MatFormFieldModule,
-         MatDividerModule,
-         MatInputModule,
-         MatProgressBarModule,
-         MatRippleModule,
-         MatProgressSpinnerModule,
-         MatListModule,
-
- } from '@angular/material';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
+import { MatToolbarModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatStepperModule,
+  MatFormFieldModule,
+  MatDividerModule,
+  MatInputModule,
+  MatProgressBarModule,
+  MatButtonModule,
+  MatRippleModule,
+  MatListModule,
+  MatCheckboxModule,
+  MatProgressSpinnerModule,
+  MatCardModule,
+  MatGridListModule,
+  MatIconModule,
+  } from '@angular/material';
 
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
