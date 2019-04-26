@@ -1,0 +1,48 @@
+
+<mat-card class="mat-card-background">
+  <div class="image button-login-feature
+      centerize">
+    <button *ngIf="!name;else content" (click)="login()" class="ripple
+        align-right" mat-flat-button color="primary" routerLink="/profile">{{ loginButton }}
+    </button>
+
+    <button routerLink="/about-office" class="ripple align-right" mat-flat-button color="primary">{{ aboutOfficeText }}
+    </button>
+
+    <ng-template #content>
+      <div class="align-left">
+        <mat-card class="mat-card-profile-area">
+          <h1 fxLayoutAlign="right right" class="mat-display">Welcome: {{ name }}</h1>
+        </mat-card>
+      </div>
+      
+
+      <button (click)="logOut()" mat-flat-button color="primary" id="logout" class="align-right">{{ Logout }}
+      </button>
+
+      <button routerLink="/profile" class="ripple align-right" mat-flat-button color="primary">{{ seeFeautesText }}
+      </button>
+    </ng-template>
+  </div>
+</mat-card>
+
+<br />
+
+<div class="alternate-theme parallax image button-login-feature
+centerize"></div>
+
+<div class="alternate-theme button-login-feature centerize">
+  <ng-template #content>
+    <div class="align-left">
+      <mat-card class="mat-card-profile-area">
+        <h1 fxLayoutAlign="right right" class="mat-display">Welcome: {{ name }}</h1>
+      </mat-card>
+    </div>
+    <a routerLink="/calendar"></a>
+    <button (click)="logOut()" mat-flat-button color="primary" id='logout' class="align-right">Logout</button>
+
+    <button routerLink="/profile" class="ripple align-right" mat-flat-button color="primary"
+      id='dashboard'>{{ seeFeautesText }}
+    </button>
+  </ng-template>
+</div>

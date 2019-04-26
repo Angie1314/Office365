@@ -4,21 +4,16 @@ import { JwksValidationHandler } from 'angular-oauth2-oidc';
 import { authConfig } from '../auth-config';
 import openIdConfig from '../openid-config.json';
 import openIdConfigKeys from '../openid-config.keys.json';
-import { Photo } from 'src/ models/photo';
-import { Observable } from 'rxjs';
-import { PhotoService } from 'src/services/photo.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
 
-
 export class AppComponent {
     title = 'OfficeApp';
-    officeLogo = 'Welcome to Office 365';
-    arrowDown = 'keyboard_arrow_down';
+    officeLogo = 'Office 365';
     seeFeautesText = 'Dashboard';
     loginButton = 'Login';
     logoutButton = 'Logout';
@@ -29,28 +24,17 @@ export class AppComponent {
     icon: string;
     settings: string;
     help: string;
-    avatarImg: string;
 
-    photo: Observable<Photo>;
+    constructor(private oauthService: OAuthService, private route: ActivatedRoute) {
 
-    private fragment: string;
-
-    constructor(private oauthService: OAuthService, private photoservice: PhotoService, private route: ActivatedRoute) {
-
-      
-
-        this.srcUrlFB = "../../../../assets/images/fb.png";
-        this.srcUrlInstagram = "../../../../assets/images/instagram.png";
-        this.srcUrlTwitter = "../../../../assets/images/twitter.png";
-        this.icon = "../../../../assets/images/icon.png";
-        this.settings = "../../../../assets/images/settings.png";
-        this.help = "../../../../assets/images/help.png";
-        this.avatarImg = "../../../../assets/images/a2.jpg";
-        
+        this.srcUrlFB = '../../../../assets/images/fb.png';
+        this.srcUrlInstagram = '../../../../assets/images/instagram.png';
+        this.srcUrlTwitter = '../../../../assets/images/twitter.png';
+        this.icon = '../../../../assets/images/icon.png';
+        this.settings = '../../../../assets/images/settings.png';
+        this.help = '../../../../assets/images/help.png';
 
         const config = openIdConfig as any;
-        this.photo = this.photoservice.getPhoto();
-
 
         Object.assign(authConfig, {
             loginUrl: config.authorization_endpoint,
@@ -90,39 +74,6 @@ export class AppComponent {
 
         return (claims as any).name;
     }
-
-      onScroll(){
-        let logout = document.querySelector("#logout");
-        let dashboard= document.querySelector('#dashboard');
-        let contact = document.querySelector('#contact');
-        // let choice=document.querySelector('#choice').value;
-
-        if (logout){
-            logout.scrollIntoView();
-        }
-        else if(dashboard){
-            dashboard.scrollIntoView();
-        }
-        else if(contact){
-            contact.scrollIntoView();
-        }
-        // switch(choice) { 
-        //     case logout: { 
-        //         logout.scrollIntoView();
-        //        break; 
-        //     } 
-        //     case dashboard: { 
-        //         dashboard.scrollIntoView();
-        //        break; 
-        //     } 
-        //     default: { 
-        //        //statements; 
-        //        break; 
-        //     } 
-        //  } 
-
-    }
-
 }
 
 

@@ -1,38 +1,37 @@
-<p class="text-heading">
+<br />
+<br />
+
+<p class="mat-display-1">
    About Office 365
 </p>
 
-<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center"
-   fxLayoutGap="10px" fxLayoutGap.xs="0">
-   <mat-card class="features">
+<div fxLayout fxLayout.md="column" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+   <mat-card>
       <mat-card-title>{{ matCardTitleFeatures }}</mat-card-title>
       <p class="text-body">{{ textForFeatures }}</p>
       <button mat-button>
-         <img [src]="imgEmail">
          <img [src]="imgOneNote">
-         <img [src]="imgWord">
-         <img [src]="imgExcel">
-         <img [src]="imgPowerpoint">
-         <img [src]="imgAccess">
       </button>
    </mat-card>
 
-   <mat-card class="item item-5 features" fxFlex="300px">
+   <mat-card>
       <mat-card-title>{{ matCardTitleUpToDate }}</mat-card-title>
       <p class="text-body">{{ upToDateText }}</p>
       <img [src]="imgMonitor">
    </mat-card>
 
-   <mat-card class="item item-5 features" fxFlex="300px">
+   <mat-card>
       <mat-card-title>{{ devicesMatCardTitle }}</mat-card-title>
       <p class="text-body">{{ devicesMatCardContent }}</p>
       <img [src]="imgDevices">
    </mat-card>
 
-   <mat-card class="item item-5 features" fxFlex="300px">
+   <mat-card>
       <mat-card-title>{{ matCardTitleCloud }}</mat-card-title>
       <p class="text-body">{{ matCardContentCloud }}</p>
       <img [src]="imgComputer" alt="computer image">
-      <p *ngIf="profile | async">{{ (profile | async)?.mail }}</p>
    </mat-card>
 </div>
+
+<br />
+<br />

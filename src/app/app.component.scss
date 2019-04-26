@@ -1,11 +1,7 @@
 
-$item-float-left:left;
-$item-float-right:right;
-$mat-card-profile-pic:transparent !important;
-$item-float-center:center;
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
+@import "src/app/components/header/header-variables.scss";
 
-$office-logo: "serif";
 
 .align-left {
   float:$item-float-left;
@@ -20,34 +16,27 @@ $office-logo: "serif";
   float: $item-float-center;
 }
 
-.mat-card-background{
-  background-color: $mat-card-profile-pic;
+.mat-card-background {
   font-family: $office-logo;
-  border: none !important;
-  color: black;
-  transition: none !important;
-  box-shadow: none !important;
+  border: $mat-card-border;
+  color: $mat-card-bg-color;
+  transition: $mat-card-border-transition-shadow;
+  box-shadow: $mat-card-border-transition-shadow;
+  padding-top: $mat-card-bg-padding;
+  padding-bottom: $mat-card-bg-padding;
+  padding-left: $mat-card-bg-padding;
+  padding-right: $mat-card-bg-padding;
 }
 
-.mat-card-profile{
+.mat-card-profile {
   background-color: $mat-card-profile-pic;
   font-family: $office-logo;
-  color: black;
-  border: none !important;
+  color:$mat-card-profile-bg-color;
+  border: $mat-card-border;
 
 }
-
-.active-cyan-2 input[type=text]:focus:not([readonly]) {
-  border-bottom: 1px solid #4dd0e1;
-  box-shadow: 0 1px 0 0 #4dd0e1;
-  }
-  
-  .active-cyan input[type=text] {
-  border-bottom: 1px solid #4dd0e1;
-  box-shadow: 0 1px 0 0 #4dd0e1;
-  }
-  
-  .active-cyan .fa,
-  .active-cyan-2 .fa {
-  color: #4dd0e1;
-  }
+.mat-display-1 { 
+  font-size: $button-font-size;
+  font-family: $button-font;
+  text-align: $alignment-of-text;
+}

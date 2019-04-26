@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
-import { CalendarEvent } from 'src/ models/calendar-event';
-import { GraphApiService } from 'src/services/graph-api.service';
+import { CalendarEvent } from 'src/app/ models/calendar-event';
+import { GraphApiService } from 'src/app/services/graph-api.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import Swal from 'sweetalert2';
 @NgModule({
@@ -19,13 +19,13 @@ export class NewEventComponent {
 
   event: CalendarEvent = {
     subject: 'Angular workshop!',
-    start: { dateTime: '2019-04-10T17:00:00,', timeZone: 'UTC' },
-    end: { dateTime: '2019-04-10T18:00:00', timeZone: 'UTC' }
+    start: { dateTime: '2019-04-18T17:00:00', timeZone: 'UTC' },
+    end: { dateTime: '2019-04-18T18:00:00', timeZone: 'UTC' }
   };
 
   constructor(private graphApi: GraphApiService) {
     this.eventForm = new FormGroup({
-      subject: new FormControl(this.event.subject, [Validators.required]),
+      subject: new FormControl(this.event.subject, [ Validators.required ])
     });
   }
 
@@ -45,7 +45,7 @@ export class NewEventComponent {
         title: 'Event Added!',
         showConfirmButton: false,
         timer: 1500
-      })
+      });
     }
   }
 }

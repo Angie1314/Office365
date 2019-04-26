@@ -1,23 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
-
-$calendar-font:'Righteous', cursive;
-$calendar-font-size:2em;
-$calendar-font-color:#2196F3;
-$button-font:'Righteous', cursive;
-$button-font-size:2em;
-$button-font-color:#2196F3;
-$alignment-of-text:center;
-
-$mat-div-and-card-border-width:1px;
-$mat-div-and-card-border-style:solid;
-$mat-button-font-border:0;
-
-$item-float:right;
-
-$mat-card-padding: 10px ;
-
-$-mat-form-field-width: 300px;
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import "src/app/components/new-event/event-variables.scss";
 
 mat-form-field{
     width: $-mat-form-field-width;
@@ -39,3 +23,10 @@ mat-form-field{
     margin-right: $mat-card-padding;
   }
   
+  .button-font {
+    font-size: $button-font-size;
+    font-family: $button-font;
+    color: $button-font-color;
+    text-align: $alignment-of-text;
+    border: $button-font-border;
+  }

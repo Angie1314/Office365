@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Calendar } from 'src/ models/calendar';
+import { Calendar } from 'src/app/ models/calendar';
 import { Observable } from 'rxjs';
-import { CalendarService } from 'src/services/calendar.service';
+import { CalendarService } from 'src/app/services/calendar.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -25,37 +25,24 @@ export class CalendarComponent implements OnInit {
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
 
-  calendar: Observable<Calendar>;
   avatar: string;
-  
-  constructor(private calendarService: CalendarService) { 
-    this.avatar = "../../../../assets/images/date.png";
+
+  showSpinner = true;
+  color = 'primary';
+  mode = 'indeterminate';
+
+   calendar: Calendar[] = [];
+
+  constructor(private calendarService: CalendarService) {
+    this.avatar = '../../../../assets/images/date.png';
+    this.icon = '../../../../assets/images/icon.png';
+    this.settings = '../../../../assets/images/settings.png';
+    this.help = '../../../../assets/images/help.png';
   }
 
   ngOnInit() {
-    this.calendar = this.calendarService.getCalendar();
-
-    this.icon = "../../../../assets/images/icon.png";
-    this.settings = "../../../../assets/images/settings.png";
-    this.help = "../../../../assets/images/help.png";
-  }
-
-  onScroll(){
-    let one = document.querySelector("#one");
-    let two= document.querySelector('#two');
-    let three = document.querySelector('#three');
-
-    if (one){
-        one.scrollIntoView();
-    }
-    else if(two){
-        two.scrollIntoView();
-    }
-    else if(three){
-        three.scrollIntoView();
-    }
+   this.calendarService.getCalendar()
+  .subscribe(x => { this.calendar = x ; });
+    // this.calendar.subscribe(() => this.showSpinner = false);
   }
 }
-
-
-

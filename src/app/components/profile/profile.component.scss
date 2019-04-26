@@ -1,26 +1,8 @@
 
 @import "~@angular/material/theming";
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
-
-$button-font:'Righteous', cursive;
-$button-font-size:2em;
-$button-font-color:#2196F3;
-$alignment-of-text:center;
-
-$button-font-border: 0;
-
-$button-size-width: 80%;
-$button-size-height: 80%;
-$button-size-border: 0;
-$button-size-padding: 30px;
-$button-size-transition: .2s;
-$button-size-width-height: 200px;
-$button-size-margin: 0 auto;
-
-$mat-card-bg-color: #2196F3;
-$mat-card-transition: none !important;
-$mat-card-box-shadow: none !important;
-
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import "src/app/components/profile/profile-variables.scss";
 
 .button-font {
     font-size: $button-font-size;
@@ -31,13 +13,9 @@ $mat-card-box-shadow: none !important;
 }
 
 .button-size {
-    width: $button-size-width;
-    height: $button-size-height;
     border: $button-size-border;
     padding: $button-size-padding;
     transition: transform $button-size-transition;
-    width: $button-size-width-height;
-    height: $button-size-width-height;
     margin: $button-size-margin;
 }
 
@@ -50,21 +28,26 @@ $mat-card-box-shadow: none !important;
     transition: $mat-card-transition;
     box-shadow: $mat-card-box-shadow;
   }
+
+  .mat-card-background {
+    font-family: $office-logo;
+    border: $mat-card-border;
+    color: $mat-card-bg-color;
+    transition: $mat-card-border-transition-shadow;
+    box-shadow: $mat-card-border-transition-shadow;
+    padding-top: $mat-card-bg-padding;
+    padding-bottom: $mat-card-bg-padding;
+    padding-left: $mat-card-bg-padding;
+    padding-right: $mat-card-bg-padding;
+  }
+
+  .parallax {
+    background-image: url("src/assets/images/dashboard.jpg");
+    min-height: $parallax-calendar-min-height;
+    background-attachment: $parallax-calendar-bg-attach;
+    background-position: $parallax-calendar-position;
+    background-repeat: $parallax-calendar-repeat;
+    background-size: $parallax-calendar-bg-size;
+  }
+
  
-
-  @mixin min {
-    @media (min-width: #{$min-widths}) and (max-width: #{$max-widths- 1px}) {
-      @content;
-      word-wrap: break-word;
-    
-    }
-  }
-  
-  @mixin max {
-    @media (min-width: #{$max-widths}) {
-      @content;
-      word-wrap: break-word;
-      
-  }
-
-  }

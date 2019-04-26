@@ -1,52 +1,7 @@
 @import "~@angular/material/theming";
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
-@include mat-core();
-
-$my-app-primary: mat-palette($mat-blue);
-$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
-$my-app-warn: mat-palette($mat-deep-orange);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
-
-$calendar-font:'Righteous', cursive;
-$calendar-font-size:2em;
-$calendar-font-color:#2196F3;
-$calendar-alignment-of-text:center;
-
-$button-font:'Righteous', cursive;
-$button-font-size:2em;
-$button-font-color:#2196F3;
-$alignment-of-text:center;
-$button-font-border: 0;
-
-$nav-bar-overflow:hidden;
-$nav-bar-bg-color:#333;
-$nav-bar-position:fixed;
-$nav-bar-top:0;
-$nav-bar-width:100%;
-
-$mat-divider-border-width: 1px;
-$mat-divider-border-style: solid;
-
-$item-float:right;
-
-$parallax-calendar-min-height: 500px;
-$parallax-calendar-bg-attach: fixed;
-$parallax-calendar-position: center;
-$parallax-calendar-repeat:no-repeat;
-$parallax-calendar-bg-size:cover;
-
-$center-items-alignment: center;
-
-$mat-grid-tile-color:lightblue;
-
-@include angular-material-theme($my-app-theme);
-
-.alternate-theme {
-  $alternate-primary: mat-palette($mat-light-blue);
-  $alternate-accent: mat-palette($mat-teal, 400);
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
-  @include angular-material-theme($alternate-theme);
-}
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import "src/app/components/calendar/calendar-variables.scss";
 
 .parallax {
   background-image: url("src/assets/images/calendar.jpg");
@@ -57,36 +12,31 @@ $mat-grid-tile-color:lightblue;
   background-size: $parallax-calendar-bg-size;
 }
 
-.navbar {
-  overflow: $nav-bar-overflow;
-  background-color: $nav-bar-bg-color;
-  position: $nav-bar-position;
-  top: $nav-bar-top;
-  width: $nav-bar-width;
-}
-
-.center-content {
-  align-items: $center-items-alignment;
-  justify-content: $center-items-alignment;
-}
-
 .calendar-heading {
   font-family: $calendar-font;
   size: $calendar-font-size;
   color:$calendar-font-color;
 }
 
-.mat-divider{
+.mat-divider {
   color: $calendar-font-color;
   border-width: $mat-divider-border-width;
   border-style: $mat-divider-border-style;
 }
 
-.mat-card{
+.mat-card {
   color: $calendar-font-color;
   border-width: $mat-divider-border-width;
   border-style: $mat-divider-border-style;
+  padding: $mat-card-padding;
+  margin-left: $mat-card-margin-left-right;
+  margin-bottom: $mat-card-margin-top-bottom;
+  margin-right: $mat-card-margin-left-right;
 }
+
+.left-align-element {
+    float: $item-float;
+  }
 
 .button-font {
   font-size: $button-font-size;
@@ -96,11 +46,13 @@ $mat-grid-tile-color:lightblue;
   border: $button-font-border;
 }
 
-mat-grid-tile {
-  background: $mat-grid-tile-color;
+.label-font {
+  font-size: $label-font-size;
+  font-family: $button-font;
+  color: $button-font-color;
+  text-align: $alignment-of-text;
+  border: $button-font-border;
 }
 
-.left-align-element{
-    float: $item-float;
-  }
+  
 
