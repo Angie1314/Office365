@@ -11,10 +11,9 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { MatCardModule } from '@angular/material/card';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule,
          MatMenuModule,
@@ -28,8 +27,11 @@ import { MatToolbarModule,
          MatRippleModule,
          MatListModule,
          MatCheckboxModule,
+         MatProgressSpinnerModule,
+         MatCardModule,
+         MatGridListModule,
          } from '@angular/material';
-import { MatGridListModule } from '@angular/material/grid-list';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
@@ -38,7 +40,6 @@ import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,6 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     PagefooterComponent,
     HeaderComponent,
     MenuBarComponent,
-    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
