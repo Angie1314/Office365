@@ -20,3 +20,11 @@
   size: $text-body-size;
   color:$text-body-color;
 }
+
+.button-font {
+  font-size: $button-font-size;
+  font-family: $button-font;
+  color: $button-font-color;
+  text-align: $alignment-of-text;
+  border: $button-font-border;
+}

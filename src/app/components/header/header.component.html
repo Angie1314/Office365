@@ -9,20 +9,7 @@
     <button routerLink="/about-office" class="ripple align-right" mat-flat-button color="primary">{{ aboutOfficeText }}
     </button>
 
-    <ng-template #content>
-      <div class="align-left">
-        <mat-card class="mat-card-profile-area">
-          <h1 fxLayoutAlign="right right" class="mat-display">Welcome: {{ name }}</h1>
-        </mat-card>
-      </div>
-      
-
-      <button (click)="logOut()" mat-flat-button color="primary" id="logout" class="align-right">{{ Logout }}
-      </button>
-
-      <button routerLink="/profile" class="ripple align-right" mat-flat-button color="primary">{{ seeFeautesText }}
-      </button>
-    </ng-template>
+  
   </div>
 </mat-card>
 
