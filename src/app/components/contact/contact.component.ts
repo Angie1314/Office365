@@ -35,7 +35,6 @@ export class ContactComponent implements OnInit {
   mailboxText = 'Mail Box';
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
-  displayedColumns: string[] = ['Display name', 'name', 'weight', 'symbol'];
 
   contact: Contact[] = [];
   dataSource = new MatTableDataSource<Contact>();

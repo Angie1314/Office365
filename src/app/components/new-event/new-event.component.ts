@@ -18,14 +18,14 @@ export class NewEventComponent {
   eventForm: FormGroup;
 
   event: CalendarEvent = {
-    subject: '',
-    start: { dateTime: '2019-04-10T17:00:00,', timeZone: 'UTC' },
-    end: { dateTime: '2019-04-10T18:00:00', timeZone: 'UTC' }
+    subject: 'Angular workshop!',
+    start: { dateTime: '2019-04-18T17:00:00', timeZone: 'UTC' },
+    end: { dateTime: '2019-04-18T18:00:00', timeZone: 'UTC' }
   };
 
   constructor(private graphApi: GraphApiService) {
     this.eventForm = new FormGroup({
-      subject: new FormControl(this.event.subject, [Validators.required]),
+      subject: new FormControl(this.event.subject, [ Validators.required ])
     });
   }
 

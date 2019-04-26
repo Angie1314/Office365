@@ -1,6 +1,6 @@
 /* Button styling */
 $button-font:"Source Sans Pro", sans-serif;
-$button-font-size:48px;
+$button-font-size:80px;
 $button-font-color:#2196F3;
 $button-font-border: 0;
 $button-size-width: 100%;
@@ -8,7 +8,7 @@ $button-size-height: 100%;
 $button-size-border: 0;
 $button-size-padding: 30px;
 $button-size-transition: .2s;
-$button-size-width-height: 300px;
+$button-size-width-height: 200px;
 $button-size-margin: 0 auto;
 $office-logo: "Source Sans Pro", sans-serif;
 
@@ -18,8 +18,17 @@ $mat-card-transition: none !important;
 $mat-card-box-shadow: none !important;
 $mat-card-profile-pic:transparent !important;
 $mat-card-border-transition-shadow: none !important;
-$mat-card-bg-padding: 0;
+$mat-card-bg-padding: 80px;
 $mat-card-border: none !important;
+$border-transition-shadow: none!important;
 
 /* Alignment of items */
 $alignment-of-text:center;
+
+/* Parallax scrolling for photo */
+$parallax-calendar-min-height: 500px;
+$parallax-calendar-bg-attach: fixed;
+$parallax-calendar-position: center;
+$parallax-calendar-repeat: no-repeat;
+$parallax-calendar-bg-size: cover;
+

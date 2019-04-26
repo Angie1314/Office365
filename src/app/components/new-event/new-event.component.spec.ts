@@ -1,7 +1,7 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MatCardModule } from '@angular/material/card';
 import { NewEventComponent } from './new-event.component';
 import { GraphApiService } from 'src/app/services/graph-api.service';
 import { CalendarEvent } from 'src/app/ models/calendar-event';
@@ -19,11 +19,12 @@ describe('NewEventComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewEventComponent ],
+      declarations: [ NewEventComponent, MatCardModule ],
       imports: [
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        MatCardModule
       ],
       providers: [ { provide: GraphApiService, useClass: GraphApiServiceMock } ]
     })
@@ -62,3 +63,4 @@ describe('NewEventComponent', () => {
     component.onSubmit();
   });
 });
+

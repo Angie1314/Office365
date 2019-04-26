@@ -6,11 +6,11 @@
     </button>
     <button routerLink="/about-office" class="ripple align-right" mat-flat-button color="primary">{{ aboutOfficeText }}
     </button>
-   
+
     <ng-template #content>
       <div class="align-left">
-        <mat-card class="mat-card-profile">
-          <h1 fxLayoutAlign="right right" class="mat-display-1">{{ name }}</h1>
+        <mat-card class="mat-card-profile-area">
+          <h1 fxLayoutAlign="right right" class="mat-display">Welcome: {{ name }}</h1>
         </mat-card>
       </div>
 
@@ -31,9 +31,8 @@ centerize"></div>
 <div class="alternate-theme button-login-feature centerize">
   <ng-template #content>
     <div class="align-left">
-      <mat-card class="mat-card-profile">
-
-        <h1 fxLayoutAlign="right right" class="mat-display-1">{{ name }}</h1>
+      <mat-card class="mat-card-profile-area">
+        <h1 fxLayoutAlign="right right" class="mat-display">Welcome: {{ name }}</h1>
       </mat-card>
     </div>
     <a routerLink="/calendar"></a>

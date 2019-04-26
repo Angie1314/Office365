@@ -28,11 +28,31 @@
   color: $calendar-font-color;
   border-width: $mat-divider-border-width;
   border-style: $mat-divider-border-style;
+  padding: $mat-card-padding;
+  margin-left: $mat-card-margin-left-right;
+  margin-bottom: $mat-card-margin-top-bottom;
+  margin-right: $mat-card-margin-left-right;
 }
 
 .left-align-element {
     float: $item-float;
   }
+
+.button-font {
+  font-size: $button-font-size;
+  font-family: $button-font;
+  color: $button-font-color;
+  text-align: $alignment-of-text;
+  border: $button-font-border;
+}
+
+.label-font {
+  font-size: $label-font-size;
+  font-family: $button-font;
+  color: $button-font-color;
+  text-align: $alignment-of-text;
+  border: $button-font-border;
+}
 
   
 

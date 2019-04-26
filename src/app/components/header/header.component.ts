@@ -6,12 +6,12 @@ import openIdConfig from 'src/openid-config.json';
 import openIdConfigKeys from 'src/openid-config.keys.json';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent {
   title = 'OfficeApp';
   officeLogo = 'Office 365';

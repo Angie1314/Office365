@@ -38,6 +38,7 @@ import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +51,7 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
     PagefooterComponent,
     HeaderComponent,
     MenuBarComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,

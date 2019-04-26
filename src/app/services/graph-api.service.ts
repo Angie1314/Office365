@@ -32,3 +32,5 @@ export class GraphApiService {
     return this.http.post(`${baseUrl}/me/events`, event);
   }
 }
+
+

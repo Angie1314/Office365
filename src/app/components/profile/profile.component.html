@@ -29,9 +29,9 @@
 
   <mat-card-content>
 
-    <mat-grid-list cols="2" [style.background]="'#2196F3'">
+    <mat-grid-list cols="2">
       <mat-grid-tile>
-        <mat-card class="mat-cards">
+        <mat-card>
           <button class="button-size" mat-menu-item>
             <a routerLink="/contact"><img class="example-card" [src]="officeContacts"></a>
           </button>
@@ -39,7 +39,7 @@
       </mat-grid-tile>
 
       <mat-grid-tile>
-        <mat-card class="mat-cards">
+        <mat-card>
           <button class="button-size" mat-menu-item>
             <a routerLink="/calendar"><img class="example-card" [src]="officeCalendar"></a>
           </button>
@@ -48,3 +48,5 @@
     </mat-grid-list>
   </mat-card-content>
 </mat-card>
+
+<div class="alternate-theme parallax image button-login-feature centerize"></div>

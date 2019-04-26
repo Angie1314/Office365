@@ -13,13 +13,9 @@
 }
 
 .button-size {
-    width: $button-size-width;
-    height: $button-size-height;
     border: $button-size-border;
     padding: $button-size-padding;
     transition: transform $button-size-transition;
-    width: $button-size-width-height;
-    height: $button-size-width-height;
     margin: $button-size-margin;
 }
 
@@ -44,4 +40,14 @@
     padding-left: $mat-card-bg-padding;
     padding-right: $mat-card-bg-padding;
   }
+
+  .parallax {
+    background-image: url("src/assets/images/dashboard.jpg");
+    min-height: $parallax-calendar-min-height;
+    background-attachment: $parallax-calendar-bg-attach;
+    background-position: $parallax-calendar-position;
+    background-repeat: $parallax-calendar-repeat;
+    background-size: $parallax-calendar-bg-size;
+  }
+
  
