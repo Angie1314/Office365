@@ -1,26 +1,14 @@
-@import "src/app/components/header/header-variables.scss";
+a:hover,
+  a:active { 
+      color:lightgray
+}
 
-.mat-card-background {
-    font-family: $office-logo;
-    border: $mat-card-border;
-    color: $mat-card-bg-color;
-    transition: $mat-card-border-transition-shadow;
-    box-shadow: $mat-card-border-transition-shadow;
-    padding-top: $mat-card-bg-padding;
-    padding-bottom: $mat-card-bg-padding;
-    padding-left: $mat-card-bg-padding;
-    padding-right: $mat-card-bg-padding;
-  }
+.nav-items {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+}
 
-  .mat-card-profile-area {
-    transition: $mat-card-border-transition-shadow;
-    box-shadow: $mat-card-border-transition-shadow;
-    border: $mat-card-border-transition-shadow;
-  }
-
-  .mat-display {
-    color:$mat-display-3-color;
-    font-size: 24px;
-  }
-
-  
+.margin-page {
+margin-bottom: 2%;
+}

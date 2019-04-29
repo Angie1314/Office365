@@ -1,34 +1,58 @@
+<div class="centerize margin-page">
+  <button *ngIf="!name;else content" (click)="login()" class="ripple" mat-flat-button color="primary"
+    href="/profile">{{ loginButton }}
+  </button>
+</div>
 
-<mat-card class="mat-card-background">
-  <div class="image button-login-feature
-      centerize">
-    <button *ngIf="!name;else content" (click)="login()" class="ripple
-        align-right" mat-flat-button color="primary" routerLink="/profile">{{ loginButton }}
-    </button>
-
-    <button routerLink="/about-office" class="ripple align-right" mat-flat-button color="primary">{{ aboutOfficeText }}
-    </button>
-
-  </div>
-</mat-card>
-
-<br />
 
 <div class="alternate-theme parallax image button-login-feature
 centerize"></div>
 
 <div class="alternate-theme button-login-feature centerize">
   <ng-template #content>
-    <div class="align-left">
-      <mat-card class="mat-card-profile-area">
-        <h1 fxLayoutAlign="center center" class="mat-display">Welcome: {{ name }}</h1>
-      </mat-card>
-    </div>
-    <a routerLink="/calendar"></a>
-    <button (click)="logOut()" mat-flat-button color="primary" id='logout' class="align-right">Logout</button>
+    <mat-toolbar color="primary">
+      <div>
+        <mat-icon>assignment</mat-icon>
+      </div>
 
-    <button routerLink="/profile" class="ripple align-right" mat-flat-button color="primary"
-      id='dashboard'>{{ seeFeautesText }}
-    </button>
+      <div fxFlex></div>
+
+      <ul fxLayout fxLayoutGap="10px" class="nav-items">
+        <li>
+          <div>
+            <a routerLink="/calendar">Calendar</a>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <a>Contacts</a>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <div class="align-left">
+                <div>
+                  <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre" class="align-center">
+                </div>
+              </div>
+            </button>
+          </div>
+        </li>
+      </ul>
+      <mat-menu fxLayoutAlign="center" #menu="matMenu">
+
+        <p fxLayoutAlign="center center" mat-menu-item>
+          <mat-icon>account_box</mat-icon> {{ name }}
+        </p>
+
+        <button (click)="logOut()" id='logout' mat-menu-item>
+          <mat-icon>assignment_return</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar>
   </ng-template>
 </div>

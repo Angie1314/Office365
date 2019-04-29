@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  Injectable } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { JwksValidationHandler } from 'angular-oauth2-oidc';
 import { authConfig } from 'src/auth-config';
 import openIdConfig from 'src/openid-config.json';
 import openIdConfigKeys from 'src/openid-config.keys.json';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+@Injectable()
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-
 export class HeaderComponent {
   title = 'OfficeApp';
   officeLogo = 'Office 365';
@@ -19,11 +19,13 @@ export class HeaderComponent {
   aboutOfficeText = 'About Office';
   loginButton = 'Login';
   logoutButton = 'Logout';
+  avatarImg = '../../../../assets/images/a2.jpg';
 
   photoUrl: string;
 
-  constructor(private oauthService: OAuthService, private route: ActivatedRoute) {
+  constructor(private oauthService: OAuthService, private router: Router) {
     const config = openIdConfig as any;
+
 
     Object.assign(authConfig, {
         loginUrl: config.authorization_endpoint,
@@ -45,12 +47,15 @@ export class HeaderComponent {
 
 public login(): void {
     this.oauthService.initImplicitFlow();
-
 }
 
 public logOut() {
     this.oauthService.logOut();
 }
+
+navigation() {
+    this.router.navigate(['/calendar', '/contact', '/about-office']);
+ }
 
 public get name() {
     const claims = this.oauthService.getIdentityClaims();
@@ -61,6 +66,4 @@ public get name() {
 
     return (claims as any).name;
 }
-
-   }
-
+}

@@ -1,30 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Cinzel");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
-@import "src/app/components/about-office/variables.scss";
+$parallax-background: fixed;
+$parallax-background-repeat: no-repeat;
+$parallax-background-size: cover;
+$centered-content-align: center;
 
-.mat-display-1 { 
-  font-size: $button-font-size;
-  font-family: $button-font;
-  color: $color-for-feature-text;
-  text-align: $alignment-of-text;
-}
-
-.features {
-  font-family: $about-office-font;
-  color:$color-for-feature-text;
-}
-
-.text-body {
-  font-family: $text-body-text;
-  size: $text-body-size;
-  color:$text-body-color;
-}
-
-.button-font {
-  font-size: $button-font-size;
-  font-family: $button-font;
-  color: $button-font-color;
-  text-align: $alignment-of-text;
-  border: $button-font-border;
+.parallax {
+    background-image: url("src/assets/images/pplWork.jpg");
+    min-height: 500px;
+    background-attachment: $parallax-background;
+    background-position: $centered-content-align;
+    background-repeat: $parallax-background-repeat;
+    background-size: $parallax-background-size;
 }

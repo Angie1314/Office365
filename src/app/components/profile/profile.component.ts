@@ -18,20 +18,15 @@ export class ProfileComponent implements OnInit {
   loginButton = 'Login';
   logoutButton = 'Logout';
 
-  officeCalendar: string;
-  officeContacts: string;
-  icon: string;
+  officeCalendar: '../../../../assets/images/officeCalendar.jpeg';
+  officeContacts: '../../../../assets/images/officeContacts.jpeg';
+  icon: '../../../../assets/images/icon.png';
 
   profile: Observable<Profile>;
 
-  constructor(private graphApi: GraphApiService) {
-    this.officeCalendar = '../../../../assets/images/officeCalendar.jpeg';
-    this.officeContacts = '../../../../assets/images/officeContacts.jpeg';
-    this.icon = '../../../../assets/images/icon.png';
-  }
+  constructor(private graphApi: GraphApiService) { }
 
   ngOnInit() {
     this.profile = this.graphApi.getProfile();
   }
-
 }

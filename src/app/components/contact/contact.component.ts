@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { parsePhoneNumber, CountryCode } from 'libphonenumber-js/min';
 import { FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material';
+import { Observable } from 'rxjs';
 
 
 // tslint:disable-next-line:use-pipe-transform-interface
@@ -23,11 +24,11 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  icon: string;
-  settings: string;
-  help: string;
-  avatar: string;
-  search: string;
+  icon: '../../../../assets/images/icon.png';
+  settings: '../../../../assets/images/settings.png';
+  help: '../../../../assets/images/help.png';
+  avatar: '../../../../assets/images/avatar.png';
+  search: '../../../../assets/images/search.png';
 
   settingsText = 'Settings';
   helpText = 'Help';
@@ -37,23 +38,19 @@ export class ContactComponent implements OnInit {
   officeLogo = 'Office 365';
 
   contact: Contact[] = [];
+  contacts: Observable<Contact[]>;
+
+  color = 'primary';
+  mode = 'indeterminate';
+  showSpinner = true;
   dataSource = new MatTableDataSource<Contact>();
 
-  constructor(private contactService: ContactService) {
-    this.icon = '../../../../assets/images/icon.png';
-    this.settings = '../../../../assets/images/settings.png';
-    this.help = '../../../../assets/images/help.png';
-    this.avatar = '../../../../assets/images/avatar.png';
-    this.search = '../../../../assets/images/search.png';
-
-  }
+  constructor(private contactService: ContactService) { }
 
   ngOnInit() {
-
     this.contactService.getContact()
-      .subscribe(x => {
-        this.contact = x;
-      });
+    .subscribe(x => { this.contact = x ; });
+    this.contacts.subscribe(() => this.showSpinner = false);
   }
 
 }

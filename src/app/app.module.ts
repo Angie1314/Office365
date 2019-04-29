@@ -39,7 +39,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
-import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
     AppComponent,
     PagefooterComponent,
     HeaderComponent,
-    MenuBarComponent,
+    SpinnerComponent,
+    ContactspinnerComponent,
   ],
   imports: [
     BrowserModule,

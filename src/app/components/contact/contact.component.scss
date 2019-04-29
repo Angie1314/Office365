@@ -1,20 +1,5 @@
 @import "~@angular/material/theming";
 @import "src/app/components/contact/contact-variables.scss";
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Righteous');
-@import url("https://fonts.googleapis.com/css?family=Cinzel");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-
-.contact-heading {
-  font-family: $calendar-font;
-  size: $calendar-font-size;
-  color: $calendar-font-color;
-}
-
-.mat-divider {
-  color: $calendar-font-color;
-  border-width: $mat-div-and-card-border-width;
-  border-style: $mat-div-and-card-border-style;
-}
 
 .mat-card {
   color: $calendar-font-color;
@@ -27,10 +12,6 @@
   width: $mat-card-width;
 }
 
-  .left-align-element {
-    float: $item-float;
-  }
-
   .parallax {
     background-image: url("src/assets/images/contacts.jpg");
     min-height: $parallax-calendar-min-height;
@@ -40,21 +21,22 @@
     background-size: $parallax-calendar-bg-size;
   }
 
-.button-font {
-  font-size: $button-font-size;
-  font-family: $button-font;
-  color: $button-font-color;
-  text-align: $alignment-of-text;
-  border: $button-font-border;
-}
-
-table {
-  width: 100%;
-  height: 50%;
+.left-align-element {
+    float: $item-float;
 }
 
 div {
   word-wrap: break-word;
+}
+
+a {
+  color: $anchor-tag-color;
+  text-decoration: $anchor-tag-tect-dec;
+}
+
+a:hover,
+  a:active { 
+      color:rgb(74, 21, 221)
 }
 
 

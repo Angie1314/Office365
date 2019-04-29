@@ -14,9 +14,9 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 
 export class CalendarComponent implements OnInit {
-  icon: string;
-  settings: string;
-  help: string;
+  icon: '../../../../assets/images/icon.png';
+  settings: '../../../../assets/images/settings.png';
+  help: '../../../../assets/images/help.png';
 
   settingsText = 'Settings';
   helpText = 'Help';
@@ -25,24 +25,19 @@ export class CalendarComponent implements OnInit {
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
 
-  avatar: string;
+  avatar: '../../../../assets/images/date.png';
 
   showSpinner = true;
   color = 'primary';
   mode = 'indeterminate';
 
-   calendar: Calendar[] = [];
-
-  constructor(private calendarService: CalendarService) {
-    this.avatar = '../../../../assets/images/date.png';
-    this.icon = '../../../../assets/images/icon.png';
-    this.settings = '../../../../assets/images/settings.png';
-    this.help = '../../../../assets/images/help.png';
-  }
+  calendar: Calendar[] = [];
+  calendars: Observable<Calendar[]>;
+  constructor(private calendarService: CalendarService) { }
 
   ngOnInit() {
    this.calendarService.getCalendar()
   .subscribe(x => { this.calendar = x ; });
-    // this.calendar.subscribe(() => this.showSpinner = false);
+   this.calendars.subscribe(() => this.showSpinner = false);
   }
 }

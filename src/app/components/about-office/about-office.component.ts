@@ -10,12 +10,12 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   styleUrls: ['./about-office.component.scss']
 })
 
-export class AboutOfficeComponent implements OnInit {
+export class AboutOfficeComponent {
 
-  imgOneNote: string;
-  imgMonitor: string;
-  imgDevices: string;
-  imgComputer: string;
+  imgOneNote: '../../../../assets/images/oneNote.png';
+  imgMonitor: '../../../../assets/images/monitor.png';
+  imgDevices: '../../../../assets/images/smartphones.png';
+  imgComputer: '../../../../assets/images/computer.png';
 
   textForFeatures = 'It’s the tools you need be more creative.';
   matCardTitleUpToDate = 'Up to date';
@@ -26,15 +26,5 @@ export class AboutOfficeComponent implements OnInit {
   matCardTitleCloud = 'Cloud Features';
   matCardContentCloud = 'Its is your great work, in the cloud';
 
-  constructor() {
-
-    this.imgOneNote = '../../../../assets/images/oneNote.png';
-    this.imgMonitor = '../../../../assets/images/monitor.png';
-    this.imgDevices = '../../../../assets/images/smartphones.png';
-    this.imgComputer = '../../../../assets/images/computer.png';
-  }
-
-  ngOnInit() {
-  }
-
+  constructor() { }
 }

@@ -5,19 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pagefooter.component.html',
   styleUrls: ['./pagefooter.component.scss']
 })
-export class PagefooterComponent implements OnInit {
-  srcUrlFB: string;
-  srcUrlInstagram: string;
-  srcUrlTwitter: string;
+export class PagefooterComponent {
+  srcUrlFB: '../../../../assets/images/fb.png';
+  srcUrlInstagram: '../../../../assets/images/instagram.png';
+  srcUrlTwitter: '../../../../assets/images/twitter.png';
 
-  constructor() {
-    this.srcUrlFB = '../../../../assets/images/fb.png';
-    this.srcUrlInstagram = '../../../../assets/images/instagram.png';
-    this.srcUrlTwitter = '../../../../assets/images/twitter.png';
-  }
-
-  ngOnInit() {
-
-  }
-
+  constructor() { }
 }

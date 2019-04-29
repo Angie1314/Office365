@@ -52,9 +52,6 @@ export class AppComponent {
         this.oauthService.tokenValidationHandler = new JwksValidationHandler();
         this.oauthService.tryLogin();
     }
-    getLocation(): void {
-        const id = +this.route.snapshot.paramMap.get('id');
-    }
 
     public login(): void {
         this.oauthService.initImplicitFlow();

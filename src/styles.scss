@@ -1,57 +1,86 @@
+
+
+@import "~@angular/material/theming";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
 $card-width: 100%;
 $card-height: auto;
 $parent-overflow: hidden;
-$img-postition: relative;
-$img-width: 100%;
 
 $h2-postition-on-img: absolute;
 $h2-top-position-on-img: 200px;
 $h2-left-position-on-img: 0;
 $h2-width-on-img: 100%;
 
-$parallax-background:fixed;
-$parallax-background-position:center;
-$parallax-background-repeat:no-repeat;
-$parallax-background-size:cover;
+$parallax-background: fixed;
+$parallax-background-repeat: no-repeat;
+$parallax-background-size: cover;
 
-$centered-button-display:flex;
-$centered-button-content:center;
+$centered-button-display: flex;
+$centered-content-align: center;
 
-$but-log-margin:8px;
-$but-log-postion:relative;
+$but-log-margin: 0;
+$but-log-postion: relative;
 
-$center-components-text-align:center;
-$center-components-margin:8px;
+$center-components-margin: 0;
 
-$button-ripple-margin:6px 12px 6px 0;
+$button-ripple-margin: 6px 12px 6px 0;
 
 $mat-display-3-color:#333;
 
 $anchor-tag-color:white;
-$anchor-tag-tect-dec:none;
+$anchor-tag-tect-dec: none;
 
 /* Button styles */
-$button-font:"Source Sans Pro", sans-serif;
-$button-font-size:48px;
-$button-font-color:#2196F3;
-$alignment-of-text:center;
-$button-font-border: 0;
+$general-color:#2196F3;
 
+$footer-display: flex;
+$footer-content-justify: center;
+$mat-card-profile-pic: transparent !important;
 
-$footer-display:flex;
-$footer-alignment:center;
-$footer-content-justify:center;
-$office-logo: "Roboto, Helvetica Neue, sans-serif";
-$mat-card-profile-pic:transparent !important;
+/* Font for some body elements */
+$text-body-size: 12px;
+$button-font-size: 32px;
+$text-body-color:rgb(104, 98, 98);
 
+/* Padding of Calendar Cards */
+$mat-card-padding: 10px ;
+$mat-card-margin-top-bottom: 10px ;
+$mat-card-margin-left-right: 10px ;
 
+/* Colors for mat dividers */
+$mat-divider-border-width: 1px;
+$mat-divider-border-style: solid;
 
-.logo {
-  font-family: $office-logo;
+/* Font for the calendar heading */
+$general-font: "Source Sans Pro", sans-serif;
+$calendar-font-size: 24px;
+
+$mat-card-border-transition-shadow: none !important;
+
+$mat-card-bg-color: black;
+$-mat-form-field-width: 300px;
+
+$general-border: 0;
+$button-size-padding: 30px;
+$button-size-transition: .2s;
+$button-size-margin: 0 auto;
+
+$general-padding: 0;
+
+$page-margins: 2%;
+
+/* Alternate theming*/
+$my-app-primary: mat-palette($mat-blue);
+$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+body {
+  margin: $general-padding;
+  margin-right: $general-padding;
+  padding: $general-padding;
 }
 
 .parent {
@@ -63,17 +92,13 @@ $mat-card-profile-pic:transparent !important;
   height: $card-height;
 }
 
-.image {
-  position: $img-postition;
-  width: $img-width;
-}
 
 h2 {
   position: $h2-postition-on-img;
   top: $h2-top-position-on-img;
   left: $h2-left-position-on-img;
   width: $h2-width-on-img;
-  font-family: $office-logo;
+  font-family: $general-font;
   margin: 12px;
 
   .btn {
@@ -81,39 +106,16 @@ h2 {
     top: 50%;
     left: $h2-left-position-on-img;
     width: $h2-width-on-img;
-    font-family: $office-logo;
+    font-family: $general-font;
   }
 }
-
-#my_centered_button {
-  display: $centered-button-display;
-  justify-content: $centered-button-content;
-}
-
-@import "~@angular/material/theming";
 @include mat-core();
-
-$my-app-primary: mat-palette($mat-blue);
-$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
-$my-app-warn: mat-palette($mat-deep-orange);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
-
 @include angular-material-theme($my-app-theme);
-
 .alternate-theme {
   $alternate-primary: mat-palette($mat-blue); 
   $alternate-accent: mat-palette($mat-pink, 400);
   $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
   @include angular-material-theme($alternate-theme);
-}
-
-.parallax {
-  background-image: url("src/assets/images/pplWork.jpg");
-  min-height: 500px;
-  background-attachment: $parallax-background;
-  background-position: $parallax-background-position;
-  background-repeat: $parallax-background-repeat;
-  background-size: $parallax-background-size;
 }
 
 .button-login-feature button,
@@ -124,25 +126,22 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 }
 
 .centerize {
-  text-align: $center-components-text-align;
+  text-align: $centered-content-align;
   margin-right: $center-components-margin;
-}
-
-.left-float{
-    float: left;
 }
 
 .ripple {
   margin: $button-ripple-margin;
 }
 
-.mat-card-profile{
+.mat-card-profile {
   background-color: $mat-card-profile-pic;
-  font-family: $office-logo;
+  font-family: $general-font;
   color: black;
   border: none !important;
 
 }
+
 
 .mat-display-3 {
   color:$mat-display-3-color;
@@ -156,11 +155,85 @@ a {
 
 .mat-display-1 {
   color:$mat-display-3-color;
-  size: 10px;
+  size: 20px;
 }
 
 footer {
   display: $footer-display;
-  align-items: $footer-alignment;
+  align-items: $centered-content-align;
   justify-content: $footer-content-justify;
 }
+
+.text-body {
+  font-family: $general-font;
+  size: $text-body-size;
+  color:$text-body-color;
+}
+
+.page-heading {
+  font-size: $button-font-size;
+  font-family: $general-font;
+  color: $general-color;
+  text-align: $centered-content-align;
+  border: $general-border;
+}
+
+.mat-divider {
+  color: $general-color;
+  border-width: $mat-divider-border-width;
+  border-style: $mat-divider-border-style;
+}
+
+
+.mat-card-profile-area {
+  transition: $mat-card-border-transition-shadow;
+  box-shadow: $mat-card-border-transition-shadow;
+  border: $mat-card-border-transition-shadow;
+}
+
+.mat-display {
+  color:$mat-display-3-color;
+  font-size: 24px;
+}
+
+.mat-card-background {
+  font-family: $general-font;
+  border: $mat-card-border-transition-shadow;
+  color: $mat-card-bg-color;
+  transition: $mat-card-border-transition-shadow;
+  box-shadow: $mat-card-border-transition-shadow;
+  padding-top: $general-padding;
+  padding-bottom: $general-padding;
+  padding-left: $general-padding;
+  padding-right: $general-padding;
+}
+
+mat-form-field {
+  width: $-mat-form-field-width;
+}
+
+.field-label {
+  font-family: $general-font;
+  size: $calendar-font-size;
+  color:$general-color;
+}
+
+.button-size {
+  border: $general-border;
+  padding: $button-size-padding;
+  transition: transform $button-size-transition;
+  margin: $button-size-margin;
+}
+
+.button-size:hover {
+  transform: scale(1.5);
+}
+
+.margin-login {
+  margin-top: $page-margins;
+  margin-bottom: $page-margins;
+}
+
+
+
+
