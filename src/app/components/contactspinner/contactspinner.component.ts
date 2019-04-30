@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Contact } from 'src/app/models/contact';
 import { ContactService } from 'src/app/services/contact.service';
-
 @Component({
   selector: 'app-contactspinner',
   templateUrl: './contactspinner.component.html',
@@ -18,8 +17,10 @@ export class ContactspinnerComponent implements OnInit {
   constructor( private contactService: ContactService) { }
 
   ngOnInit() {
-        this.contact = this.contactService.getContact();
-        this.contact.subscribe(() => this.showSpinner = false);
+        this.contact = this.contactService
+         .getContact();
+        this.contact
+         .subscribe(() => this.showSpinner = false);
   }
 }
 

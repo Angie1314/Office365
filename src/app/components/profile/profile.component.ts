@@ -27,6 +27,7 @@ export class ProfileComponent implements OnInit {
   constructor(private graphApi: ProfileApiService) { }
 
   ngOnInit() {
-    this.profile = this.graphApi.getProfile();
+    this.profile = this.graphApi
+     .getProfile();
   }
 }

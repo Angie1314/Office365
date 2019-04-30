@@ -38,8 +38,9 @@ export class ContactComponent implements OnInit {
   constructor(private contactService: ContactService) { }
   ngOnInit() {
     this.contactService.getContact()
-    .subscribe(x => { this.contact = x ; });
-    this.contacts.subscribe(() => this.showSpinner = false);
+     .subscribe(x => { this.contact = x ; });
+    this.contacts
+     .subscribe(() => this.showSpinner = false);
   }
 
 }

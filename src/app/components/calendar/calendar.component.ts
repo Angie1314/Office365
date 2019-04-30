@@ -36,7 +36,8 @@ export class CalendarComponent implements OnInit {
 
   ngOnInit() {
    this.calendarService.getCalendar()
-  .subscribe(x => { this.calendar = x ; });
-   this.calendars.subscribe(() => this.showSpinner = false);
+    .subscribe(x => { this.calendar = x ; });
+   this.calendars
+    .subscribe(() => this.showSpinner = false);
   }
 }

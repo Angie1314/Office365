@@ -16,8 +16,10 @@ export class SpinnerComponent implements OnInit {
   constructor(private calendarService: CalendarService) { }
 
   ngOnInit() {
-    this.calendar = this.calendarService.getCalendar();
-    this.calendar.subscribe(() => this.showSpinner = false);
+    this.calendar = this.calendarService
+     .getCalendar();
+    this.calendar
+     .subscribe(() => this.showSpinner = false);
   }
 
 }

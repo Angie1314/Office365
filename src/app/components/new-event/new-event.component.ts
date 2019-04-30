@@ -29,14 +29,16 @@ export class NewEventComponent {
   }
 
   get subject(): AbstractControl {
-    return this.eventForm.get('subject');
+    return this.eventForm
+     .get('subject');
   }
 
   onSubmit() {
     if (this.eventForm.valid) {
       this.graphApi
         .createEvent(this.event)
-        .subscribe(() => this.eventForm.reset());
+        .subscribe(() => this.eventForm
+        .reset());
 
       Swal.fire({
         position: 'center',
