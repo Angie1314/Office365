@@ -1,11 +1,11 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Observable, of } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
 import { NewEventComponent } from './new-event.component';
 import { GraphApiService } from 'src/app/services/graph-api.service';
-import { CalendarEvent } from 'src/app/ models/calendar-event';
-import { Observable, of } from 'rxjs';
+import { CalendarEvent } from 'src/app/models/calendar-event';
 
 class GraphApiServiceMock {
   createEvent(event: CalendarEvent): Observable<number> {

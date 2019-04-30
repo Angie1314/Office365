@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { JwksValidationHandler } from 'angular-oauth2-oidc';
 import { authConfig } from '../auth-config';
 import openIdConfig from '../openid-config.json';
 import openIdConfigKeys from '../openid-config.keys.json';
-import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -18,22 +18,12 @@ export class AppComponent {
     loginButton = 'Login';
     logoutButton = 'Logout';
 
-    srcUrlFB: string;
-    srcUrlInstagram: string;
-    srcUrlTwitter: string;
-    icon: string;
-    settings: string;
-    help: string;
+    srcUrlFB = '../../../../assets/images/fb.png';
+    srcUrlInstagram = '../../../../assets/images/instagram.png';
+    srcUrlTwitter = '../../../../assets/images/twitter.png';
+    icon = '../../../../assets/images/icon.png';
 
     constructor(private oauthService: OAuthService, private route: ActivatedRoute) {
-
-        this.srcUrlFB = '../../../../assets/images/fb.png';
-        this.srcUrlInstagram = '../../../../assets/images/instagram.png';
-        this.srcUrlTwitter = '../../../../assets/images/twitter.png';
-        this.icon = '../../../../assets/images/icon.png';
-        this.settings = '../../../../assets/images/settings.png';
-        this.help = '../../../../assets/images/help.png';
-
         const config = openIdConfig as any;
 
         Object.assign(authConfig, {

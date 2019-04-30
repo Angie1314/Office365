@@ -1,18 +1,20 @@
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import { NgModule , CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 
+import { AppComponent } from './app.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
-import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
-
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule,
@@ -32,10 +34,6 @@ import { MatToolbarModule,
          MatGridListModule,
          } from '@angular/material';
 
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { OAuthModule } from 'angular-oauth2-oidc';
-import { AppRoutingModule } from './app-routing.module';
 import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -79,7 +77,6 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     HttpClientModule,
     MatListModule,
     MatGridListModule,
-    NgxPageScrollCoreModule,
     BrowserModule,
     ReactiveFormsModule,
     OAuthModule.forRoot()
@@ -111,6 +108,4 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
 })
-export class AppModule {
-
-}
+export class AppModule { }

@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
-
-import { ContactService } from './contact.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+import { ContactService } from './contact.service';
 
 describe('ContactService', () => {
   beforeEach(() => TestBed.configureTestingModule({

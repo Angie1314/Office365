@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Contact } from 'src/app/models/contact';
 import { ContactService } from 'src/app/services/contact.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-contactspinner',

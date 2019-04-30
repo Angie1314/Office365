@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { ProfileComponent } from './profile.component';
 import { MatCardModule } from '@angular/material/card';
+import { ProfileComponent } from './profile.component';
+
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
   let fixture: ComponentFixture<ProfileComponent>;

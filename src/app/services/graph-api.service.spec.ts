@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
-
-import { GraphApiService } from './graph-api.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+import { GraphApiService } from './graph-api.service';
 
 describe('GraphApiService', () => {
   beforeEach(() => TestBed.configureTestingModule({

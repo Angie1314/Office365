@@ -1,21 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from 'src/app/models/contact';
-import { ContactService } from 'src/app/services/contact.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { Pipe, PipeTransform } from '@angular/core';
-import { parsePhoneNumber, CountryCode } from 'libphonenumber-js/min';
-import { FormGroup } from '@angular/forms';
-import { MatTableDataSource } from '@angular/material';
 import { Observable } from 'rxjs';
+import { MatTableDataSource } from '@angular/material';
+import { ContactService } from 'src/app/services/contact.service';
+import { Contact } from 'src/app/models/contact';
 
 
 // tslint:disable-next-line:use-pipe-transform-interface
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
-})
-
-@Pipe({
-  name: 'phone'
 })
 
 @Component({
