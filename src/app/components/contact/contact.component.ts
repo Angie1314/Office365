@@ -4,9 +4,6 @@ import { Observable } from 'rxjs';
 import { MatTableDataSource } from '@angular/material';
 import { ContactService } from 'src/app/services/contact.service';
 import { Contact } from 'src/app/models/contact';
-
-
-// tslint:disable-next-line:use-pipe-transform-interface
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -32,6 +32,7 @@ import { MatToolbarModule,
          MatProgressSpinnerModule,
          MatCardModule,
          MatGridListModule,
+         MatDialogModule,
          } from '@angular/material';
 
 import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';
@@ -79,6 +80,7 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     MatGridListModule,
     BrowserModule,
     ReactiveFormsModule,
+    MatDialogModule,
     OAuthModule.forRoot()
   ],
   exports: [MatButtonModule,
@@ -98,6 +100,7 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     MatRippleModule,
     MatListModule,
     MatGridListModule,
+    MatDialogModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

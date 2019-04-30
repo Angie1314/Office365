@@ -5,6 +5,8 @@ import { authConfig } from 'src/auth-config';
 import openIdConfig from 'src/openid-config.json';
 import openIdConfigKeys from 'src/openid-config.keys.json';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { GraphApiService } from 'src/app/services/graph-api.service';
 @Injectable()
 
 @Component({
@@ -12,6 +14,7 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent {
   title = 'OfficeApp';
   officeLogo = 'Office 365';
@@ -20,12 +23,11 @@ export class HeaderComponent {
   loginButton = 'Login';
   logoutButton = 'Logout';
   avatarImg = '../../../../assets/images/avatar2.png';
-
+  mail: string;
   photoUrl: string;
 
-  constructor(private oauthService: OAuthService, private router: Router) {
+  constructor(private oauthService: OAuthService, private router: Router, private graphApiService: GraphApiService) {
     const config = openIdConfig as any;
-
 
     Object.assign(authConfig, {
         loginUrl: config.authorization_endpoint,
@@ -47,6 +49,7 @@ export class HeaderComponent {
 
 public login(): void {
     this.oauthService.initImplicitFlow();
+    this.navigation();
 }
 
 public logOut() {
@@ -54,7 +57,7 @@ public logOut() {
 }
 
 navigation() {
-    this.router.navigate(['/calendar', '/contact', '/about-office']);
+    this.router.navigate(['/calendar']);
  }
 
 public get name() {
@@ -66,4 +69,31 @@ public get name() {
 
     return (claims as any).name;
 }
+get sub() { return this.getClaimValue('sub'); }
+private onIdentityClaimsChanged(): void {
+
+    if (!this.sub) {
+      this.photoUrl = null;
+      return;
+    }
+
+    this.graphApiService.getProfile().subscribe(profile => {
+      this.mail = profile.mail;
+
+      this.photoUrl = this.mail
+        ? `https://outlook.office.com/owa/service.svc/s/GetPersonaPhoto?email=${this.mail}&UA=0&size=HR64x64`
+        : null;
+    });
+  }
+
+  private getClaimValue(name) {
+    const claims = this.oauthService.getIdentityClaims();
+
+    if (!claims) {
+      return null;
+    }
+
+    return claims[name];
+  }
+
 }

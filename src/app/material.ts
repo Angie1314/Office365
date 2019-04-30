@@ -14,6 +14,7 @@ import { MatToolbarModule,
   MatCardModule,
   MatGridListModule,
   MatIconModule,
+  MatDialogModule,
   } from '@angular/material';
 
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
@@ -38,6 +39,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
               MatListModule,
               MatGridListModule,
               MatDatepickerModule,
+              MatDialogModule,
             ],
 
     exports: [MatButtonModule,
@@ -58,6 +60,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
               MatListModule,
               MatGridListModule,
               MatDatepickerModule,
+              MatDialogModule,
             ],
             schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
 })
