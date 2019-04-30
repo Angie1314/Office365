@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GraphApiService } from 'src/app/services/graph-api.service';
 import { Observable } from 'rxjs';
-import { Profile } from 'src/app/ models/profile';
+import { Profile } from 'src/app/models/profile';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @Component({
   selector: 'app-profile',

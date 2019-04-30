@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Calendar } from 'src/app/ models/calendar';
+import { Calendar } from 'src/app/models/calendar';
 import { Observable } from 'rxjs';
 import { CalendarService } from 'src/app/services/calendar.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -14,9 +14,10 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 
 export class CalendarComponent implements OnInit {
-  icon: '../../../../assets/images/icon.png';
-  settings: '../../../../assets/images/settings.png';
-  help: '../../../../assets/images/help.png';
+  icon = '../../../../assets/images/icon.png';
+  settings = '../../../../assets/images/settings.png';
+  help = '../../../../assets/images/help.png';
+  avatar =  '../../../../assets/images/date.png';
 
   settingsText = 'Settings';
   helpText = 'Help';
@@ -24,9 +25,7 @@ export class CalendarComponent implements OnInit {
   mailboxText = 'Mail Box';
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
-
-  avatar: '../../../../assets/images/date.png';
-
+  
   showSpinner = true;
   color = 'primary';
   mode = 'indeterminate';

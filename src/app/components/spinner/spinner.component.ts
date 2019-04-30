@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CalendarService } from 'src/app/services/calendar.service';
-import { Calendar } from 'src/app/ models/calendar';
+import { Calendar } from 'src/app/models/calendar';
 @Component({
   selector: 'app-spinner',
   templateUrl: './spinner.component.html',

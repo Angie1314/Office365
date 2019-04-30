@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Calendar } from '../ models/calendar';
+import { Calendar } from '../models/calendar';
 import { map } from 'rxjs/operators';
 
 

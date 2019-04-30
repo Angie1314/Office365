@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Contact } from '../ models/contact';
+import { Contact } from '../models/contact';
 import { map } from 'rxjs/operators';
 
 const baseUrl = 'https://graph.microsoft.com/v1.0';

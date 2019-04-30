@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from 'src/app/ models/contact';
+import { Contact } from 'src/app/models/contact';
 import { ContactService } from 'src/app/services/contact.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Pipe, PipeTransform } from '@angular/core';
@@ -24,11 +24,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  icon: '../../../../assets/images/icon.png';
-  settings: '../../../../assets/images/settings.png';
-  help: '../../../../assets/images/help.png';
-  avatar: '../../../../assets/images/avatar.png';
-  search: '../../../../assets/images/search.png';
+  icon = '../../../../assets/images/icon.png';
+  settings = '../../../../assets/images/settings.png';
+  help = '../../../../assets/images/help.png';
+  avatar = '../../../../assets/images/avatar.png';
+  search = '../../../../assets/images/search.png';
 
   settingsText = 'Settings';
   helpText = 'Help';
@@ -46,7 +46,6 @@ export class ContactComponent implements OnInit {
   dataSource = new MatTableDataSource<Contact>();
 
   constructor(private contactService: ContactService) { }
-
   ngOnInit() {
     this.contactService.getContact()
     .subscribe(x => { this.contact = x ; });

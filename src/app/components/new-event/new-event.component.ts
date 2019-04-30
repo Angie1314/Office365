@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
-import { CalendarEvent } from 'src/app/ models/calendar-event';
+import { CalendarEvent } from 'src/app/models/calendar-event';
 import { GraphApiService } from 'src/app/services/graph-api.service';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import Swal from 'sweetalert2';
