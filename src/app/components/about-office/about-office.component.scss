@@ -5,9 +5,13 @@ $centered-content-align: center;
 
 .parallax {
     background-image: url("src/assets/images/pplWork.jpg");
-    min-height: 500px;
+    min-height: 900px;
     background-attachment: $parallax-background;
     background-position: $centered-content-align;
     background-repeat: $parallax-background-repeat;
     background-size: $parallax-background-size;
 }
+
+.margin-top {
+    margin-top: 2%;
+  }
