@@ -1,5 +1,5 @@
 <div class="centerize margin-page">
-  <button *ngIf="!name;else content" (click)="login()" class="ripple margin-top" mat-flat-button color="primary"
+  <button *ngIf="!name;else content" (click)="login()" class="ripple" mat-flat-button color="primary"
     href="/profile">{{ loginButton }}
   </button>
 </div>
@@ -10,13 +10,13 @@
 <div>
   <ng-template #content>
     <mat-toolbar class="border-menu" color="primary">
-      <div>
-        <mat-icon>assignment</mat-icon>
-      </div>
+      <ul fxLayout fxLayoutAlign="center" fxLayoutGap="10px" class="nav-items">
+        <li>
+          <div>
+            <mat-icon color="warn">assignment</mat-icon>
+          </div>
+        </li>
 
-      <div fxFlex></div>
-
-      <ul fxLayout fxLayoutGap="10px" class="nav-items">
         <li>
           <div>
             <a routerLink="/calendar">Calendar</a>
@@ -30,17 +30,21 @@
         </li>
 
         <li>
-          <div>
-            <button mat-icon-button [matMenuTriggerFor]="menu">
-              <div class="align-left">
-                <div>
-                  <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre" class="align-center">
-                </div>
-              </div>
-            </button>
-          </div>
-        </li>
+            <div>
+              <a routerLink="/about-office">About Office</a>
+            </div>
+          </li>
       </ul>
+      <div fxFlex></div>
+      <div>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <div class="align-left">
+            <div>
+              <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre" class="align-center">
+            </div>
+          </div>
+        </button>
+      </div>
       <mat-menu fxLayoutAlign="center" #menu="matMenu">
 
         <p fxLayoutAlign="center center" mat-menu-item>
