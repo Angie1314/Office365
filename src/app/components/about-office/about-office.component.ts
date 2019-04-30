@@ -12,10 +12,10 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 export class AboutOfficeComponent {
 
-  imgOneNote: '../../../../assets/images/oneNote.png';
-  imgMonitor: '../../../../assets/images/monitor.png';
-  imgDevices: '../../../../assets/images/smartphones.png';
-  imgComputer: '../../../../assets/images/computer.png';
+  imgOneNote = '../../../../assets/images/oneNote.png';
+  imgMonitor = '../../../../assets/images/monitor.png';
+  imgDevices = '../../../../assets/images/smartphones.png';
+  imgComputer =  '../../../../assets/images/computer.png';
 
   textForFeatures = 'It’s the tools you need be more creative.';
   matCardTitleUpToDate = 'Up to date';

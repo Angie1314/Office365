@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagefooter.component.scss']
 })
 export class PagefooterComponent {
-  srcUrlFB: '../../../../assets/images/fb.png';
-  srcUrlInstagram: '../../../../assets/images/instagram.png';
-  srcUrlTwitter: '../../../../assets/images/twitter.png';
+  srcUrlFB = '../../../../assets/images/fb.png';
+  srcUrlInstagram =  '../../../../assets/images/instagram.png';
+  srcUrlTwitter = '../../../../assets/images/twitter.png';
 
   constructor() { }
 }
