@@ -1,35 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, from, of, combineLatest, merge } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map, mergeAll } from 'rxjs/operators';
 import { Profile } from '../models/profile';
 import { CalendarEvent } from '../models/calendar-event';
-
-const baseUrl = 'https://graph.microsoft.com/v1.0';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class GraphApiService {
+export class ProfileApiService {
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) { }
 
   getProfile(): Observable<Profile> {
-    return this.http.get<Profile>(`${baseUrl}/me/`);
+    return this.http
+     .get<Profile>(`${environment.baseUrl}/me/`);
   }
-
 
   getEvents(): Observable<Event> {
     return this.http
-      .get(`${baseUrl}/me/events`)
-      .pipe(
-        map(x => (x as any).value),
-        mergeAll()
-      );
+     .get(`${environment.baseUrl}/me/events`)
+     .pipe(
+      map(x => (x as any).value),
+      mergeAll()
+    );
   }
 
   createEvent(event: CalendarEvent) {
-    return this.http.post(`${baseUrl}/me/events`, event);
+    return this.http
+     .post(`${environment.baseUrl}/me/events`, event);
   }
 }
 

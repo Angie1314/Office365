@@ -14,7 +14,8 @@ describe('ContactService', () => {
   }));
 
   it('should be created', () => {
-    const service: ContactService = TestBed.get(ContactService);
+    const service: ContactService = TestBed
+    .get(ContactService);
     expect(service).toBeTruthy();
   });
 });

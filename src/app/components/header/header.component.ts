@@ -6,7 +6,7 @@ import openIdConfig from 'src/openid-config.json';
 import openIdConfigKeys from 'src/openid-config.keys.json';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
-import { GraphApiService } from 'src/app/services/graph-api.service';
+import { ProfileApiService } from 'src/app/services/profile-api.service';
 @Injectable()
 
 @Component({
@@ -26,7 +26,7 @@ export class HeaderComponent {
   mail: string;
   photoUrl: string;
 
-  constructor(private oauthService: OAuthService, private router: Router, private graphApiService: GraphApiService) {
+  constructor(private oauthService: OAuthService, private router: Router, private graphApiService: ProfileApiService) {
     const config = openIdConfig as any;
 
     Object.assign(authConfig, {

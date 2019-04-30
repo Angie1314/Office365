@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Contact } from '../models/contact';
+import { environment } from 'src/environments/environment';
 
-const baseUrl = 'https://graph.microsoft.com/v1.0';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +17,8 @@ export class ContactService {
   }
 
   getContact(): Observable<Contact[]> {
-    return this.http.get<Contact>(`${baseUrl}/users`)
+    return this.http
+      .get<Contact>(`${environment.baseUrl}/users`)
       .pipe(map(x => (x as any).value));
   }
 }

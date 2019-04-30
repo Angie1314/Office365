@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { GraphApiService } from './graph-api.service';
+import { ProfileApiService } from './profile-api.service';
 
 describe('GraphApiService', () => {
   beforeEach(() => TestBed.configureTestingModule({
@@ -14,7 +14,7 @@ describe('GraphApiService', () => {
   }));
 
   it('should be created', () => {
-    const service: GraphApiService = TestBed.get(GraphApiService);
+    const service: ProfileApiService = TestBed.get(ProfileApiService);
     expect(service).toBeTruthy();
   });
 });

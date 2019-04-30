@@ -4,7 +4,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Observable, of } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
 import { NewEventComponent } from './new-event.component';
-import { GraphApiService } from 'src/app/services/graph-api.service';
+import { ProfileApiService } from 'src/app/services/profile-api.service';
 import { CalendarEvent } from 'src/app/models/calendar-event';
 
 class GraphApiServiceMock {
@@ -26,7 +26,7 @@ describe('NewEventComponent', () => {
         HttpClientModule,
         MatCardModule
       ],
-      providers: [ { provide: GraphApiService, useClass: GraphApiServiceMock } ]
+      providers: [ { provide: ProfileApiService, useClass: GraphApiServiceMock } ]
     })
     .compileComponents();
   }));

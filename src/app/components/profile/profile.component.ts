@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Profile } from 'src/app/models/profile';
-import { GraphApiService } from 'src/app/services/graph-api.service';
+import { ProfileApiService } from 'src/app/services/profile-api.service';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
 
   profile: Observable<Profile>;
 
-  constructor(private graphApi: GraphApiService) { }
+  constructor(private graphApi: ProfileApiService) { }
 
   ngOnInit() {
     this.profile = this.graphApi.getProfile();

@@ -1,7 +1,7 @@
 import { Component, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { CalendarEvent } from 'src/app/models/calendar-event';
-import { GraphApiService } from 'src/app/services/graph-api.service';
+import { ProfileApiService } from 'src/app/services/profile-api.service';
 import Swal from 'sweetalert2';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -22,7 +22,7 @@ export class NewEventComponent {
     end: { dateTime: '2019-04-18T18:00:00', timeZone: 'UTC' }
   };
 
-  constructor(private graphApi: GraphApiService) {
+  constructor(private graphApi: ProfileApiService) {
     this.eventForm = new FormGroup({
       subject: new FormControl(this.event.subject, [ Validators.required ])
     });

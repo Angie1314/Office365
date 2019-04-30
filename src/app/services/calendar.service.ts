@@ -3,14 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Calendar } from '../models/calendar';
-
-
-const baseUrl = 'https://graph.microsoft.com/v1.0';
-
+import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-
 
 export class CalendarService {
 
@@ -18,8 +14,9 @@ export class CalendarService {
   }
 
   getCalendar(): Observable<Calendar[]> {
-    return this.http.get<Calendar>(`${baseUrl}/me/events?$select=subject,body,bodyPreview,organizer,attendees,start,end,location`)
-    .pipe(map(x => (x as any).value));
+    return this.http
+     .get<Calendar>(`${environment.baseUrl}/me/events?$select=subject,body,bodyPreview,organizer,attendees,start,end,location`)
+     .pipe(map(x => (x as any).value));
   }
 }
 
