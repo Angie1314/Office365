@@ -19,7 +19,7 @@ export class HeaderComponent {
   aboutOfficeText = 'About Office';
   loginButton = 'Login';
   logoutButton = 'Logout';
-  avatarImg = '../../../../assets/images/a2.jpg';
+  avatarImg = '../../../../assets/images/avatar2.png';
 
   photoUrl: string;
 

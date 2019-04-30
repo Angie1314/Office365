@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, from, of, combineLatest, merge } from 'rxjs';
-import { map, mergeMap, mergeAll, filter } from 'rxjs/operators';
+import { map, mergeAll } from 'rxjs/operators';
 import { Profile } from '../models/profile';
 import { CalendarEvent } from '../models/calendar-event';
 

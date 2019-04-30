@@ -25,7 +25,7 @@ export class CalendarComponent implements OnInit {
   mailboxText = 'Mail Box';
   calendarText = 'Calendar';
   officeLogo = 'Office 365';
-  
+
   showSpinner = true;
   color = 'primary';
   mode = 'indeterminate';
