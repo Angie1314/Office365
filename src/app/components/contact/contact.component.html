@@ -7,8 +7,8 @@
         <mat-card-content>{{ user.displayName }}</mat-card-content>
         <div class="float-avatar-right"><img [src]="avatar" alt="User Avatar"></div>
         <mat-card-content>
-            <a href="mailto:{{ user.mail }}" target="_top">{{ user.mail }} </a>
-          </mat-card-content>
+          <a href="mailto:{{ user.mail }}" target="_top">{{ user.mail }} </a>
+        </mat-card-content>
       </mat-card>
     </div>
     <ng-container *ngTemplateOutlet="spinner"></ng-container>
@@ -20,21 +20,3 @@
     <app-contactspinner></app-contactspinner>
   </div>
 </ng-template>
-
-<!-- <p class="page-heading margin-login" fxLayoutAlign="center center"> Contact Cards</p>
-
-<app-contactspinner></app-contactspinner>
-
-<div fxLayout="column" fxLayoutAlign="start center">
-  <mat-card *ngFor="let element of contact" [type]="element">{{ element.displayName }}
-    <div fxLayoutAlign="center">
-      <img [src]="avatar">
-    </div>
-    <mat-card-content>
-
-      <a href="mailto:{{ element.mail }}" target="_top">{{ element.mail }} </a>
-    </mat-card-content>
-  </mat-card>
-</div>
-
-<div class="parallax"></div> -->
