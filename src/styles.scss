@@ -77,10 +77,11 @@ $my-app-accent: mat-palette($mat-pink, 500, 900, A100);
 $my-app-warn: mat-palette($mat-deep-orange);
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 
-body {
+html, body {
   margin: $general-padding;
   margin-right: $general-padding;
   padding: $general-padding;
+  height: 100%;
 }
 
 .parent {

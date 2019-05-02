@@ -1,4 +1,27 @@
 <p class="page-heading margin-login" fxLayoutAlign="center center"> Contact Cards</p>
+<ng-container *ngIf="(infinate$ | async) as infinate; else spinner">
+  <cdk-virtual-scroll-viewport itemSize="24" class="flex-grow-1"
+    (scrolledIndexChange)="loadNextUsers($event, infinate.nextLink)">
+    <div fxLayout="column" fxLayoutAlign="start center" class="margin-login">
+      <mat-card *cdkVirtualFor="let user of infinate.data">
+        <mat-card-content>{{ user.displayName }}</mat-card-content>
+        <div class="float-avatar-right"><img [src]="avatar" alt="User Avatar"></div>
+        <mat-card-content>
+            <a href="mailto:{{ user.mail }}" target="_top">{{ user.mail }} </a>
+          </mat-card-content>
+      </mat-card>
+    </div>
+    <ng-container *ngTemplateOutlet="spinner"></ng-container>
+  </cdk-virtual-scroll-viewport>
+</ng-container>
+
+<ng-template #spinner>
+  <div fxLayout="column" fxLayoutAlign="start center" *ngIf="loading$ | async" class="margin-login" role="status">
+    <app-contactspinner></app-contactspinner>
+  </div>
+</ng-template>
+
+<!-- <p class="page-heading margin-login" fxLayoutAlign="center center"> Contact Cards</p>
 
 <app-contactspinner></app-contactspinner>
 
@@ -14,4 +37,4 @@
   </mat-card>
 </div>
 
-<div class="parallax"></div>
+<div class="parallax"></div> -->

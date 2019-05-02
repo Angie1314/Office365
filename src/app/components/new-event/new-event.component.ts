@@ -35,10 +35,10 @@ export class NewEventComponent {
 
   onSubmit() {
     if (this.eventForm.valid) {
-      this.graphApi
-        .createEvent(this.event)
-        .subscribe(() => this.eventForm
-        .reset());
+      // this.graphApi
+        // .createEvent(this.event)
+        // .subscribe(() => this.eventForm
+        // .reset());
 
       Swal.fire({
         position: 'center',

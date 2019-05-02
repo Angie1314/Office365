@@ -5,6 +5,8 @@ import { map, mergeAll } from 'rxjs/operators';
 import { Profile } from '../models/profile';
 import { CalendarEvent } from '../models/calendar-event';
 import { environment } from 'src/environments/environment';
+import { ODataResponse } from '../models/odata-response';
+import { Contact } from '../models/contact';
 @Injectable({
   providedIn: 'root'
 })
@@ -24,11 +26,6 @@ export class ProfileApiService {
       map(x => (x as any).value),
       mergeAll()
     );
-  }
-
-  createEvent(event: CalendarEvent) {
-    return this.http
-     .post(`${environment.baseUrl}/me/events`, event);
   }
 }
 

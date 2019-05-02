@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppComponent } from './app.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
@@ -40,6 +41,7 @@ import { PagefooterComponent } from './components/page-footer/pagefooter.compone
 import { HeaderComponent } from './components/header/header.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,6 +83,7 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     BrowserModule,
     ReactiveFormsModule,
     MatDialogModule,
+    ScrollingModule,
     OAuthModule.forRoot()
   ],
   exports: [MatButtonModule,
@@ -100,6 +103,7 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     MatRippleModule,
     MatListModule,
     MatGridListModule,
+    ScrollingModule,
     MatDialogModule,
   ],
   providers: [{

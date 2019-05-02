@@ -1,8 +1,8 @@
 <div class="centerize">
-  <button *ngIf="!name;else content" (click)="login()" class="ripple margin-top" mat-flat-button color="primary">{{ loginButton }}
+  <button *ngIf="!name;else content" (click)="login()" class="ripple margin-top " mat-raised-button
+    color="primary">{{ loginButton }}
   </button>
 </div>
-
 <div class="parallax"></div>
 
 <div>
@@ -26,14 +26,10 @@
             <a routerLink="/contact">Contacts</a>
           </div>
         </li>
-
-        <li>
-          <div>
-            <a routerLink="/about-office">About Office</a>
-          </div>
-        </li>
       </ul>
+
       <div fxFlex></div>
+
       <div>
         <button mat-icon-button [matMenuTriggerFor]="menu">
           <div class="align-left">

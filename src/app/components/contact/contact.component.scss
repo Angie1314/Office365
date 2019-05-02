@@ -12,23 +12,6 @@
   width: $mat-card-width;
 }
 
-  .parallax {
-    background-image: url("src/assets/images/contacts.jpg");
-    min-height: $parallax-calendar-min-height;
-    background-attachment: $parallax-calendar-bg-attach;
-    background-position: $parallax-calendar-position;
-    background-repeat: $parallax-calendar-repeat;
-    background-size: $parallax-calendar-bg-size;
-  }
-
-.left-align-element {
-    float: $item-float;
-}
-
-div {
-  word-wrap: break-word;
-}
-
 a {
   color: $anchor-tag-color;
   text-decoration: $anchor-tag-tect-dec;
@@ -36,8 +19,31 @@ a {
 
 a:hover,
   a:active { 
-      color:rgb(74, 21, 221)
+      color:$color-email-hover-to-mail;
 }
+:host {
+  display: $host-display;
+  flex-direction: $host-direction;
+  height: $host-height;
+}
+
+cdk-virtual-scroll-viewport {
+  height: $height-virtual-scroll;
+  .item {
+      height: $height-item-scroll;
+  }
+}
+
+li {
+  list-style: $list-style;
+  padding: $list-margin-padding;
+  margin: $list-margin-padding;
+}
+
+.float-avatar-right {
+  float: $float-avatar;
+}
+
 
 
 

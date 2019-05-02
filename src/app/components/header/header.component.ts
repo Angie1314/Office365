@@ -49,16 +49,16 @@ export class HeaderComponent {
 
 public login(): void {
     this.oauthService.initImplicitFlow();
-    this.navigation();
+    // this.navigation();
 }
 
-public logOut() {
+public logOut(): void {
     this.oauthService.logOut();
 }
 
-navigation() {
-    this.router.navigate(['/calendar']);
- }
+// navigation(): void {
+//     this.router.navigate(['/calendar']);
+//  }
 
 public get name() {
     const claims = this.oauthService.getIdentityClaims();
@@ -69,31 +69,4 @@ public get name() {
 
     return (claims as any).name;
 }
-get sub() { return this.getClaimValue('sub'); }
-private onIdentityClaimsChanged(): void {
-
-    if (!this.sub) {
-      this.photoUrl = null;
-      return;
-    }
-
-    this.graphApiService.getProfile().subscribe(profile => {
-      this.mail = profile.mail;
-
-      this.photoUrl = this.mail
-        ? `https://outlook.office.com/owa/service.svc/s/GetPersonaPhoto?email=${this.mail}&UA=0&size=HR64x64`
-        : null;
-    });
-  }
-
-  private getClaimValue(name) {
-    const claims = this.oauthService.getIdentityClaims();
-
-    if (!claims) {
-      return null;
-    }
-
-    return claims[name];
-  }
-
 }
