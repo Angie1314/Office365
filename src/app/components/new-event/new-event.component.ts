@@ -1,11 +1,8 @@
-import { Component, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { CalendarEvent } from 'src/app/models/calendar-event';
 import { ProfileApiService } from 'src/app/services/profile-api.service';
 import Swal from 'sweetalert2';
-@NgModule({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-})
 
 @Component({
   selector: 'app-new-event',
@@ -35,11 +32,6 @@ export class NewEventComponent {
 
   onSubmit() {
     if (this.eventForm.valid) {
-      // this.graphApi
-        // .createEvent(this.event)
-        // .subscribe(() => this.eventForm
-        // .reset());
-
       Swal.fire({
         position: 'center',
         type: 'success',

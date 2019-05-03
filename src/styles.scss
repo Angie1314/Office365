@@ -1,5 +1,4 @@
 
-
 @import "~@angular/material/theming";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
@@ -93,7 +92,6 @@ html, body {
   height: $card-height;
 }
 
-
 h2 {
   position: $h2-postition-on-img;
   top: $h2-top-position-on-img;
@@ -142,7 +140,6 @@ h2 {
   border: none !important;
 
 }
-
 
 .mat-display-3 {
   color:$mat-display-3-color;

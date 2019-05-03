@@ -10,7 +10,6 @@ import openIdConfigKeys from '../openid-config.keys.json';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-
 export class AppComponent {
     title = 'OfficeApp';
     officeLogo = 'Office 365';
@@ -48,11 +47,11 @@ export class AppComponent {
 
     }
 
-    public logOut() {
+    public logOut(): void {
         this.oauthService.logOut();
     }
 
-    public get name() {
+    public get name(): void {
         const claims = this.oauthService.getIdentityClaims();
 
         if (!claims) {

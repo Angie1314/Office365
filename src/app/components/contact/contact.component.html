@@ -1,4 +1,13 @@
 <p class="page-heading margin-login" fxLayoutAlign="center center"> Contact Cards</p>
+
+<div fxLayoutAlign="center right">
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Search" class="form-control" type="text" name="search" [(ngModel)]="filter">
+    </mat-form-field>
+  </form>
+</div>
+
 <ng-container *ngIf="(infinate$ | async) as infinate; else spinner">
   <cdk-virtual-scroll-viewport itemSize="24" class="flex-grow-1"
     (scrolledIndexChange)="loadNextUsers($event, infinate.nextLink)">

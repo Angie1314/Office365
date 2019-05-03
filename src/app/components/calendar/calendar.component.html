@@ -3,6 +3,7 @@
 <app-spinner></app-spinner>
 
 <div fxLayout="column" fxLayoutAlign="start center">
+
   <div class="margin-login">
     <button routerLink="/new-event" class="ripple
           align-right" mat-flat-button color="primary">Add
@@ -14,6 +15,7 @@
     <mat-card-title>
       <mat-card-subtitle>
         <p *ngIf="calendar">Date: {{ calendar[0].start.dateTime | date }}</p>
+        <p *ngIf="calendar"> Time: {{ calendar[0].start.dateTime | date:'shortTime' }}</p>
       </mat-card-subtitle>
 
       <p *ngIf="calendar"> {{ calendar[0].subject }}</p>
@@ -21,71 +23,42 @@
     </mat-card-title>
 
     <p *ngIf="calendar"> {{ calendar[0].bodyPreview }}</p>
-
-    <mat-card-subtitle>
-      <p *ngIf="calendar"> Time: {{ calendar[0].start.dateTime | date:'shortTime' }}</p>
-    </mat-card-subtitle>
   </mat-card>
 
   <mat-card>
     <mat-card-title>
       <mat-card-subtitle>
         <p *ngIf="calendar">Date: {{ calendar[3].start.dateTime | date }}</p>
+        <p *ngIf="calendar"> Time: {{ calendar[3].start.dateTime | date:'shortTime' }}</p>
       </mat-card-subtitle>
 
       <p *ngIf="calendar"> {{ calendar[3].subject }}</p>
-
     </mat-card-title>
 
     <p *ngIf="calendar"> {{ calendar[3].bodyPreview }}</p>
-
-    <mat-card-subtitle>
-      <p *ngIf="calendar"> Time: {{ calendar[3].start.dateTime | date:'shortTime' }}</p>
-    </mat-card-subtitle>
   </mat-card>
 
   <mat-card>
     <mat-card-title>
       <mat-card-subtitle>
         <p *ngIf="calendar">Date: {{ calendar[2].start.dateTime | date }}</p>
+        <p *ngIf="calendar"> Time: {{ calendar[2].start.dateTime | date:'shortTime' }}</p>
       </mat-card-subtitle>
       <p *ngIf="calendar"> {{ calendar[2].subject }}</p>
     </mat-card-title>
+
     <p *ngIf="calendar"> {{ calendar[2].bodyPreview }}</p>
-
-    <mat-card-subtitle>
-
-      <p *ngIf="calendar"> Time: {{ calendar[2].start.dateTime | date:'shortTime' }}</p>
-    </mat-card-subtitle>
   </mat-card>
 
   <mat-card>
     <mat-card-title>
       <mat-card-subtitle>
         <p *ngIf="calendar">Date: {{ calendar[1].start.dateTime | date }}</p>
+        <p *ngIf="calendar"> Time: {{ calendar[1].start.dateTime | date:'shortTime' }}</p>
       </mat-card-subtitle>
       <p *ngIf="calendar"> {{ calendar[1].subject }}</p>
     </mat-card-title>
-    <mat-card-subtitle>
+    
       <p *ngIf="calendar"> {{ calendar[1].bodyPreview }}</p>
-      <p *ngIf="calendar"> Time: {{ calendar[1].start.dateTime | date:'shortTime' }}</p>
-    </mat-card-subtitle>
   </mat-card>
 </div>
-
-<br />
-<br />
-
-<div class="parallax"></div>
-
-<!-- <div fxLayout="column" fxLayoutAlign="start center">
-    <mat-card *ngFor="let element of contact" [type]="element">{{ element.displayName }}
-      <div fxLayoutAlign="center">
-        <img [src]="avatar">
-      </div>
-      <mat-card-content>
-  
-        <a href="mailto:{{ element.mail }}" target="_top">{{ element.mail }} </a>
-      </mat-card-content>
-    </mat-card>
-  </div> -->

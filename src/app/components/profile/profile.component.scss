@@ -2,7 +2,6 @@
 @import "~@angular/material/theming";
 @import "src/app/components/profile/profile-variables.scss";
 
-
   .mat-card {
     background-color: $mat-card-bg-color;
     transition: $mat-card-transition;
@@ -19,7 +18,7 @@
     margin: 0%;
   }
 
-  div{
+  div {
     margin: 0%;
   }
 

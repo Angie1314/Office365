@@ -1,11 +1,10 @@
 import { Component,  Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { JwksValidationHandler } from 'angular-oauth2-oidc';
 import { authConfig } from 'src/auth-config';
 import openIdConfig from 'src/openid-config.json';
 import openIdConfigKeys from 'src/openid-config.keys.json';
-import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material';
 import { ProfileApiService } from 'src/app/services/profile-api.service';
 @Injectable()
 
@@ -14,7 +13,6 @@ import { ProfileApiService } from 'src/app/services/profile-api.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-
 export class HeaderComponent {
   title = 'OfficeApp';
   officeLogo = 'Office 365';
@@ -49,18 +47,13 @@ export class HeaderComponent {
 
 public login(): void {
     this.oauthService.initImplicitFlow();
-    // this.navigation();
 }
 
 public logOut(): void {
     this.oauthService.logOut();
 }
 
-// navigation(): void {
-//     this.router.navigate(['/calendar']);
-//  }
-
-public get name() {
+public get name(): void {
     const claims = this.oauthService.getIdentityClaims();
 
     if (!claims) {

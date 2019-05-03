@@ -3,10 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, mergeAll } from 'rxjs/operators';
 import { Profile } from '../models/profile';
-import { CalendarEvent } from '../models/calendar-event';
 import { environment } from 'src/environments/environment';
-import { ODataResponse } from '../models/odata-response';
-import { Contact } from '../models/contact';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,16 +13,16 @@ export class ProfileApiService {
 
   getProfile(): Observable<Profile> {
     return this.http
-     .get<Profile>(`${environment.baseUrl}/me/`);
+      .get<Profile>(`${environment.baseUrl}/me/`);
   }
 
   getEvents(): Observable<Event> {
     return this.http
-     .get(`${environment.baseUrl}/me/events`)
-     .pipe(
-      map(x => (x as any).value),
-      mergeAll()
-    );
+      .get(`${environment.baseUrl}/me/events`)
+      .pipe(
+        map(x => (x as any).value),
+        mergeAll()
+      );
   }
 }
 
