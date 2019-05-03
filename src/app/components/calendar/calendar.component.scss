@@ -8,6 +8,9 @@ $mat-div-and-card-border-style: solid;
 /* Alignment of items */
 $item-float: right;
 
+/* media queries */
+$max-widths: 600px;
+
 /* Material card styles */
 $mat-card-padding: 10px ;
 $mat-card-width: 30%;
@@ -25,3 +28,17 @@ $mat-button-font-border: 0;
   margin-right: $mat-card-padding;
   width: $mat-card-width;
 }
+
+div {
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: $max-widths) {
+  .mat-card {
+    width: 70%;
+}
+}
+
+
+
+

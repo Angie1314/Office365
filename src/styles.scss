@@ -108,6 +108,7 @@ h2 {
     font-family: $general-font;
   }
 }
+
 @include mat-core();
 @include angular-material-theme($my-app-theme);
 .alternate-theme {

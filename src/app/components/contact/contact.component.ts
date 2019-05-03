@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
   contacts: Observable<Contact[]>;
 
 
-  loadingspinner$ = new BehaviorSubject<boolean>(true);
+  loadingSpinner$ = new BehaviorSubject<boolean>(true);
   private pageArea = 100;
 
   nextItem$ = new BehaviorSubject<{ nextPosition: number, nextLink: string }>({ nextPosition: 1, nextLink: null });
@@ -62,11 +62,11 @@ export class ContactComponent implements OnInit {
     );
 
     this.infinate$ = nextForwardOnly$.pipe(
-      tap(() => this.loadingspinner$.next(true)),
+      tap(() => this.loadingSpinner$.next(true)),
       mergeMap(x => x.nextLink ? this.contactService.getNextUsers(x.nextLink) : this.contactService.getUsers(this.pageArea)),
       map<ODataResponse<Contact[]>, { nextLink: string, data: Contact[] }>(x => ({ nextLink: x['@odata.nextLink'], data: x.value })),
       scan((acc, resp) => ({ nextLink: resp.nextLink, data: [ ...acc.data, ...resp.data ]}), { nextLink: null, data: []}),
-      tap(() => this.loadingspinner$.next(false))
+      tap(() => this.loadingSpinner$.next(false))
     );
   }
 

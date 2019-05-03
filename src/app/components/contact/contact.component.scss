@@ -48,6 +48,12 @@ div {
   word-wrap: break-word;
 }
 
+@media screen and (max-width: $max-widths) {
+  .mat-card {
+    width: 70%;
+}
+}
+
 
 
 
