@@ -10,9 +10,10 @@
 </div>
 
 <div>
-  <div *ngFor="let res of searchRes">
+  <div *ngFor="let res of searchRes" fxLayout="column" fxLayoutAlign="start center" class="margin-login">
     <mat-card>
       <mat-card-title>{{ res.displayName }}</mat-card-title>
+      <div class="float-avatar-right"><img [src]="avatar" alt="User Avatar"></div>
       <mat-card-content>{{ res.mail }}</mat-card-content>
     </mat-card>
   </div>
