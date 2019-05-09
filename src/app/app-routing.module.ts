@@ -5,12 +5,13 @@ import { AboutOfficeComponent } from './components/about-office/about-office.com
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
 
   {
-    path: '',
-    component: AboutOfficeComponent
+    path: 'app',
+    component: AppComponent
   }, {
     path: 'profile',
     component: ProfileComponent
@@ -21,7 +22,7 @@ const routes: Routes = [
     path: 'calendar',
     component: CalendarComponent
   }, {
-    path: 'about-office',
+    path: '',
     component: AboutOfficeComponent
   }, {
     path: 'contact',

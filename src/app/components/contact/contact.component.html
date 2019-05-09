@@ -3,9 +3,15 @@
 <div fxLayoutAlign="center right">
   <form>
     <mat-form-field>
-      <input matInput placeholder="Search" class="form-control" type="text" name="search" [(ngModel)]="filter">
+      <input matInput placeholder="Search by name" id="searchbox" name="searchStr" type="text" [(ngModel)]="searchStr" (keyup)="searchContact()">
     </mat-form-field>
   </form>
+</div>
+
+<div>
+  <div *ngFor="let res of searchRes">
+    <mat-card>{{ res.displayName }}</mat-card>
+  </div>
 </div>
 
 <ng-container *ngIf="(infinate$ | async) as infinate; else spinner">

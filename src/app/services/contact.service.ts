@@ -3,13 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ODataResponse } from '../models/odata-response';
+import { Search} from '../models/search-response';
 import { Contact } from '../models/contact';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
+  private getName;
   constructor(private http: HttpClient) { }
 
   getUsers(top?: number): Observable<ODataResponse<Contact[]>> {
@@ -26,5 +29,12 @@ export class ContactService {
   getNextUsers(nextLink: string): Observable<ODataResponse<Contact[]>> {
     return this.http.get<ODataResponse<Contact[]>>(nextLink);
   }
+
+  searchByName(displayName: string): Observable<Search[]> {
+    return this.http
+    .get<Search>(`${environment.baseUrl}/users?$filter=startswith(givenName%2C+'A')`)
+    .pipe(map(x => (x as any).value));
+  }
 }
+
 
