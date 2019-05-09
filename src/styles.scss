@@ -2,79 +2,7 @@
 @import "~@angular/material/theming";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-
-$card-width: 100%;
-$card-height: auto;
-$parent-overflow: hidden;
-
-$h2-postition-on-img: absolute;
-$h2-top-position-on-img: 200px;
-$h2-left-position-on-img: 0;
-$h2-width-on-img: 100%;
-
-$parallax-background: fixed;
-$parallax-background-repeat: no-repeat;
-$parallax-background-size: cover;
-
-$centered-button-display: flex;
-$centered-content-align: center;
-
-$but-log-margin: 0;
-$but-log-postion: relative;
-
-$center-components-margin: 0;
-
-$button-ripple-margin: 6px 12px 6px 0;
-
-$mat-display-3-color:#333;
-
-$anchor-tag-color:white;
-$anchor-tag-tect-dec: none;
-
-/* Button styles */
-$general-color:#2196F3;
-
-$footer-display: flex;
-$footer-content-justify: center;
-$mat-card-profile-pic: transparent !important;
-
-/* Font for some body elements */
-$text-body-size: 12px;
-$button-font-size: 32px;
-$text-body-color:rgb(104, 98, 98);
-
-/* Padding of Calendar Cards */
-$mat-card-padding: 10px ;
-$mat-card-margin-top-bottom: 10px ;
-$mat-card-margin-left-right: 10px ;
-
-/* Colors for mat dividers */
-$mat-divider-border-width: 1px;
-$mat-divider-border-style: solid;
-
-/* Font for the calendar heading */
-$general-font: "Source Sans Pro", sans-serif;
-$calendar-font-size: 24px;
-
-$mat-card-border-transition-shadow: none !important;
-
-$mat-card-bg-color: black;
-$-mat-form-field-width: 300px;
-
-$general-border: 0;
-$button-size-padding: 30px;
-$button-size-transition: .2s;
-$button-size-margin: 0 auto;
-
-$general-padding: 0;
-
-$page-margins: 2%;
-
-/* Alternate theming*/
-$my-app-primary: mat-palette($mat-blue);
-$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
-$my-app-warn: mat-palette($mat-deep-orange);
-$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@import "src/app/variables.scss";
 
 html, body {
   margin: $general-padding;
@@ -182,7 +110,6 @@ footer {
   border-width: $mat-divider-border-width;
   border-style: $mat-divider-border-style;
 }
-
 
 .mat-card-profile-area {
   transition: $mat-card-border-transition-shadow;
