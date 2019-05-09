@@ -32,7 +32,7 @@ export class ContactService {
 
   searchByName(displayName: string): Observable<Search[]> {
     return this.http
-    .get<Search>(`${environment.baseUrl}/users?$filter=startswith(givenName%2C+'A')`)
+    .get<Search>(`${environment.baseUrl}/users?$filter=startswith(givenName%2C+'${displayName}')`)
     .pipe(map(x => (x as any).value));
   }
 }
