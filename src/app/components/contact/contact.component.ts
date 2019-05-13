@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import { mergeMap, map, scan, tap, debounceTime, filter } from 'rxjs/operators';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { ContactService } from 'src/app/services/contact.service';
 import { Contact } from 'src/app/models/contact';
 import { ODataResponse } from 'src/app/models/odata-response';
@@ -22,6 +21,7 @@ export class ContactComponent implements OnInit {
   help = '../../../../assets/images/help.png';
   avatar = '../../../../assets/images/avatar.png';
   search = '../../../../assets/images/search.png';
+  avatarImg = '../../../../assets/images/avatar2.png';
 
   settingsText = 'Settings';
   helpText = 'Help';
@@ -44,8 +44,8 @@ export class ContactComponent implements OnInit {
 
   color = 'primary';
   mode = 'indeterminate';
-  showSpinner = true;
-  dataSource = new MatTableDataSource<Contact>();
+  results: string;
+  showSpinners: false;
 
   constructor(private contactService: ContactService) { }
 
@@ -54,6 +54,7 @@ export class ContactComponent implements OnInit {
       .subscribe(results => {
         this.searchRes = results;
       });
+
   }
 
   clear() {

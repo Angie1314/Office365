@@ -15,6 +15,7 @@ export class ProfileComponent implements OnInit {
   officeCalendar = '../../../../assets/images/officeCalendar.jpeg';
   officeContacts = '../../../../assets/images/officeContacts.jpeg';
   icon = '../../../../assets/images/icon.png';
+  avatarImg = '../../../../assets/images/avatar2.png';
 
   profile: Observable<Profile>;
 

@@ -1,10 +1,8 @@
 <div class="centerize">
-  <button *ngIf="!name;else content" (click)="login()" class="ripple margin-top " mat-raised-button
+  <button *ngIf="!name;else content" (click)="login()" class="ripple margin-top" mat-raised-button
     color="primary">{{ loginButton }}
   </button>
 </div>
-
-<div class="parallax"></div>
 
 <div>
   <ng-template #content>
@@ -12,7 +10,7 @@
       <ul fxLayout fxLayoutAlign="center" fxLayoutGap="10px" class="nav-items">
         <li>
           <div>
-            <mat-icon color="accent">assignment</mat-icon>
+            <mat-icon color="warn"> attach_file</mat-icon>
           </div>
         </li>
 
@@ -35,17 +33,17 @@
         <button mat-icon-button [matMenuTriggerFor]="menu">
           <div class="align-left">
             <div>
-              <img mat-card-avatar [src]="avatarImg" alt="Your profile picutre" class="align-center">
+              <div class="spanProfile">{{ name.charAt(0) }}</div>
             </div>
           </div>
         </button>
       </div>
-      
+
       <mat-menu fxLayoutAlign="center" #menu="matMenu">
 
-        <p fxLayoutAlign="center center" mat-menu-item>
+        <button fxLayoutAlign="center center" mat-menu-item routerLink="/profile">
           <mat-icon>account_box</mat-icon> {{ name }}
-        </p>
+        </button>
 
         <button (click)="logOut()" id='logout' mat-menu-item>
           <mat-icon>assignment_return</mat-icon>
@@ -55,3 +53,4 @@
     </mat-toolbar>
   </ng-template>
 </div>
+

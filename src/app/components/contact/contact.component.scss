@@ -38,7 +38,10 @@
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 77cb1cf191713b1386c0aa460f57d9ed41ec9ddd
 a {
   color: $anchor-tag-color;
   text-decoration: $anchor-tag-tect-dec;
@@ -73,6 +76,9 @@ li {
 
 div {
   word-wrap: break-word;
+}
+.margin {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: $max-widths) {

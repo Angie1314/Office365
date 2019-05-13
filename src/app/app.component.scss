@@ -1,0 +1,13 @@
+$parallax-background: fixed;
+$parallax-background-repeat: no-repeat;
+$parallax-background-size: cover;
+$centered-content-align: center;
+
+.parallax {
+    background-image: url("src/assets/images/pplWork.jpg");
+    min-height: 900px;
+    background-attachment: $parallax-background;
+    background-position: $centered-content-align;
+    background-repeat: $parallax-background-repeat;
+    background-size: $parallax-background-size;
+}

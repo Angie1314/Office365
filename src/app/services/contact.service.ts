@@ -12,7 +12,6 @@ import { map } from 'rxjs/operators';
 })
 export class ContactService {
 
-  private getName;
   constructor(private http: HttpClient) { }
 
   getUsers(top?: number): Observable<ODataResponse<Contact[]>> {
@@ -34,6 +33,10 @@ export class ContactService {
     return this.http
     .get<Search>(`${environment.baseUrl}/users?$filter=startswith(givenName%2C+'${displayName}')`)
     .pipe(map(x => (x as any).value));
+  }
+
+  createContact(contact: Contact) {
+    return this.http.post(`${environment.baseUrl}/users`, contact);
   }
 }
 

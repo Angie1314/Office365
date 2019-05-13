@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
-import { CalendarEvent } from 'src/app/models/calendar-event';
 import { ProfileApiService } from 'src/app/services/profile-api.service';
+import { Calendar } from 'src/app/models/calendar';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -12,9 +12,10 @@ import Swal from 'sweetalert2';
 export class NewEventComponent {
 
   eventForm: FormGroup;
+  subjectAdd: string;
 
-  event: CalendarEvent = {
-    subject: 'Code review!',
+  event: Calendar = {
+    subject:  this.subjectAdd,
     start: { dateTime: '2019-04-18T17:00:00', timeZone: 'UTC' },
     end: { dateTime: '2019-04-18T18:00:00', timeZone: 'UTC' }
   };
@@ -27,11 +28,15 @@ export class NewEventComponent {
 
   get subject(): AbstractControl {
     return this.eventForm
-     .get('subject');
+     .get(this.subjectAdd);
   }
 
   onSubmit() {
     if (this.eventForm.valid) {
+      this.graphApi
+      .createEvent(this.event)
+      .subscribe(() => this.eventForm.reset());
+
       Swal.fire({
         position: 'center',
         type: 'success',

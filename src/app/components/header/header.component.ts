@@ -47,6 +47,7 @@ export class HeaderComponent {
 
 public login(): void {
     this.oauthService.initImplicitFlow();
+
 }
 
 public logOut(): void {
@@ -61,5 +62,9 @@ public get name(): void {
     }
 
     return (claims as any).name;
+}
+
+changeIcon() {
+
 }
 }

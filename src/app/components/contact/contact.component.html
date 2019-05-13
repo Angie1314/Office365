@@ -1,19 +1,37 @@
 <p class="page-heading margin-login" fxLayoutAlign="center center"> Contact Cards</p>
 
+<div fxLayout="column" fxLayoutAlign="start center">
+  <div class="margin-login">
+    <button routerLink="/add-contact" class="ripple
+          align-right" mat-flat-button color="primary">Add Contact
+    </button>
+  </div>
+</div>
+
 <div fxLayoutAlign="center right">
   <form #form="ngForm">
     <mat-form-field>
       <input matInput placeholder="Search by name" id="searchbox" name="searchStr" type="text" [(ngModel)]="searchStr"
+<<<<<<< HEAD
         (keyup)="searchContact()">
       <mat-hint>Hit enter to clear search</mat-hint>
     </mat-form-field>
     <button id='reset' color="primary" (click)="clear();form.reset()">RESET</button>
+=======
+        (keyup)="searchContact(); showSpinner()">
+    </mat-form-field>
+    <!-- <button color="primary" (click)="form.reset()">RESET</button> -->
+>>>>>>> 77cb1cf191713b1386c0aa460f57d9ed41ec9ddd
   </form>
 </div>
 
 <div id='card'>
   <div *ngFor="let res of searchRes" fxLayout="column" fxLayoutAlign="start center" class="margin-login">
+<<<<<<< HEAD
     <mat-card id='card' class="searchCard">
+=======
+    <mat-card class="searchCard">
+>>>>>>> 77cb1cf191713b1386c0aa460f57d9ed41ec9ddd
       <mat-card-title>{{ res.displayName }}</mat-card-title>
       <div class="float-avatar-right"><img [src]="avatarImg" alt="User Avatar"></div>
       <mat-card-content><a href="mailto:{{ res.mail }}" target="_top">{{ res.mail }} </a></mat-card-content>
