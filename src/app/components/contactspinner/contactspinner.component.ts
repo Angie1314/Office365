@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/app/models/contact';
-import { ContactService } from 'src/app/services/contact.service';
 import { ODataResponse } from 'src/app/models/odata-response';
 @Component({
   selector: 'app-contactspinner',

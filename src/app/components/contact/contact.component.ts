@@ -45,6 +45,7 @@ export class ContactComponent implements OnInit {
   color = 'primary';
   mode = 'indeterminate';
   results: string;
+  showSpinners: false;
 
   constructor(private contactService: ContactService) { }
 
@@ -54,9 +55,6 @@ export class ContactComponent implements OnInit {
         this.searchRes = results;
       });
 
-  }
-  showSpinner() {
-    this.loadingSpinner$.next(true);
   }
 
   ngOnInit() {
