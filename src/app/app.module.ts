@@ -18,7 +18,6 @@ import { NewEventComponent } from './components/new-event/new-event.component';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
-import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
 import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';
 
 import { MatToolbarModule,
@@ -39,6 +38,9 @@ import { MatToolbarModule,
          MatDialogModule,
          MatIconModule ,
          } from '@angular/material';
+import { AddcontactComponent } from './components/addcontact/addcontact.component';
+import { OrderByPipe } from './components/pipes/order-by.pipe';
+import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +53,8 @@ import { MatToolbarModule,
     PagefooterComponent,
     HeaderComponent,
     SpinnerComponent,
+    AddcontactComponent,
+    OrderByPipe,
     ContactspinnerComponent,
   ],
   imports: [

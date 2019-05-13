@@ -1,6 +1,5 @@
 export interface Calendar {
-    event: string;
     subject: string;
-    start: string;
-    location: string;
+    start: { dateTime: string, timeZone: string };
+    end: { dateTime: string, timeZone: string };
 }

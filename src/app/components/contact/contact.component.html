@@ -1,27 +1,35 @@
 <p class="page-heading margin-login" fxLayoutAlign="center center"> Contact Cards</p>
 
+<div fxLayout="column" fxLayoutAlign="start center">
+  <div class="margin-login">
+    <button routerLink="/add-contact" class="ripple
+          align-right" mat-flat-button color="primary">Add Contact
+    </button>
+  </div>
+</div>
+
 <div fxLayoutAlign="center right">
-  <form>
+  <form #form="ngForm">
     <mat-form-field>
       <input matInput placeholder="Search by name" id="searchbox" name="searchStr" type="text" [(ngModel)]="searchStr"
-        (keyup)="searchContact()">
+        (keyup)="searchContact(); showSpinner()">
     </mat-form-field>
+    <!-- <button color="primary" (click)="form.reset()">RESET</button> -->
   </form>
 </div>
 
 <div>
   <div *ngFor="let res of searchRes" fxLayout="column" fxLayoutAlign="start center" class="margin-login">
-    <mat-card>
+    <mat-card class="searchCard">
       <mat-card-title>{{ res.displayName }}</mat-card-title>
-      <div class="float-avatar-right"><img [src]="avatar" alt="User Avatar"></div>
-      <mat-card-content>{{ res.mail }}</mat-card-content>
+      <div class="float-avatar-right"><img [src]="avatarImg" alt="User Avatar"></div>
+      <mat-card-content><a href="mailto:{{ res.mail }}" target="_top">{{ res.mail }} </a></mat-card-content>
     </mat-card>
   </div>
 </div>
 
 <ng-container *ngIf="(infinate$ | async) as infinate; else spinner">
-  <cdk-virtual-scroll-viewport itemSize="24" class="flex-grow-1"
-    (scrolledIndexChange)="loadNextUsers($event, infinate.nextLink)">
+  <cdk-virtual-scroll-viewport itemSize="24" (scrolledIndexChange)="loadNextUsers($event, infinate.nextLink)">
     <div fxLayout="column" fxLayoutAlign="start center" class="margin-login">
       <mat-card *cdkVirtualFor="let user of infinate.data">
         <mat-card-title>{{ user.displayName }}</mat-card-title>
@@ -41,3 +49,4 @@
     <app-contactspinner></app-contactspinner>
   </div>
 </ng-template>
+<app-pagefooter></app-pagefooter>
