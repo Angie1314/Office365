@@ -13,7 +13,7 @@ export class CalendarService {
 
   getCalendar(): Observable<Calendar[]> {
     return this.http
-      .get<Calendar>(`${environment.baseUrl}/me/events?$select=subject,body,bodyPreview,organizer,attendees,start,end,location`)
+      .get<Calendar>(`${environment.baseUrl}/me/events?$orderby=createdDateTime&$skip=20`)
       .pipe(map(x => (x as any).value));
   }
 }

@@ -15,9 +15,9 @@ export class NewEventComponent {
   subjectAdd: string;
 
   event: Calendar = {
-    subject:  this.subjectAdd,
-    start: { dateTime: '2019-04-18T17:00:00', timeZone: 'UTC' },
-    end: { dateTime: '2019-04-18T18:00:00', timeZone: 'UTC' }
+    subject: 'Code review!',
+    start: { dateTime: '2019-07-18T17:00:00', timeZone: 'UTC' },
+    end: { dateTime: '2019-07-18T18:00:00', timeZone: 'UTC' }
   };
 
   constructor(private graphApi: ProfileApiService) {
@@ -28,7 +28,7 @@ export class NewEventComponent {
 
   get subject(): AbstractControl {
     return this.eventForm
-     .get(this.subjectAdd);
+     .get('subject');
   }
 
   onSubmit() {
