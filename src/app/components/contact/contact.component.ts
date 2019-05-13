@@ -56,6 +56,15 @@ export class ContactComponent implements OnInit {
       });
   }
 
+  clear() {
+    if (this.searchStr === this.searchStr) {
+      document.getElementById('card').style.display = 'block';
+      } else if (this.searchStr == null) {
+        document.getElementById('card').style.display = 'none';
+        document.getElementById('card').style.visibility = 'hidden';
+      }
+  }
+
   ngOnInit() {
     const nextForwardOnly$ = this.nextItem$.pipe(
       debounceTime(200),

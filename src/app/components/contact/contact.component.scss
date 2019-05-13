@@ -12,6 +12,33 @@
   width: $mat-card-width;
 }
 
+.searchCard {
+  color: rgb(68, 66, 66);
+  border-width: $mat-div-and-card-border-width;
+  border-style: $mat-div-and-card-border-style;
+  padding: $mat-card-padding;
+  margin-left: $mat-card-padding;
+  margin-bottom: 0;
+  margin-right: $mat-card-padding;
+  width: $mat-card-width;
+
+  a {
+    color:grey;
+    text-decoration: $anchor-tag-tect-dec;
+  }
+  
+  a:hover,
+    a:active { 
+        color:rgb(75, 71, 71);
+  }
+  :host {
+    display: $host-display;
+    flex-direction: $host-direction;
+    height: $host-height;
+  }
+}
+
+
 a {
   color: $anchor-tag-color;
   text-decoration: $anchor-tag-tect-dec;
