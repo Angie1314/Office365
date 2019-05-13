@@ -1,11 +1,11 @@
-<p class="page-heading margin-login" fxLayoutAlign="center center"> Contact Cards</p>
+<p i18n="Title Contact cards" class="page-heading margin-login" fxLayoutAlign="center center"> Contact Cards</p>
 
 <div fxLayoutAlign="center right">
   <form #form="ngForm">
     <mat-form-field>
-      <input matInput placeholder="Search by name" id="searchbox" name="searchStr" type="text" [(ngModel)]="searchStr"
+      <input matInput placeholder="Search by name" i18n-placeholder="Search placeholder" id="searchbox" name="searchStr" type="text" [(ngModel)]="searchStr"
         (keyup)="searchContact()">
-      <mat-hint>Hit enter to clear search</mat-hint>
+      <mat-hint i18n="Hint">Hit enter to clear search</mat-hint>
     </mat-form-field>
     <button id='reset' color="primary" (click)="clear();form.reset()">RESET</button>
   </form>

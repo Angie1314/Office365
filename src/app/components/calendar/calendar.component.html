@@ -1,4 +1,4 @@
-<p class="page-heading margin-login"> Calendar Events</p>
+<p i18n="Title events" class="page-heading margin-login"> Calendar Events</p>
 
 <app-spinner></app-spinner>
 
@@ -6,7 +6,7 @@
 
   <div class="margin-login">
     <button routerLink="/new-event" class="ripple
-          align-right" mat-flat-button color="primary">Add Event
+          align-right" mat-flat-button color="primary" i18n="Title Add Events">Add Event
     </button>
   </div>
 
@@ -21,44 +21,5 @@
 
     <p> {{ item.bodyPreview }}</p>
   </mat-card>
-
-  <!-- <mat-card>
-
-    <mat-card-subtitle>
-      <p *ngIf="calendar">Date: {{ calendar[3].start.dateTime | date }}</p>
-      <p *ngIf="calendar"> Time: {{ calendar[3].start.dateTime | date:'shortTime' }}</p>
-    </mat-card-subtitle>
-    <mat-card-title>
-      <p *ngIf="calendar"> {{ calendar[3].subject }}</p>
-    </mat-card-title>
-
-    <p *ngIf="calendar"> {{ calendar[3].bodyPreview }}</p>
-  </mat-card>
-
-  <mat-card>
-
-    <mat-card-subtitle>
-      <p *ngIf="calendar">Date: {{ calendar[2].start.dateTime | date }}</p>
-      <p *ngIf="calendar"> Time: {{ calendar[2].start.dateTime | date:'shortTime' }}</p>
-    </mat-card-subtitle>
-    <mat-card-title>
-      <p *ngIf="calendar"> {{ calendar[2].subject }}</p>
-    </mat-card-title>
-
-    <p *ngIf="calendar"> {{ calendar[2].bodyPreview }}</p>
-  </mat-card>
-
-  <mat-card>
-
-    <mat-card-subtitle>
-      <p *ngIf="calendar">Date: {{ calendar[1].start.dateTime | date }}</p>
-      <p *ngIf="calendar"> Time: {{ calendar[1].start.dateTime | date:'shortTime' }}</p>
-    </mat-card-subtitle>
-    <mat-card-title>
-      <p *ngIf="calendar"> {{ calendar[1].subject }}</p>
-    </mat-card-title>
-
-    <p *ngIf="calendar"> {{ calendar[1].bodyPreview }}</p>
-  </mat-card> -->
 </div>
 <app-pagefooter></app-pagefooter>

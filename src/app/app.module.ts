@@ -38,8 +38,6 @@ import { MatToolbarModule,
          MatDialogModule,
          MatIconModule ,
          } from '@angular/material';
-import { AddcontactComponent } from './components/addcontact/addcontact.component';
-import { OrderByPipe } from './components/pipes/order-by.pipe';
 import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
 @NgModule({
   declarations: [
@@ -53,8 +51,6 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     PagefooterComponent,
     HeaderComponent,
     SpinnerComponent,
-    AddcontactComponent,
-    OrderByPipe,
     ContactspinnerComponent,
   ],
   imports: [

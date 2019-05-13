@@ -33,6 +33,15 @@
             "es5BrowserSupport": true
           },
           "configurations": {
+            "fr": {
+              "aot": true,
+              "outputPath": "dist/OfficeUse365-fr/",
+              "i18nFile": "src/locale/messages.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr",
+              "i18nMissingTranslation": "error"
+            },
+          
             "production": {
               "fileReplacements": [
                 {
@@ -67,6 +76,9 @@
           "configurations": {
             "production": {
               "browserTarget": "OfficeUse365:build:production"
+            },
+            "fr": {
+              "browserTarget": "OfficeUse365:build:fr"
             }
           }
         },

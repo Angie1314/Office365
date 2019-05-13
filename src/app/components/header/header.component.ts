@@ -45,16 +45,16 @@ export class HeaderComponent {
 
 }
 
-public login(): void {
+public login() {
     this.oauthService.initImplicitFlow();
 
 }
 
-public logOut(): void {
+public logOut() {
     this.oauthService.logOut();
 }
 
-public get name(): void {
+public get name() {
     const claims = this.oauthService.getIdentityClaims();
 
     if (!claims) {
