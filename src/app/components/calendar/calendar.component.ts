@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CalendarService } from 'src/app/services/calendar.service';
 import { Calendar } from 'src/app/models/calendar';
+import { FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
@@ -28,6 +29,10 @@ export class CalendarComponent implements OnInit {
   calendar: Calendar[] = [];
   calendars: Observable<Calendar[]>;
 
+  isLinear = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+
   constructor(private calendarService: CalendarService) { }
 
   ngOnInit() {
@@ -36,5 +41,7 @@ export class CalendarComponent implements OnInit {
 
    this.calendars
     .subscribe(() => this.showSpinner = false);
+
   }
+
 }
