@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6276192683450d08cf514f629fc199e29ad4c0b3" datatype="html">
+        <source> Calendar Events</source>
+        <target>
+          HElllllooo
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/calendar/calendar.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Title events</note>
+      </trans-unit>
+      <trans-unit id="85baa2cf019dfa01abf238ed270f570200d9df64" datatype="html">
+        <source>Add Event
+    </source>
+    <target>Voeg Gebeurtenis By</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/calendar/calendar.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Title Add Events</note>
+      </trans-unit>
+      <trans-unit id="477150754c9f5846cd35a9cd881f385bff673978" datatype="html">
+        <source>
+           About Office 365
+        </source>
+         <target>HELLLLLLO</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Title About office</note>
+      </trans-unit>
+      <trans-unit id="959fcc9f9c6fc50d3f3447fe7ed11982ff451f75" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ matCardTitleFeatures }}"/></source>
+         <target>
+            Kenmerke.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Title Features text</note>
+      </trans-unit>
+      <trans-unit id="65f7aed5660f14a8049181bd303c2398c54545c5" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ textForFeatures }}"/></source>
+         <target>
+            Dit is die gereedskap wat jy nodig het om meer kreatief te wees.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Features text</note>
+      </trans-unit>
+      <trans-unit id="17fc0c608d80a467d27eea6eb5f17d35f3492898" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ upToDateText }}"/></source>
+         <target>Met 'n Office 365-intekening kry jy die nuutste Office-programme.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Title update text</note>
+      </trans-unit>
+      <trans-unit id="4e4b9fb2a23a3d79d74957af755e76b4351e1833" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ devicesMatCardTitle }}"/></source>
+         <target>
+            Dit is op al jou toestelle.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Title Devices text</note>
+      </trans-unit>
+      <trans-unit id="a4edebadb6d455a9379aca0d75fb52b6119dd495" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ devicesMatCardContent }}"/></source>
+         <target>
+          Produktiviteit waar jy ook al is .
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Devices text</note>
+      </trans-unit>
+      <trans-unit id="d2ed4d3b3e9c37c889dbd2ef2d2244f1ca9dd1cf" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ matCardTitleCloud }}"/></source>
+         <target>Wolkkenmerke.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Title cloud text</note>
+      </trans-unit>
+      <trans-unit id="a068bcade8d43e43250374ff1cb2d6ba136146cc" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ matCardContentCloud }}"/></source>
+         <target>
+            Dis jou groot werk, in die wolk.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Cloud text</note>
+      </trans-unit>
+      <trans-unit id="ebf408bbb925a356a2aac4a8409bedc9d378910e" datatype="html">
+        <source> Contact Cards</source>
+         <target>
+            Kontakkaarte
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Title Contact cards</note>
+      </trans-unit>
+      <trans-unit id="d3482a2fe17d28c2051e895925c9f35d47dbcc29" datatype="html">
+        <source>Soek op naam</source>
+         <target></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Search placeholder</note>
+      </trans-unit>
+      <trans-unit id="354cc37025e0c0ffeac72acbde794952aa812daf" datatype="html">
+        <source>Hit enter to clear search</source>
+         <target>
+            Klik op Enter om die soektog te verwyder
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Hint</note>
+      </trans-unit>
+      <trans-unit id="a2a0ec792fbf9eb79203f48b515c812b2614f42e" datatype="html">
+        <source> 
+          Voeg kalender gebeurtenis by:   
+        </source>
+         <target></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Title Add Event</note>
+      </trans-unit>
+      <trans-unit id="18f384ac74d21d300b589a59661f40d6115f76fb" datatype="html">
+        <source>Subject: </source>
+         <target>Vak:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Subject</note>
+      </trans-unit>
+      <trans-unit id="8eeedc4b2f9bf50b7d65ba32d83b13ccd3ca131a" datatype="html">
+        <source>Start Time: </source>
+         <target>Begin Tyd:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Start time</note>
+      </trans-unit>
+      <trans-unit id="88c48f1135872c93f0e41dfb171010bcbbd029a8" datatype="html">
+        <source>
+          Eind Tyd: 
+        </source>
+         <target></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Title End time</note>
+      </trans-unit>
+      <trans-unit id="de04eefeb62936c0ad135129b019091ca4684f4f" datatype="html">
+        <source>See Calendar</source>
+        <target>Sien Kalendar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">See calendar text</note>
+      </trans-unit>
+      <trans-unit id="9c1615911c9bb371dd4d1682b1469ee4243ffc84" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ loginButton }}"/>
+  </source>
+   <target>Teken In</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/header/header.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Title Login button</note>
+      </trans-unit>
+      <trans-unit id="33629999fd41361c48d5a60a5783dfdbd09276b7" datatype="html">
+        <source>Calendar</source>
+         <target>Kalendar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/header/header.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Title Calendar menu</note>
+      </trans-unit>
+      <trans-unit id="9b475bb63675494482effde989c7f1f18c232620" datatype="html">
+        <source>Contacts</source>
+         <target>Kontakte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/header/header.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Title Contacts menu</note>
+      </trans-unit>
+      <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
+        <source>Logout</source>
+         <target>Teken Uit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/header/header.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">Title Logout</note>
+      </trans-unit>
+        <trans-unit id="6c9f2fe3a25c4c59cbbee47c2413ef52c0c6d70f" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ matCardTitleUpToDate }}"/></source>
+         <target>Op Datum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/header/header.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Title Features</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -41,6 +41,14 @@
               "i18nLocale": "fr",
               "i18nMissingTranslation": "error"
             },
+            "de": {
+              "aot": true,
+              "outputPath": "dist/OfficeUse365-de/",
+              "i18nFile": "src/locale/messages.de.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "de",
+              "i18nMissingTranslation": "error"
+            },
           
             "production": {
               "fileReplacements": [
@@ -79,6 +87,9 @@
             },
             "fr": {
               "browserTarget": "OfficeUse365:build:fr"
+            },
+            "de": {
+              "browserTarget": "OfficeUse365:build:de"
             }
           }
         },
