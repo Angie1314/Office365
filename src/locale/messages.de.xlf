@@ -5,7 +5,7 @@
       <trans-unit id="6276192683450d08cf514f629fc199e29ad4c0b3" datatype="html">
         <source> Calendar Events</source>
         <target>
-          HElllllooo
+          Imicimbi Yekhalenda
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/calendar/calendar.component.html</context>
@@ -14,9 +14,8 @@
         <note priority="1" from="description">Title events</note>
       </trans-unit>
       <trans-unit id="85baa2cf019dfa01abf238ed270f570200d9df64" datatype="html">
-        <source>Add Event
-    </source>
-    <target>Voeg Gebeurtenis By</target>
+        <source>Add Event</source>
+    <target>Engeza Isenzakalo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/calendar/calendar.component.html</context>
           <context context-type="linenumber">9</context>
@@ -27,7 +26,9 @@
         <source>
            About Office 365
         </source>
-         <target>HELLLLLLO</target>
+         <target>
+            Mayelana Office 365
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
           <context context-type="linenumber">5</context>
@@ -37,7 +38,7 @@
       <trans-unit id="959fcc9f9c6fc50d3f3447fe7ed11982ff451f75" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ matCardTitleFeatures }}"/></source>
          <target>
-            Kenmerke.
+            Izici.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
@@ -48,7 +49,7 @@
       <trans-unit id="65f7aed5660f14a8049181bd303c2398c54545c5" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ textForFeatures }}"/></source>
          <target>
-            Dit is die gereedskap wat jy nodig het om meer kreatief te wees.
+          Yilawo mathuluzi okudingayo abe ngaphezulu kokudala.    
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
@@ -58,7 +59,7 @@
       </trans-unit>
       <trans-unit id="17fc0c608d80a467d27eea6eb5f17d35f3492898" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ upToDateText }}"/></source>
-         <target>Met 'n Office 365-intekening kry jy die nuutste Office-programme.</target>
+         <target>Ngokubhalisele kwe-Office 365, uthole izinhlelo zokusebenza zakamuva ze-Office .</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
           <context context-type="linenumber">20</context>
@@ -68,7 +69,7 @@
       <trans-unit id="4e4b9fb2a23a3d79d74957af755e76b4351e1833" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ devicesMatCardTitle }}"/></source>
          <target>
-            Dit is op al jou toestelle.
+            Kuwo wonke amadivayisi wakho.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
@@ -79,7 +80,7 @@
       <trans-unit id="a4edebadb6d455a9379aca0d75fb52b6119dd495" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ devicesMatCardContent }}"/></source>
          <target>
-          Produktiviteit waar jy ook al is .
+            Ukukhiqiza noma ngabe ukuphi.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
@@ -89,7 +90,9 @@
       </trans-unit>
       <trans-unit id="d2ed4d3b3e9c37c889dbd2ef2d2244f1ca9dd1cf" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ matCardTitleCloud }}"/></source>
-         <target>Wolkkenmerke.</target>
+         <target>
+            Izici zefu.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
           <context context-type="linenumber">31</context>
@@ -99,7 +102,7 @@
       <trans-unit id="a068bcade8d43e43250374ff1cb2d6ba136146cc" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ matCardContentCloud }}"/></source>
          <target>
-            Dis jou groot werk, in die wolk.
+            Yona umsebenzi wakho omkhulu, efwini.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/about-office/about-office.component.html</context>
@@ -110,7 +113,7 @@
       <trans-unit id="ebf408bbb925a356a2aac4a8409bedc9d378910e" datatype="html">
         <source> Contact Cards</source>
          <target>
-            Kontakkaarte
+            Amakhadi Wokuxhumana
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/contact/contact.component.html</context>
@@ -120,7 +123,7 @@
       </trans-unit>
       <trans-unit id="d3482a2fe17d28c2051e895925c9f35d47dbcc29" datatype="html">
         <source>Soek op naam</source>
-         <target></target>
+         <target>Sesha Ngegama</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/contact/contact.component.html</context>
           <context context-type="linenumber">6</context>
@@ -130,7 +133,7 @@
       <trans-unit id="354cc37025e0c0ffeac72acbde794952aa812daf" datatype="html">
         <source>Hit enter to clear search</source>
          <target>
-            Klik op Enter om die soektog te verwyder
+            Faka ukufaka ukuze useshe ukusesha
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/contact/contact.component.html</context>
@@ -142,7 +145,9 @@
         <source> 
           Voeg kalender gebeurtenis by:   
         </source>
-         <target></target>
+         <target>
+            Sesha ngomcimbi
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
           <context context-type="linenumber">1</context>
@@ -151,7 +156,7 @@
       </trans-unit>
       <trans-unit id="18f384ac74d21d300b589a59661f40d6115f76fb" datatype="html">
         <source>Subject: </source>
-         <target>Vak:</target>
+         <target>Isihloko::</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
           <context context-type="linenumber">8</context>
@@ -160,7 +165,9 @@
       </trans-unit>
       <trans-unit id="8eeedc4b2f9bf50b7d65ba32d83b13ccd3ca131a" datatype="html">
         <source>Start Time: </source>
-         <target>Begin Tyd:</target>
+         <target>
+            Isikhathi sokuqala:
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
           <context context-type="linenumber">16</context>
@@ -171,7 +178,9 @@
         <source>
           Eind Tyd: 
         </source>
-         <target></target>
+         <target>
+            Isikhathi sokuphela
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
           <context context-type="linenumber">24</context>
@@ -180,7 +189,7 @@
       </trans-unit>
       <trans-unit id="de04eefeb62936c0ad135129b019091ca4684f4f" datatype="html">
         <source>See Calendar</source>
-        <target>Sien Kalendar</target>
+        <target>Bona ikhalenda</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/new-event/new-event.component.html</context>
           <context context-type="linenumber">34</context>
@@ -190,7 +199,7 @@
       <trans-unit id="9c1615911c9bb371dd4d1682b1469ee4243ffc84" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ loginButton }}"/>
   </source>
-   <target>Teken In</target>
+   <target>Ngena ngemvume</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/header/header.component.html</context>
           <context context-type="linenumber">3</context>
@@ -199,7 +208,9 @@
       </trans-unit>
       <trans-unit id="33629999fd41361c48d5a60a5783dfdbd09276b7" datatype="html">
         <source>Calendar</source>
-         <target>Kalendar</target>
+         <target>
+            Ikhalenda
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/header/header.component.html</context>
           <context context-type="linenumber">19</context>
@@ -208,7 +219,9 @@
       </trans-unit>
       <trans-unit id="9b475bb63675494482effde989c7f1f18c232620" datatype="html">
         <source>Contacts</source>
-         <target>Kontakte</target>
+         <target>
+            Oxhumana nabo
+          </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/header/header.component.html</context>
           <context context-type="linenumber">25</context>
@@ -217,7 +230,7 @@
       </trans-unit>
       <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
         <source>Logout</source>
-         <target>Teken Uit</target>
+         <target>Phuma</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/header/header.component.html</context>
           <context context-type="linenumber">50</context>
@@ -226,7 +239,9 @@
       </trans-unit>
         <trans-unit id="6c9f2fe3a25c4c59cbbee47c2413ef52c0c6d70f" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{ matCardTitleUpToDate }}"/></source>
-         <target>Op Datum</target>
+         <target>
+            Kusesikhathini.
+          </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/header/header.component.html</context>
           <context context-type="linenumber">19</context>
