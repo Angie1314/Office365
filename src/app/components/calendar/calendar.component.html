@@ -12,8 +12,8 @@
         <mat-step label="{{ calendar[0].start.dateTime | date }}">
 
           <mat-card-subtitle>
-            <p>Date: {{ calendar[0].start.dateTime | date }}</p>
-            <p> Time: {{ calendar[0].start.dateTime | date:'shortTime' }}</p>
+            
+            <p> Time: {{ calendar[0].start.dateTime | date:'shortTime' }} - {{ calendar[0].end.dateTime | date:'shortTime' }}</p>
           </mat-card-subtitle>
           <mat-card-title>
             <p> {{ calendar[0].subject }} </p>
@@ -25,53 +25,51 @@
         <mat-step label="{{ calendar[1].start.dateTime | date }}">
 
           <mat-card-subtitle>
-            <p>Date: {{ calendar[1].start.dateTime | date }}</p>
-            <p> Time: {{ calendar[1].start.dateTime | date:'shortTime' }}</p>
+            <p> Time: {{ calendar[1].start.dateTime | date:'shortTime' }} - {{ calendar[1].end.dateTime | date:'shortTime' }}</p>
           </mat-card-subtitle>
+
           <mat-card-title>
             <p> {{ calendar[1].subject }}</p>
           </mat-card-title>
           <p> {{ calendar[1].bodyPreview }} </p>
-
         </mat-step>
 
         <mat-step label="{{ calendar[2].start.dateTime | date }}">
 
           <mat-card-subtitle>
-            <p>Date: {{ calendar[2].start.dateTime | date }}</p>
-            <p> Time: {{ calendar[2].start.dateTime | date:'shortTime' }}</p>
+            <p> Time: {{ calendar[2].start.dateTime | date:'shortTime' }} - {{ calendar[2].end.dateTime | date:'shortTime' }}</p>
           </mat-card-subtitle>
+
           <mat-card-title>
             <p> {{ calendar[2].subject }}</p>
           </mat-card-title>
           <p> {{ calendar[2].bodyPreview }} </p>
-
         </mat-step>
 
         <mat-step label="{{ calendar[3].start.dateTime | date }}">
 
           <mat-card-subtitle>
-            <p>Date: {{ calendar[3].start.dateTime | date }}</p>
-            <p> Time: {{ calendar[3].start.dateTime | date:'shortTime' }}</p>
+            <p> Time: {{ calendar[3].start.dateTime | date:'shortTime' }} - {{ calendar[3].end.dateTime | date:'shortTime' }}</p>
           </mat-card-subtitle>
+
           <mat-card-title>
             <p> {{ calendar[3].subject }}</p>
           </mat-card-title>
-          <p> {{ calendar[3].bodyPreview }} </p>
 
+          <p> {{ calendar[3].bodyPreview }} </p>
         </mat-step>
 
         <mat-step label="{{ calendar[4].start.dateTime | date }}">
 
           <mat-card-subtitle>
-            <p>Date: {{ calendar[4].start.dateTime | date }}</p>
-            <p> Time: {{ calendar[4].start.dateTime | date:'shortTime' }}</p>
+            <p> Time: {{ calendar[4].start.dateTime | date:'shortTime' }} - {{ calendar[4].end.dateTime | date:'shortTime' }}</p>
           </mat-card-subtitle>
+
           <mat-card-title>
             <p> {{ calendar[4].subject }}</p>
           </mat-card-title>
-          <p> {{ calendar[4].bodyPreview }} </p>
 
+          <p> {{ calendar[4].bodyPreview }} </p>
         </mat-step>
       </mat-vertical-stepper>
     </div>
