@@ -12,7 +12,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
-import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -43,7 +42,6 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     AppComponent,
     CalendarComponent,
     AboutOfficeComponent,
-    ProfileComponent,
     ContactComponent,
     AppComponent,
     PagefooterComponent,
