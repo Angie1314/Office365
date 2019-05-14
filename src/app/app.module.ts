@@ -14,7 +14,6 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { NewEventComponent } from './components/new-event/new-event.component';
 import { PagefooterComponent } from './components/page-footer/pagefooter.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
@@ -46,7 +45,6 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     AboutOfficeComponent,
     ProfileComponent,
     ContactComponent,
-    NewEventComponent,
     AppComponent,
     PagefooterComponent,
     HeaderComponent,
