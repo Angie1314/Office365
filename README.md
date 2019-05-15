@@ -15,3 +15,7 @@ Unless port otherwise specified
 
 ## Language Afrikaans 
 npm run start:fr -- --port=4201
+
+## Language Zulu 
+
+npm run start:de -- --port=4201
