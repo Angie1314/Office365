@@ -34,9 +34,11 @@ import { MatToolbarModule,
          MatCardModule,
          MatGridListModule,
          MatDialogModule,
-         MatIconModule ,
+         MatIconModule,
          } from '@angular/material';
 import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +79,8 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     ReactiveFormsModule,
     MatDialogModule,
     ScrollingModule,
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [MatButtonModule,
     MatProgressSpinnerModule,
