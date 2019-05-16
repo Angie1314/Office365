@@ -21,6 +21,7 @@ npm run start:fr -- --port=4201
 npm run start:de -- --port=4201
 
 ## Run as PWA <OFFLINE>
+  npm install @angular/service-worker
   ng build --prod
   cd dist/OfficeUse365
   http-server
