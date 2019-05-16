@@ -80,7 +80,7 @@ import { environment } from '../environments/environment';
     MatDialogModule,
     ScrollingModule,
     OAuthModule.forRoot(),
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [MatButtonModule,
     MatProgressSpinnerModule,
