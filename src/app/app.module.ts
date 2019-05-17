@@ -35,7 +35,7 @@ import { MatToolbarModule,
          MatCardModule,
          MatGridListModule,
          MatDialogModule,
-         MatIconModule ,
+         MatIconModule,
          } from '@angular/material';
 import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -85,6 +85,8 @@ import { NewEventComponent } from './components/new-event/new-event.component';
     MatDatepickerModule,
     OAuthModule.forRoot(),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    OAuthModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [MatButtonModule,
     MatProgressSpinnerModule,
