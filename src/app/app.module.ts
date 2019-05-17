@@ -17,6 +17,7 @@ import { PagefooterComponent } from './components/page-footer/pagefooter.compone
 import { HeaderComponent } from './components/header/header.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatToolbarModule,
          MatMenuModule,
@@ -37,6 +38,9 @@ import { MatToolbarModule,
          MatIconModule ,
          } from '@angular/material';
 import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { NewEventComponent } from './components/new-event/new-event.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +52,7 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     HeaderComponent,
     SpinnerComponent,
     ContactspinnerComponent,
+    NewEventComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,7 +82,9 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     ReactiveFormsModule,
     MatDialogModule,
     ScrollingModule,
-    OAuthModule.forRoot()
+    MatDatepickerModule,
+    OAuthModule.forRoot(),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   exports: [MatButtonModule,
     MatProgressSpinnerModule,
@@ -98,12 +105,14 @@ import { ContactspinnerComponent } from './components/contactspinner/contactspin
     MatGridListModule,
     ScrollingModule,
     MatDialogModule,
+    MatDatepickerModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true
   },
+  AppComponent
   ],
     bootstrap: [AppComponent],
     schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]

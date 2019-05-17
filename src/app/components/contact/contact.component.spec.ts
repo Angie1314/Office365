@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { ContactComponent } from './contact.component';
 describe('ContactComponent', () => {
@@ -10,6 +11,7 @@ describe('ContactComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ ContactComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [FormsModule]
 
     })
     .compileComponents();

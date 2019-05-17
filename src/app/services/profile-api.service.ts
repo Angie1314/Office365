@@ -3,8 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, mergeAll } from 'rxjs/operators';
 import { Profile } from '../models/profile';
+import { AddContact } from '../models/addcontact';
 import { environment } from 'src/environments/environment';
 import { Calendar } from '../models/calendar';
+import { CalendarEvent } from '../models/calendar-event';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,8 +28,11 @@ export class ProfileApiService {
       );
   }
 
-  createEvent(event: Calendar) {
+  createEvent(event: CalendarEvent) {
     return this.http.post(`${environment.baseUrl}/me/events`, event);
+  }
+  createContact(addcontact: AddContact) {
+    return this.http.post(`${environment.baseUrl}/me/users`, addcontact);
   }
 }
 
