@@ -1,31 +1,63 @@
 <p i18n="Title events" class="page-heading margin-login"> Calendar Events</p>
 
+<div class="margin-login centerize">
+  <button routerLink="/new-event" class="ripple
+        align-right" mat-flat-button color="primary">Add Event
+  </button>
+</div>
+
 <app-spinner></app-spinner>
 
-<div fxLayout="column" fxLayoutAlign="center center">
-  <div fxLayout="column" fxFlex="80%" fxLayoutAlign="center center">
-    <div *ngIf="calendar">
-      <mat-vertical-stepper>
+<div fxLayoutAlign="center center" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px">
+  <div fxLayout.gt-md="row" fxLayout.lt-sm="row" fxLayoutGap="10px" fxFlex="100" fxFlex.gt-md="10">
+    <div fxFlex.lt-md="20" fxFlex.lt-sm="100"><button mat-fab (click)="move(0)"
+        color="primary">{{ calendar[0].start.dateTime | date:'dd' }}
+        {{ calendar[0].start.dateTime | date:'MMM' }}
+      </button>
+    </div>
+    <div fxFlex.lt-md="20" fxFlex.lt-sm="100"><button mat-fab (click)="move(1)"
+        color="primary">{{ calendar[1].start.dateTime | date:'dd' }}
+        {{ calendar[1].start.dateTime | date:'MMM' }}</button>
+    </div>
+    <div fxFlex.lt-md="20" fxFlex.lt-sm="100"><button mat-fab (click)="move(2)"
+        color="primary">{{ calendar[2].start.dateTime | date:'dd' }}
+        {{ calendar[2].start.dateTime | date:'MMM' }}</button>
+    </div>
+    <div fxFlex.lt-md="20" fxFlex.lt-sm="100"><button mat-fab (click)="move(3)"
+        color="primary">{{ calendar[3].start.dateTime | date:'dd' }}
+        {{ calendar[3].start.dateTime | date:'MMM' }}</button>
+    </div>
+    <div fxFlex.lt-md="20" fxFlex.lt-sm="100"><button mat-fab (click)="move(4)"
+      color="primary">{{ calendar[4].start.dateTime | date:'dd' }}
+      {{ calendar[4].start.dateTime | date:'MMM' }}</button>
+  </div>
+  </div>
+</div>
+
+<div *ngIf="calendar" class="margin-login" fxLayoutAlign="center center" >
+  <div fxLayoutAlign="center center">
+    <div fxLayout="column" fxFlex="80%" fxLayoutAlign="center center">
+      <mat-vertical-stepper  #stepper>
         <ng-template matStepperIcon="edit">
           <mat-icon>insert_invitation</mat-icon>
         </ng-template>
         <mat-step label="{{ calendar[0].start.dateTime | date }}">
 
           <mat-card-subtitle>
-            
-            <p> Time: {{ calendar[0].start.dateTime | date:'shortTime' }} - {{ calendar[0].end.dateTime | date:'shortTime' }}</p>
+            <p> Time: {{ calendar[0].start.dateTime | date:'shortTime' }} -
+              {{ calendar[0].end.dateTime | date:'shortTime' }}</p>
           </mat-card-subtitle>
+
           <mat-card-title>
             <p> {{ calendar[0].subject }} </p>
           </mat-card-title>
           <p> {{ calendar[0].bodyPreview }} </p>
-
         </mat-step>
 
         <mat-step label="{{ calendar[1].start.dateTime | date }}">
-
           <mat-card-subtitle>
-            <p> Time: {{ calendar[1].start.dateTime | date:'shortTime' }} - {{ calendar[1].end.dateTime | date:'shortTime' }}</p>
+            <p> Time: {{ calendar[1].start.dateTime | date:'shortTime' }} -
+              {{ calendar[1].end.dateTime | date:'shortTime' }}</p>
           </mat-card-subtitle>
 
           <mat-card-title>
@@ -35,9 +67,9 @@
         </mat-step>
 
         <mat-step label="{{ calendar[2].start.dateTime | date }}">
-
           <mat-card-subtitle>
-            <p> Time: {{ calendar[2].start.dateTime | date:'shortTime' }} - {{ calendar[2].end.dateTime | date:'shortTime' }}</p>
+            <p> Time: {{ calendar[2].start.dateTime | date:'shortTime' }} -
+              {{ calendar[2].end.dateTime | date:'shortTime' }}</p>
           </mat-card-subtitle>
 
           <mat-card-title>
@@ -47,30 +79,28 @@
         </mat-step>
 
         <mat-step label="{{ calendar[3].start.dateTime | date }}">
-
           <mat-card-subtitle>
-            <p> Time: {{ calendar[3].start.dateTime | date:'shortTime' }} - {{ calendar[3].end.dateTime | date:'shortTime' }}</p>
+            <p> Time: {{ calendar[3].start.dateTime | date:'shortTime' }} -
+              {{ calendar[3].end.dateTime | date:'shortTime' }}</p>
           </mat-card-subtitle>
 
           <mat-card-title>
             <p> {{ calendar[3].subject }}</p>
           </mat-card-title>
-
           <p> {{ calendar[3].bodyPreview }} </p>
         </mat-step>
 
         <mat-step label="{{ calendar[4].start.dateTime | date }}">
-
-          <mat-card-subtitle>
-            <p> Time: {{ calendar[4].start.dateTime | date:'shortTime' }} - {{ calendar[4].end.dateTime | date:'shortTime' }}</p>
-          </mat-card-subtitle>
-
-          <mat-card-title>
-            <p> {{ calendar[4].subject }}</p>
-          </mat-card-title>
-
-          <p> {{ calendar[4].bodyPreview }} </p>
-        </mat-step>
+            <mat-card-subtitle>
+              <p> Time: {{ calendar[4].start.dateTime | date:'shortTime' }} -
+                {{ calendar[4].end.dateTime | date:'shortTime' }}</p>
+            </mat-card-subtitle>
+  
+            <mat-card-title>
+              <p> {{ calendar[4].subject }}</p>
+            </mat-card-title>
+            <p> {{ calendar[4].bodyPreview }} </p>
+          </mat-step>
       </mat-vertical-stepper>
     </div>
   </div>

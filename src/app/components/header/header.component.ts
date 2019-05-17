@@ -47,7 +47,7 @@ export class HeaderComponent {
 
 public login() {
     this.oauthService.initImplicitFlow();
-
+    this.router.navigate(['/contacts']);
 }
 
 public logOut() {
@@ -62,9 +62,5 @@ public get name() {
     }
 
     return (claims as any).name;
-}
-
-changeIcon() {
-
 }
 }

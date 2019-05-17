@@ -45,9 +45,8 @@ mat-card-title {
 
 mat-step-header .mat-step-label {
   overflow: visible;
+}\
+::ng-deep .mat-step-header {
+  color: #2196F3;
+  padding: 0%;
 }
-
-
-
-
-

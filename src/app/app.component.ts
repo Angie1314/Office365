@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, AfterViewInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { JwksValidationHandler } from 'angular-oauth2-oidc';
 import { authConfig } from '../auth-config';
 import openIdConfig from '../openid-config.json';
 import openIdConfigKeys from '../openid-config.keys.json';
+import { SwUpdate } from '@angular/service-worker';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit  {
     title = 'OfficeApp';
     officeLogo = 'Office 365';
     seeFeautesText = 'Dashboard';
@@ -22,7 +24,11 @@ export class AppComponent {
     srcUrlTwitter = '../../../../assets/images/twitter.png';
     icon = '../../../../assets/images/icon.png';
 
-    constructor(private oauthService: OAuthService, private route: ActivatedRoute) {
+    constructor(
+        private oauthService: OAuthService,
+        private route: ActivatedRoute,
+        private router: Router,
+        private swUpdate: SwUpdate) {
         const config = openIdConfig as any;
 
         Object.assign(authConfig, {
@@ -40,10 +46,16 @@ export class AppComponent {
         this.oauthService.configure(authConfig);
         this.oauthService.tokenValidationHandler = new JwksValidationHandler();
         this.oauthService.tryLogin();
+
+        this.oauthService.loadDiscoveryDocumentAndTryLogin({
+            onTokenReceived: (info) => {
+                router.navigate([info.state]);
+            }
+        });
     }
 
-    public login(): void {
-        this.oauthService.initImplicitFlow();
+    public login(additionalState: string): void {
+        this.oauthService.initImplicitFlow(additionalState);
 
     }
 
@@ -60,6 +72,18 @@ export class AppComponent {
 
         return (claims as any).name;
     }
+    ngAfterViewInit() {
+        if (this.swUpdate.isEnabled) {
+          this.swUpdate.available
+            .subscribe(() => {
+              this.swUpdate
+                .activateUpdate()
+                .then(() => {
+                  window.location.reload();
+                });
+            });
+        }
+      }
 }
 
 
