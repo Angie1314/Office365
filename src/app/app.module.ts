@@ -40,7 +40,6 @@ import { MatToolbarModule,
 import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { NewEventComponent } from './components/new-event/new-event.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +51,6 @@ import { NewEventComponent } from './components/new-event/new-event.component';
     HeaderComponent,
     SpinnerComponent,
     ContactspinnerComponent,
-    NewEventComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,8 +83,6 @@ import { NewEventComponent } from './components/new-event/new-event.component';
     MatDatepickerModule,
     OAuthModule.forRoot(),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-    OAuthModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [MatButtonModule,
     MatProgressSpinnerModule,
