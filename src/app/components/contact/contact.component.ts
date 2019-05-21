@@ -60,10 +60,10 @@ export class ContactComponent implements OnInit {
   clear() {
     if (this.searchStr === this.searchStr) {
       document.getElementById('card').style.display = 'block';
-      } else if (this.searchStr == null) {
-        document.getElementById('card').style.display = 'none';
-        document.getElementById('card').style.visibility = 'hidden';
-      }
+    } else if (this.searchStr == null) {
+      document.getElementById('card').style.display = 'none';
+      document.getElementById('card').style.visibility = 'hidden';
+    }
   }
 
   ngOnInit() {
@@ -92,5 +92,3 @@ export class ContactComponent implements OnInit {
     }
   }
 }
-
-

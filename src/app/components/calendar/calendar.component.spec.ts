@@ -8,10 +8,10 @@ describe('CalendarComponent', () => {
   let fixture: ComponentFixture<CalendarComponent>;
 
   beforeEach(async(() => {
-      TestBed.configureTestingModule({
-      declarations: [ CalendarComponent ],
+    TestBed.configureTestingModule({
+      declarations: [CalendarComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
-      })
+    })
       .compileComponents();
   }));
 

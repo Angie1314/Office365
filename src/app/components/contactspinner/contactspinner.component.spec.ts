@@ -8,9 +8,9 @@ describe('ContactspinnerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactspinnerComponent ]
+      declarations: [ContactspinnerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

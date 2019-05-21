@@ -1,4 +1,4 @@
-import { NgModule , CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -19,24 +19,25 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { TokenInterceptor } from 'src/app/interceptors/token-interceptor';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
-import { MatToolbarModule,
-         MatMenuModule,
-         MatSidenavModule,
-         MatStepperModule,
-         MatFormFieldModule,
-         MatDividerModule,
-         MatInputModule,
-         MatProgressBarModule,
-         MatButtonModule,
-         MatRippleModule,
-         MatListModule,
-         MatCheckboxModule,
-         MatProgressSpinnerModule,
-         MatCardModule,
-         MatGridListModule,
-         MatDialogModule,
-         MatIconModule,
-         } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatStepperModule,
+  MatFormFieldModule,
+  MatDividerModule,
+  MatInputModule,
+  MatProgressBarModule,
+  MatButtonModule,
+  MatRippleModule,
+  MatListModule,
+  MatCheckboxModule,
+  MatProgressSpinnerModule,
+  MatCardModule,
+  MatGridListModule,
+  MatDialogModule,
+  MatIconModule,
+} from '@angular/material';
 import { ContactspinnerComponent } from './components/contactspinner/contactspinner.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -110,9 +111,9 @@ import { environment } from '../environments/environment';
     useClass: TokenInterceptor,
     multi: true
   },
-  AppComponent
+    AppComponent
   ],
-    bootstrap: [AppComponent],
-    schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

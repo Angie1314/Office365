@@ -5,7 +5,6 @@ import { map, mergeAll } from 'rxjs/operators';
 import { Profile } from '../models/profile';
 import { AddContact } from '../models/addcontact';
 import { environment } from 'src/environments/environment';
-import { Calendar } from '../models/calendar';
 import { CalendarEvent } from '../models/calendar-event';
 @Injectable({
   providedIn: 'root'
@@ -35,5 +34,3 @@ export class ProfileApiService {
     return this.http.post(`${environment.baseUrl}/me/users`, addcontact);
   }
 }
-
-

@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CalendarService } from 'src/app/services/calendar.service';
 import { Calendar } from 'src/app/models/calendar';
-import { FormGroup, Validators } from '@angular/forms';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material';
 import { MatStepper } from '@angular/material/stepper';
 
 @Component({

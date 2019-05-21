@@ -12,7 +12,7 @@ import { routerNgProbeToken } from '@angular/router/src/router_module';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit  {
+export class AppComponent implements AfterViewInit {
     title = 'OfficeApp';
     officeLogo = 'Office 365';
     seeFeautesText = 'Dashboard';
@@ -46,12 +46,6 @@ export class AppComponent implements AfterViewInit  {
         this.oauthService.configure(authConfig);
         this.oauthService.tokenValidationHandler = new JwksValidationHandler();
         this.oauthService.tryLogin();
-
-        this.oauthService.loadDiscoveryDocumentAndTryLogin({
-            onTokenReceived: (info) => {
-                router.navigate([info.state]);
-            }
-        });
     }
 
     public login(additionalState: string): void {
@@ -74,16 +68,14 @@ export class AppComponent implements AfterViewInit  {
     }
     ngAfterViewInit() {
         if (this.swUpdate.isEnabled) {
-          this.swUpdate.available
-            .subscribe(() => {
-              this.swUpdate
-                .activateUpdate()
-                .then(() => {
-                  window.location.reload();
+            this.swUpdate.available
+                .subscribe(() => {
+                    this.swUpdate
+                        .activateUpdate()
+                        .then(() => {
+                            window.location.reload();
+                        });
                 });
-            });
         }
-      }
+    }
 }
-
-
