@@ -86,7 +86,6 @@ import { NewEventComponent } from './components/new-event/new-event.component';
     OAuthModule.forRoot(),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     OAuthModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [MatButtonModule,
     MatProgressSpinnerModule,
