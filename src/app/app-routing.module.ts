@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { AboutOfficeComponent } from './components/about-office/about-office.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { NewEventComponent } from './components/new-event/new-event.component';
 
 const routes: Routes = [   {
     path: 'calendar',
@@ -14,9 +13,6 @@ const routes: Routes = [   {
   }, {
     path: 'contact',
     component: ContactComponent
-  }, {
-    path: 'new-event',
-    component: NewEventComponent
   }
 ];
 @NgModule({
