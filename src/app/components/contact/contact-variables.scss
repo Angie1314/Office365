@@ -1,5 +1,6 @@
 /* Calendar text heading */
-$calendar-font:"Source Sans Pro", sans-serif;
+$calendar-font:"Source Sans Pro",
+sans-serif;
 $calendar-font-color :#2196F3;
 
 /* Material divider color and width */
@@ -8,7 +9,7 @@ $mat-div-and-card-border-style: solid;
 $mat-button-font-border: 0;
 
 /* Material card styles */
-$mat-card-padding: 10px ;
+$mat-card-padding: 10px;
 $panel-calendar-margin: 10px;
 $mat-card-no-border-transition: none !important;
 $mat-card-no-border-shadow: none !important;
@@ -18,20 +19,15 @@ $mat-card-width: 30%;
 $anchor-tag-color:#2196F3;
 $color-email-hover-to-mail: rgb(74, 21, 221);
 $anchor-tag-tect-dec: none;
-
 /*Host*/
 $host-height: 100%;
 $host-display: flex;
 $host-direction: column;
-
 /* list items*/
 $list-margin-padding: 0;
 $list-style: none;
 $height-virtual-scroll: 900px;
 $height-item-scroll: 24px;
-
 $float-avatar: right;
-
 /* media queries */
 $max-widths: 600px;
-

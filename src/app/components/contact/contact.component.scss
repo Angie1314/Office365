@@ -2,100 +2,95 @@
 @import "src/app/components/contact/contact-variables.scss";
 
 .mat-card {
-  color: $calendar-font-color;
-  border-width: $mat-div-and-card-border-width;
-  border-style: $mat-div-and-card-border-style;
-  padding: $mat-card-padding;
-  margin-left: $mat-card-padding;
-  margin-bottom: $mat-card-padding;
-  margin-right: $mat-card-padding;
-  width: $mat-card-width;
+    color: $calendar-font-color;
+    border-width: $mat-div-and-card-border-width;
+    border-style: $mat-div-and-card-border-style;
+    padding: $mat-card-padding;
+    margin-left: $mat-card-padding;
+    margin-bottom: $mat-card-padding;
+    margin-right: $mat-card-padding;
+    width: $mat-card-width;
 }
 
 .searchCard {
-  color: rgb(68, 66, 66);
-  border-width: $mat-div-and-card-border-width;
-  border-style: $mat-div-and-card-border-style;
-  padding: $mat-card-padding;
-  margin-left: $mat-card-padding;
-  margin-bottom: 0;
-  margin-right: $mat-card-padding;
-  width: $mat-card-width;
+    color: rgb(68, 66, 66);
+    border-width: $mat-div-and-card-border-width;
+    border-style: $mat-div-and-card-border-style;
+    padding: $mat-card-padding;
+    margin-left: $mat-card-padding;
+    margin-bottom: 0;
+    margin-right: $mat-card-padding;
+    width: $mat-card-width;
 
-  a {
-    color:grey;
-    text-decoration: $anchor-tag-tect-dec;
-  }
-  
-  a:hover,
-    a:active { 
-        color:rgb(75, 71, 71);
-  }
-  :host {
-    display: $host-display;
-    flex-direction: $host-direction;
-    height: $host-height;
-  }
+    a {
+        color: grey;
+        text-decoration: $anchor-tag-tect-dec;
+    }
+
+    a:hover,
+    a:active {
+        color: rgb(75, 71, 71);
+    }
+
+    :host {
+        display: $host-display;
+        flex-direction: $host-direction;
+        height: $host-height;
+    }
 }
 
 a {
-  color: $anchor-tag-color;
-  text-decoration: $anchor-tag-tect-dec;
+    color: $anchor-tag-color;
+    text-decoration: $anchor-tag-tect-dec;
 }
 
 a:hover,
-  a:active { 
-      color:$color-email-hover-to-mail;
+a:active {
+    color: $color-email-hover-to-mail;
 }
+
 :host {
-  display: $host-display;
-  flex-direction: $host-direction;
-  height: $host-height;
+    display: $host-display;
+    flex-direction: $host-direction;
+    height: $host-height;
 }
 
 cdk-virtual-scroll-viewport {
-  height: $height-virtual-scroll;
-  .item {
-      height: $height-item-scroll;
-  }
+    height: $height-virtual-scroll;
+
+    .item {
+        height: $height-item-scroll;
+    }
 }
 
 li {
-  list-style: $list-style;
-  padding: $list-margin-padding;
-  margin: $list-margin-padding;
+    list-style: $list-style;
+    padding: $list-margin-padding;
+    margin: $list-margin-padding;
 }
 
 .float-avatar-right {
-  float: $float-avatar;
+    float: $float-avatar;
 }
 
 div {
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
+
 .margin {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: $max-widths) {
-  .mat-card {
-    width: 70%;
-}
+    .mat-card {
+        width: 70%;
+    }
 }
 
 #card {
-  display: block;
+    display: block;
 }
 
 #reset {
-  display: none;
+    display: none;
 }
-
-
-
-
-  
-
-
- 
-

@@ -1,170 +1,171 @@
-
 @import "~@angular/material/theming";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 @import "src/app/variables.scss";
 
-html, body {
-  margin: $general-padding;
-  margin-right: $general-padding;
-  padding: $general-padding;
-  height: 100%;
+html,
+body {
+    margin: $general-padding;
+    margin-right: $general-padding;
+    padding: $general-padding;
+    height: 100%;
 }
 
 .parent {
-  overflow: $parent-overflow;
+    overflow: $parent-overflow;
 }
 
 .card img {
-  width: $card-width;
-  height: $card-height;
+    width: $card-width;
+    height: $card-height;
 }
 
 h2 {
-  position: $h2-postition-on-img;
-  top: $h2-top-position-on-img;
-  left: $h2-left-position-on-img;
-  width: $h2-width-on-img;
-  font-family: $general-font;
-  margin: 12px;
-
-  .btn {
     position: $h2-postition-on-img;
-    top: 50%;
+    top: $h2-top-position-on-img;
     left: $h2-left-position-on-img;
     width: $h2-width-on-img;
     font-family: $general-font;
-  }
+    margin: 12px;
+
+    .btn {
+        position: $h2-postition-on-img;
+        top: 50%;
+        left: $h2-left-position-on-img;
+        width: $h2-width-on-img;
+        font-family: $general-font;
+    }
 }
 
 @include mat-core();
 @include angular-material-theme($my-app-theme);
+
 .alternate-theme {
-  $alternate-primary: mat-palette($mat-blue); 
-  $alternate-accent: mat-palette($mat-pink, 400);
-  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
-  @include angular-material-theme($alternate-theme);
+    $alternate-primary: mat-palette($mat-blue);
+    $alternate-accent: mat-palette($mat-pink, 400);
+    $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+    @include angular-material-theme($alternate-theme);
 }
 
 .button-login-feature button,
 .button-login-feature a {
-  margin-right: $but-log-margin;
-  margin-top: 10%;
-  position: $but-log-postion;
+    margin-right: $but-log-margin;
+    margin-top: 10%;
+    position: $but-log-postion;
 }
 
 .centerize {
-  text-align: $centered-content-align;
-  margin-right: $center-components-margin;
+    text-align: $centered-content-align;
+    margin-right: $center-components-margin;
 }
 
 .ripple {
-  margin: $button-ripple-margin;
+    margin: $button-ripple-margin;
 }
 
 .mat-card-profile {
-  background-color: $mat-card-profile-pic;
-  font-family: $general-font;
-  color: black;
-  border: none !important;
+    background-color: $mat-card-profile-pic;
+    font-family: $general-font;
+    color: black;
+    border: none !important;
 
 }
 
 .mat-display-3 {
-  color:$mat-display-3-color;
-  size: 12px;
+    color: $mat-display-3-color;
+    size: 12px;
 }
 
 a {
-  color: $anchor-tag-color;
-  text-decoration: $anchor-tag-tect-dec;
+    color: $anchor-tag-color;
+    text-decoration: $anchor-tag-tect-dec;
 }
 
 .mat-display-1 {
-  color:$mat-display-3-color;
-  size: 20px;
+    color: $mat-display-3-color;
+    size: 20px;
 }
 
 footer {
-  display: $footer-display;
-  align-items: $centered-content-align;
-  justify-content: $footer-content-justify;
+    display: $footer-display;
+    align-items: $centered-content-align;
+    justify-content: $footer-content-justify;
 }
 
 .text-body {
-  font-family: $general-font;
-  size: $text-body-size;
-  color:$text-body-color;
+    font-family: $general-font;
+    size: $text-body-size;
+    color: $text-body-color;
 }
 
 .page-heading {
-  font-size: $button-font-size;
-  font-family: $general-font;
-  color: $general-color;
-  text-align: $centered-content-align;
-  border: $general-border;
+    font-size: $button-font-size;
+    font-family: $general-font;
+    color: $general-color;
+    text-align: $centered-content-align;
+    border: $general-border;
 }
 
 .mat-divider {
-  color: $general-color;
-  border-width: $mat-divider-border-width;
-  border-style: $mat-divider-border-style;
+    color: $general-color;
+    border-width: $mat-divider-border-width;
+    border-style: $mat-divider-border-style;
 }
 
 .mat-card-profile-area {
-  transition: $mat-card-border-transition-shadow;
-  box-shadow: $mat-card-border-transition-shadow;
-  border: $mat-card-border-transition-shadow;
+    transition: $mat-card-border-transition-shadow;
+    box-shadow: $mat-card-border-transition-shadow;
+    border: $mat-card-border-transition-shadow;
 }
 
 .mat-display {
-  color:$mat-display-3-color;
-  font-size: 24px;
+    color: $mat-display-3-color;
+    font-size: 24px;
 }
 
 .mat-card-background {
-  font-family: $general-font;
-  border: $mat-card-border-transition-shadow;
-  color: $mat-card-bg-color;
-  transition: $mat-card-border-transition-shadow;
-  box-shadow: $mat-card-border-transition-shadow;
-  padding-top: $general-padding;
-  padding-bottom: $general-padding;
-  padding-left: $general-padding;
-  padding-right: $general-padding;
+    font-family: $general-font;
+    border: $mat-card-border-transition-shadow;
+    color: $mat-card-bg-color;
+    transition: $mat-card-border-transition-shadow;
+    box-shadow: $mat-card-border-transition-shadow;
+    padding-top: $general-padding;
+    padding-bottom: $general-padding;
+    padding-left: $general-padding;
+    padding-right: $general-padding;
 }
 
 mat-form-field {
-  width: $-mat-form-field-width;
+    width: $-mat-form-field-width;
 }
 
 .field-label {
-  font-family: $general-font;
-  size: $calendar-font-size;
-  color:$general-color;
+    font-family: $general-font;
+    size: $calendar-font-size;
+    color: $general-color;
 }
 
 .button-size {
-  border: $general-border;
-  padding: $button-size-padding;
-  transition: transform $button-size-transition;
-  margin: $button-size-margin;
+    border: $general-border;
+    padding: $button-size-padding;
+    transition: transform $button-size-transition;
+    margin: $button-size-margin;
 }
 
 .button-size:hover {
-  transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 .margin-login {
-  margin-top: $page-margins;
-  margin-bottom: $page-margins;
+    margin-top: $page-margins;
+    margin-bottom: $page-margins;
 }
 
 .margin-spinner {
-  margin-top: 20;
-  margin-bottom: 20;
+    margin-top: 20;
+    margin-bottom: 20;
 }
 
 .padding-calendar-months {
-  padding-left: 80px;
+    padding-left: 80px;
 }

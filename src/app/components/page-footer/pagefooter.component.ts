@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class PagefooterComponent {
   srcUrlFB = '../../../../assets/images/fb.png';
-  srcUrlInstagram =  '../../../../assets/images/instagram.png';
+  srcUrlInstagram = '../../../../assets/images/instagram.png';
   srcUrlTwitter = '../../../../assets/images/twitter.png';
 
   constructor() { }

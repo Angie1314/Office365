@@ -1,11 +1,5 @@
 <p i18n="Title events" class="page-heading margin-login"> Calendar Events</p>
 
-<div class="margin-login centerize">
-  <button routerLink="/new-event" class="ripple
-        align-right" mat-flat-button color="primary">Add Event
-  </button>
-</div>
-
 <app-spinner></app-spinner>
 
 <div fxLayoutAlign="center center" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px">
@@ -28,16 +22,16 @@
         {{ calendar[3].start.dateTime | date:'MMM' }}</button>
     </div>
     <div fxFlex.lt-md="20" fxFlex.lt-sm="100"><button mat-fab (click)="move(4)"
-      color="primary">{{ calendar[4].start.dateTime | date:'dd' }}
-      {{ calendar[4].start.dateTime | date:'MMM' }}</button>
-  </div>
+        color="primary">{{ calendar[4].start.dateTime | date:'dd' }}
+        {{ calendar[4].start.dateTime | date:'MMM' }}</button>
+    </div>
   </div>
 </div>
 
-<div *ngIf="calendar" class="margin-login" fxLayoutAlign="center center" >
+<div *ngIf="calendar" class="margin-login" fxLayoutAlign="center center">
   <div fxLayoutAlign="center center">
     <div fxLayout="column" fxFlex="80%" fxLayoutAlign="center center">
-      <mat-vertical-stepper  #stepper>
+      <mat-vertical-stepper #stepper>
         <ng-template matStepperIcon="edit">
           <mat-icon>insert_invitation</mat-icon>
         </ng-template>
@@ -91,16 +85,16 @@
         </mat-step>
 
         <mat-step label="{{ calendar[4].start.dateTime | date }}">
-            <mat-card-subtitle>
-              <p> Time: {{ calendar[4].start.dateTime | date:'shortTime' }} -
-                {{ calendar[4].end.dateTime | date:'shortTime' }}</p>
-            </mat-card-subtitle>
-  
-            <mat-card-title>
-              <p> {{ calendar[4].subject }}</p>
-            </mat-card-title>
-            <p> {{ calendar[4].bodyPreview }} </p>
-          </mat-step>
+          <mat-card-subtitle>
+            <p> Time: {{ calendar[4].start.dateTime | date:'shortTime' }} -
+              {{ calendar[4].end.dateTime | date:'shortTime' }}</p>
+          </mat-card-subtitle>
+
+          <mat-card-title>
+            <p> {{ calendar[4].subject }}</p>
+          </mat-card-title>
+          <p> {{ calendar[4].bodyPreview }} </p>
+        </mat-step>
       </mat-vertical-stepper>
     </div>
   </div>

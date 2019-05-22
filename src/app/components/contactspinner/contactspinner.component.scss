@@ -1,7 +1,6 @@
-$border-transition-shadow: none!important;
+$border-transition-shadow: none !important;
 
-.mat-card-spinner{
+.mat-card-spinner {
     transition: $border-transition-shadow;
     box-shadow: $border-transition-shadow;
-    
 }

@@ -8,9 +8,9 @@ describe('PagefooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PagefooterComponent ]
+      declarations: [PagefooterComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
